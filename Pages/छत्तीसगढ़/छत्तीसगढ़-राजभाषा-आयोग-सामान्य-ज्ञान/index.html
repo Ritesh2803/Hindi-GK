@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<style type="text/css" media="print">
+BODY {display:none;visibility:hidden;}
+</style>
+
+  <style>
+      .unselectable {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+      }
+    </style>
+
 <head>
     <!-- Basic Page -->
     <meta charset="UTF-8">
-    <title>hindi knowledge</title>
+    <title>हिंदी सामान्य ज्ञान</title>
     <!-- Mobile Specific -->
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- Favicon -->
-    <link href="Photos/HINDI_knowledge_SORT_LOGO-removebg.png" rel="shortcut icon" type="image/x-icon">
-    <link href="Photos/HINDI_knowledge_SORT_LOGO-removebg.png" rel="icon" type="image/x-icon">
+    <link href="Photos/lOGO.png" rel="shortcut icon" type="image/x-icon">
+    <link href="Photos/lOGO.png" rel="icon" type="image/x-icon">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Fontawesome Styles -->
@@ -45,1097 +61,276 @@
 </head>
 
 <body>
-    
-    <div class="main" id="main">
-        <!-- Start Mobile Header -->
-        <header class="mobile-header">
-            <div class="mobile-header-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="mobile-logo text-center">
-                                <a href="#"><img alt="lOGO" class="img-fluid" src="Photos/HINDI_knowledge_LOGO-removebg.png"></a>
-                            </div>
-                        </div>
-                        <!-- Logo Col End -->
-                    </div>
-                    <!-- Row End -->
-                </div>
-                <!-- Container End -->
-            </div>
-            <!-- Header Content End -->
-        </header>
-        <!-- Mobile Header End -->
-        <!-- Start Header -->
-        <header class="main-nav clearfix is-sticky">
-            <div class="container-fluid">
-                <div class="row justify-content-between">
-                    <div class="col-lg-9 pl-0">
-                        <!-- Start Navigation -->
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html"><img alt="LOGO" class="img-fluid" src="Photos/HINDI_knowledge_LOGO-removebg.png"></a>
-                            <!-- Logo End -->
-                            <div class="site-nav-inner float-left">
-                                <button aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="fa fa-bars"></span></button> <!-- Navbar Toggler End -->
-                                <div class="navbar-collapse navbar-responsive-collapse collapse" id="navbarSupportedContent">
-                                    <ul class="nav navbar-nav">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="Pages/साॉल्वड-पेपर्स/01.html">साॉल्वड पेपर्स </a>
-                                        </li>
-                                        <!-- Nav Item 1 End -->
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Pages/कप्म्युटर/01.html">कंप्यूटर</a>
-                                        </li>
-                                        <!-- Nav Item 2 End -->
-                                   
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link menu-dropdown" data-toggle="dropdown" href="#">राज्य <i class="fa fa-angle-down"></i></a>
-                                            <ul class="dropdown-menu fade-up" role="menu">
-                                                
-                                                <li>
-                                                    <a class="dropdown-item" href="Pages/छत्तीसगढ़/01.html">छत्तीसगढ</a>
-                                                </li>
-                                                <!-- Sub Nav Item 2 End -->
-                                                <li>
-                                                    <a class="dropdown-item" href="#">मध्य प्रदेश</a>
-                                                </li>
-                                                <!-- Sub Nav Item 4 End -->
-                                                
-                                                <!-- Sub Nav Item 5 End -->
-                                            </ul>
-                                            <!-- Dropdown End -->
-                                        </li>
-                                        <!-- Nav Item 4 End -->
-                                    </ul>
-                                    <!-- Nav UL End -->
-                                </div>
-                                <!-- Navbar Collapse End -->
-                            </div>
-                            <!-- Site Nav Inner End -->
-                        </nav>
-                        <!-- Navigation End -->
-                    </div>
-                    <!-- Col End -->
-                    <div class="col-lg-3 text-right right-menu-wrap">
-                        <ul class="nav d-flex align-items-center list-inline m-0 float-right">
-                            <li class="nav-item">
-                                <div class="nav-search">
-                                    <a class="nav-link modal-popup" href="#search-popup"><i class="icofont-ui-search"></i></a>
-                                </div>
-                                <!-- Search Icon End -->
-                            </li>
-                            
-                            <li class="nav-item">
-                                <div class="nav-filter">
-                                    <a class="nav-link openbtn" onclick="openNav()"><svg class="filter-animate" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M24 14v-4c-1.619 0-2.906.267-3.705-1.476-.697-1.663.604-2.596 1.604-3.596l-2.829-2.828c-1.033 1.033-1.908 2.307-3.666 1.575-1.674-.686-1.404-2.334-1.404-3.675h-4c0 1.312.278 2.985-1.404 3.675-1.761.733-2.646-.553-3.667-1.574l-2.829 2.828c1.033 1.033 2.308 1.909 1.575 3.667-.348.849-1.176 1.404-2.094 1.404h-1.581v4c1.471 0 2.973-.281 3.704 1.475.698 1.661-.604 2.596-1.604 3.596l2.829 2.829c1-1 1.943-2.282 3.667-1.575 1.673.687 1.404 2.332 1.404 3.675h4c0-1.244-.276-2.967 1.475-3.704 1.645-.692 2.586.595 3.596 1.604l2.828-2.829c-1-1-2.301-1.933-1.604-3.595l.03-.072c.687-1.673 2.332-1.404 3.675-1.404zm-12 2c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"></path>
-                                        </svg></a>
-                                </div>
-                                <!-- Sidebar Filter Button End -->
-                            </li>
-                            <!-- Nav Item 2 End -->
-                            <li class="nav-item">
-                                <div class="nav-account ml-2">
-                                    <div class="dropdown">
-                                        <div aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="dropdown-account" role="button"><img alt="" class="img-fluid user-icon rounded-circle" src="images/avatar/user.jpg"></div>
-                                        <ul class="dropdown-menu dropdown-menu-right fade-up">
-                                            <li>
-                                                <a class="dropdown-item" href="Pages/login.html">Account Settings</a>
-                                            </li>
-                                            <!-- Li 1 end -->
-                                            <li>
-                                                <a class="dropdown-item" href="Pages/login.html">Admin</a>
-                                            </li>
-                                            <!-- Li 2 end -->
-                                            <li>
-                                                <a class="dropdown-item" href="Pages/login.html">Private Page</a>
-                                            </li>
-                                            <!-- Li 3 end -->
-                                        </ul>
-                                        <!-- Account List End -->
-                                    </div>
-                                    <!-- Account Drop Down End -->
-                                </div>
-                                <!-- Account Menu End -->
-                            </li>
-                            <!-- Nav Item 3 End -->
-                        </ul>
-                        <!-- Nav UL End -->
-                    </div>
-                    <!-- Col End -->
-                </div>
-                <!-- Row End -->
-            </div>
-            <!-- Container End -->
-        </header>
-        <!-- Header End -->
-        <!-- Start Main Slider -->
-        <div class="main-slider" id="main-slider">
-            <div class="slider big-slider slider-wrap">
-                <div class="slide slick-bg bg-1">
-                    <div class="container-fluid position-relative h-100">
-                        <div class="slider-content h-100">
-                            <div class="row align-items-center h-100">
-                                <div class="col-xl-6 col-lg-12 col-md-12">
-                                    <h3 data-animation-in="fadeInUp" data-delay-in="1"><span class="badge bg-warning text-dark">GK</span></h3>
-                                    <h1 data-animation-in="fadeInUp" data-delay-in="1">हिंदी सामान्य ज्ञान</h1>
-                                    <div class="slide-info" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <span class="radius">language - हिंदी</span> 
-                                    </div>
-                                    <p data-animation-in="fadeInUp" data-delay-in="1">हिंदी- सटीक रूप से आधुनिक मानक हिंदी, एक इंडो-आर्यन भाषा है जो मुख्य रूप से उत्तरी, मध्य, पूर्वी और पश्चिमी भारत के हिस्सों को शामिल करते हुए हिंदी बेल्ट क्षेत्र में बोली जाती है।</p>
-                                    <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <a class="btn hvr-sweep-to-right" href="Pages/हिंदी_सामान्य_ज्ञान/01.html" tabindex="0"><i aria-hidden="true" class="fa fa-book mr-2"></i>Read Now</a>
-                                    </div>
-                                </div>
-                                <!-- Col End -->
-                            </div>
-                            <!-- Row End -->
-                        </div>
-                        <!-- Slider Content End -->
-                    </div>
-                    <!-- Container End -->
-                </div>
-                <!-- Slide 1 End -->
-                 <div class="slide slick-bg bg-2">
-                    <div class="container-fluid position-relative h-100">
-                        <div class="slider-content h-100">
-                            <div class="row align-items-center h-100">
-                                  <div class="col-xl-6 col-lg-12 col-md-12">
-                                    <h3 data-animation-in="fadeInUp" data-delay-in="1"><span class="badge bg-warning text-dark">GK</span></h3>
-                                    <h1 data-animation-in="fadeInUp" data-delay-in="1">कंप्यूटर सामान्य ज्ञान</h1>
-                                    <div class="slide-info" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <span class="radius">language - हिंदी</span> 
-                                    </div>
-                                    <p data-animation-in="fadeInUp" data-delay-in="1">कंप्यूटर (अंग्रेजी: Computer) (अन्य हिन्दी नाम - अभिकलित्र, संगणक, अभिकलक, परिकलक) वस्तुतः एक अभिकलक यंत्र (programmable machine) है जो दिये गये गणितीय तथा तार्किक संक्रियाओं को क्रम से स्वचालित रूप से करने में सक्षम है।</p>
-                                    <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <a class="btn hvr-sweep-to-right" href="Pages/कप्म्युटर/01.html" tabindex="0"><i aria-hidden="true" class="fa fa-book mr-2"></i>Read Now</a>
-                                    </div>
-                                </div>
-                                <!-- Col End -->
-                            </div>
-                            <!-- Row End -->
-                        </div>
-                        <!-- Slider Content End -->
-                    </div>
-                    <!-- Container End -->
-                </div>
-                <!-- Slide 2 End -->
-                 <div class="slide slick-bg bg-3">
-                    <div class="container-fluid position-relative h-100">
-                        <div class="slider-content h-100">
-                            <div class="row align-items-center h-100">
-                                 <div class="col-xl-6 col-lg-12 col-md-12">
-                                    <h3 data-animation-in="fadeInUp" data-delay-in="1"><span class="badge bg-warning text-dark">GK</span></h3>
-                                    <h1 data-animation-in="fadeInUp" data-delay-in="1">छत्तीसगढ़ी व्याकरण</h1>
-                                    <div class="slide-info" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <span class="radius">language - हिंदी</span> 
-                                    </div>
-                                    <p data-animation-in="fadeInUp" data-delay-in="1">छत्तीसगढ़ भारत का एक राज्य है। इसका गठन 1 नवम्बर 2000 को हुआ था और यह भारत का 26वां राज्य है। पहले यह मध्य प्रदेश के अन्तर्गत था। डॉ॰ हीरालाल के मतानुसार छत्तीसगढ़ 'चेदीशगढ़' का अपभ्रंश हो सकता है।</p>
-                                    <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <a class="btn hvr-sweep-to-right" href="Pages/छत्तीसगढ़/01.html" tabindex="0"><i aria-hidden="true" class="fa fa-book mr-2"></i>Read Now</a>
-                                    </div>
-                                </div>
-                                <!-- Col End -->
-                            </div>
-                            <!-- Row End -->
-                        </div>
-                        <!-- Slider Content End -->
-                    </div>
-                    <!-- Container End -->
-                </div>
-                <!-- Slide 3 End -->
-            </div>
-            <!-- Slide Wrap End -->
-        </div>
-        <!-- Main Slider End -->
 
-
-  <!-- Start Pupular Section -->
-            <section class="pupular">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2 id="VIRAL-VIDEOS" class="block-title">chhattisgarh LATEST JOB</h2>
-                            <!-- Start Pupular Slider -->
-                            <div class="owl-carousel owl-theme" id="pupular-slider">
-
-
-
-
-
-
-
-<!--start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-<div class="item"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#"><img alt="" class="img-fluid" src="LATEST-JOB/डिस्ट्रिक्ट-कोर्ट-रायपुर-भर्ती/district-court-raipur-bharti.jpg"></a><div class="box-content"><ul class="icon"><li><a href="web&movies/(The-Kapil-Sharma-Show.html"><i class="fas fa-address-card"></i></a></li></ul></div></div>
-
-<div class="video-content"><h2 class="video-title"><a href="movie-single.html">डिस्ट्रिक्ट कोर्ट रायपुर भर्ती</a></h2><div class="video-info d-flex align-items-center"><span class="video-age">LAST DATE</span> <span class="video-type">25/11/2022</span></div></div></div><!-- video Block End --></div><!-- Item 1 End -->
-
-<!--end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-                                
-                         
-<!--start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-<div class="item"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#"><img alt="" class="img-fluid" src="LATEST-JOB/सीआरपीएफ-छत्तीसगढ़-रैली-भर्ती/सीआरपीएफ-छत्तीसगढ़-रैली-भर्ती.jpg"></a><div class="box-content"><ul class="icon"><li><a href="web&movies/(The-Kapil-Sharma-Show.html"><i class="fas fa-address-card"></i></a></li></ul></div></div>
-
-<div class="video-content"><h2 class="video-title"><a href="movie-single.html">सीआरपीएफ छत्तीसगढ़ रैली भर्ती</a></h2><div class="video-info d-flex align-items-center"><span class="video-age">LAST DATE</span> <span class="video-type">22/10/2022</span></div></div></div><!-- video Block End --></div><!-- Item 1 End -->
-
-<!--end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-
-
-
-
-
-
-
-                       
-                            </div>
-                            <!-- Pupular Slider End -->
-                        </div>
-                        <!-- Col End -->
-                    </div>
-                    <!-- Row End -->
-                </div>
-                <!-- Container End -->
-            </section>
-            <!-- Pupular Section End -->
-            <!-- Start Office Box Section -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Start Trending Section -->
-            <section class="trending">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2 class="block-title">course Update</h2>
-                            <div class="row">
-
-
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(jarurat -web/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(jarurat -web.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-<a>jarurat</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(Jaan-Bujh-kar-web/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(Jaan-Bujh-kar-web.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-<a>Jaan Bujh kar</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(love-in-goa-web/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(love-in-goa-web.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-<a>love in goa</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(necklace-Movie/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(necklace-Movie.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-<a>necklace</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(rubeena-Movie/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(rubeena-Movie.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-<a>rubeena</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(Nalayak-web/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(Nalayak-web.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-<a>Nalayak</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(Shilajit-web/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(Shilajit-web.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-<a>Shilajit</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(santushti-web/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(santushti-web.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-<a>santushti</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(Shaukeen-Uncle-web/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(Shaukeen-Uncle-web.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-<a>Shaukeen Uncle</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#">
-                                            <!--Edit👇👇👇👇👇-->
-<img alt="" class="img-fluid" src="web&movies/(mrs.-teacher-web/front-poster.jpg"></a><div class="box-content"><ul class="icon">
-                       <!--Edit👇👇👇👇👇-->
-<li><a href="web&movies/(mrs.-teacher-web.html"><i class="fas fa-play"></i></a></li></ul></div></div><div class="video-content"><!--Edit👇👇👇👇👇-->                                           <h2 class="video-title"> 
-  <a>mrs.-teacher</a></h2><div class="video-info d-flex align-items-center">
-                                                 <span class="video-age">18+</span>
-                                                 <span class="video-type">Hindi</span></div></div></div></div><!-- Col End -->
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-<!--start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-                       
-
-
-                              
-<!--end@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-
-
-
-
-
-                            </div>
-                            <!-- Row End -->
-                        </div>
-                    </div>
-                    <!-- Row End -->
-                </div>
-                <!-- Container End -->
-            </section>
-            <!-- Trending Section End -->
-
- <center><a href="Pages/Web-show/01.html" class="btn btn-outline-maincolor">Web Series ></a>                               
-<a href="Pages/Movies/01.html" class="btn btn-outline-maincolor">Full Movies ></a></center>
-
-
-
-        
-            <!-- Start Pupular Section -->
-            <section class="pupular">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2 id="VIRAL-VIDEOS" class="block-title">Movie Clips</h2>
-                            <!-- Start Pupular Slider -->
-                            <div class="owl-carousel owl-theme" id="pupular-slider">
-
-
-
-<!--Movie Clip start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-<div class="item"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#"><img alt="" class="img-fluid" src="Viral&movieclip/(movie-sex-scene-compilation/front-poster.jpg"></a><div class="box-content"><ul class="icon"><li><a href="Viral&movieclip/(movie-sex-scene-compilation.html"><i class="fas fa-play"></i></a></li></ul></div></div>
-
-<div class="video-content"><h2 class="video-title"><a href="movie-single.html">movie sex scene compilation</a></h2><div class="video-info d-flex align-items-center"></div></div></div><!-- video Block End --></div><!-- Item 1 End -->
-
-<!--Movie Clip end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-<!--Movie Clip start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-<div class="item"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#"><img alt="" class="img-fluid" src="web&movies/(The-Kapil-Sharma-Show/front-poster.jpg"></a><div class="box-content"><ul class="icon"><li><a href="web&movies/(The-Kapil-Sharma-Show.html"><i class="fas fa-play"></i></a></li></ul></div></div>
-
-<div class="video-content"><h2 class="video-title"><a href="movie-single.html">Movie Clip</a></h2><div class="video-info d-flex align-items-center"><span class="video-year">Hindi</span> <span class="video-age">12+</span> <span class="video-type">Comedy</span></div></div></div><!-- video Block End --></div><!-- Item 1 End -->
-
-<!--Movie Clip end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-                                
-                         
-<!--Movie Clip start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-<div class="item"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#"><img alt="" class="img-fluid" src="web&movies/(The-Kapil-Sharma-Show/front-poster.jpg"></a><div class="box-content"><ul class="icon"><li><a href="web&movies/(The-Kapil-Sharma-Show.html"><i class="fas fa-play"></i></a></li></ul></div></div>
-
-<div class="video-content"><h2 class="video-title"><a href="movie-single.html">Movie Clip</a></h2><div class="video-info d-flex align-items-center"><span class="video-year">Hindi</span> <span class="video-age">12+</span> <span class="video-type">Comedy</span></div></div></div><!-- video Block End --></div><!-- Item 1 End -->
-
-<!--Movie Clip end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-<!--Movie Clip start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-<div class="item"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#"><img alt="" class="img-fluid" src="web&movies/(The-Kapil-Sharma-Show/front-poster.jpg"></a><div class="box-content"><ul class="icon"><li><a href="web&movies/(The-Kapil-Sharma-Show.html"><i class="fas fa-play"></i></a></li></ul></div></div>
-
-<div class="video-content"><h2 class="video-title"><a href="movie-single.html">Movie Clip</a></h2><div class="video-info d-flex align-items-center"><span class="video-year">Hindi</span> <span class="video-age">12+</span> <span class="video-type">Comedy</span></div></div></div><!-- video Block End --></div><!-- Item 1 End -->
-
-<!--Movie Clip end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-<!--Movie Clip start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-<div class="item"><div class="video-block"><div class="video-thumb position-relative thumb-overlay"><a href="#"><img alt="" class="img-fluid" src="web&movies/(The-Kapil-Sharma-Show/front-poster.jpg"></a><div class="box-content"><ul class="icon"><li><a href="web&movies/(The-Kapil-Sharma-Show.html"><i class="fas fa-play"></i></a></li></ul></div></div>
-
-<div class="video-content"><h2 class="video-title"><a href="movie-single.html">Movie Clip</a></h2><div class="video-info d-flex align-items-center"><span class="video-year">Hindi</span> <span class="video-age">12+</span> <span class="video-type">Comedy</span></div></div></div><!-- video Block End --></div><!-- Item 1 End -->
-
-<!--Movie Clip end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-
-
-
-
-
-
-
-                       
-                            </div>
-                            <!-- Pupular Slider End -->
-                        </div>
-                        <!-- Col End -->
-                    </div>
-                    <!-- Row End -->
-                </div>
-                <!-- Container End -->
-            </section>
-            <!-- Pupular Section End -->
-            <!-- Start Office Box Section -->
-
-
-<center><a href="#become-model" class="btn btn-outline-maincolor">See More Clips ></a></center>
-            
-<br><br>           
-
-
-
-        <!-- Start Copyrights Section -->
-        <div class="copyright">
-            <div class="container-fluid">
-                <div class="row justify-content-between">
-                    <div class="col-md-6">
-                        <p>© Copyright 2022, All Rights Reserved</p>
-                    </div>
-                    <!-- Col End -->
-                    <div class="col-md-6">
-                        <div class="copyright-menu text-right">
-                            <ul>
-                                <li>
-                                    <a href="#">Terms of Service</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Copyrights Menu End -->
-                    </div>
-                    <!-- Col End -->
-                </div>
-                <!-- Row End -->
-            </div>
-            <!-- Container End -->
-        </div>
-        <!-- Copyrights Section End -->
-        <!-- To Top Button Start-->
-        <div class="back-to-top-btn">
-            <div class="back-to-top" style="display: block;">
-                <a aria-hidden="true" class="fas fa-angle-up" href="#"></a>
-            </div>
-        </div>
-        <!-- To Top Button End -->
-    </div>
-    <!-- Main Class End -->
-    <!-- Start Search Modal -->
-    <div class="zoom-anim-dialog mfp-hide modal-searchPanel search-form" id="search-popup">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="search-panel">
-                    
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: black;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: black;
-}
-</style>
-
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search......." title="Type.......">
-
-<ul id="myUL">
- 
-
-    <li><center><a href="Pages/छत्तीसगढ़/छत्तीसगढ़-राजभाषा-आयोग-सामान्य-ज्ञान/index.html"><img alt="" class="img-fluid" width="100%" height="" src="Pages/छत्तीसगढ़/छत्तीसगढ़-राजभाषा-आयोग-सामान्य-ज्ञान/छत्तीसगढ़-राजभाषा-आयोग-सामान्य-ज्ञान.jpg"><br><br><h6>छत्तीसगढ़-राजभाषा-आयोग-सामान्य-ज्ञान (Chhattisgarh Rajbhasha Aayog) (HINDI)</h6></a></center></li>
-
-    <li><center><a href="Pages/साॉल्वड-पेपर्स/बीएड-मॉडल-पेपर-2022/index.html"><img alt="" class="img-fluid" width="100%" height="" src="Pages/साॉल्वड-पेपर्स/बीएड-मॉडल-पेपर-2022/बीएड-मॉडल-पेपर-2022.jpg"><br><br><h6>बीएड-मॉडल-पेपर-2022 (CG.B.ed Entrance exam 2022 Question Paper) (HINDI)</h6></a></center></li>
-
- <li><center><a href="Pages/कप्म्युटर/कप्म्युटर-की-उत्पत्ति-एवं-विकास-सामान्य-ज्ञान/index.html"><img alt="" class="img-fluid" width="100%" height="" src="Pages/कप्म्युटर/कप्म्युटर-की-उत्पत्ति-एवं-विकास-सामान्य-ज्ञान/कप्म्युटर-की-उत्पत्ति-एवं-विकास-सामान्य-ज्ञान.jpg"><br><br><h6>कप्म्युटर-की-उत्पत्ति-एवं-विकास-सामान्य-ज्ञान (Computer Knowledge) (HINDI)</h6></a></center></li>
-
-   <li><center><a href="Pages/हिंदी_सामान्य_ज्ञान/पर्यायवाची-शब्द/index.html"><img alt="" class="img-fluid" width="100%" height="" src="Pages/हिंदी_सामान्य_ज्ञान/पर्यायवाची-शब्द/पर्यायवाची-शब्द.jpg"><br><br><h6>पर्यायवाची-शब्द (paryayvachi shabd) (HINDI)</h6></a></center></li>
- 
-  <li><center><a href="Pages/हिंदी_सामान्य_ज्ञान/समानार्थी-शब्द/index.html"><img alt="" class="img-fluid" width="100%" height="" src="Pages/हिंदी_सामान्य_ज्ञान/समानार्थी-शब्द/समानार्थी-शब्द.jpg"><br><br><h6>समानार्थी-शब्द (samanarthi shabd) (HINDI)</h6></a></center></li>
-    
-   <li><center><a href="Pages/हिंदी_सामान्य_ज्ञान/vilom-sabd/index.html"><img alt="" class="img-fluid" width="100%" height="" src="Pages/हिंदी_सामान्य_ज्ञान/vilom-sabd/vilom-sabd.jpg"><br><br><h6>विलोम शब्द (vilom sabd) (HINDI)</h6></a></center></li>
-
-
-
-    
-
-  
-
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
+<script language="javascript">
+    var autoBlur=true;
+    var noPrint=true;
+    var noCopy=true;
+    var noScreenshot=true;
 </script>
 
+<script type="text/javascript" src="noprint.js"></script>
 
-
-
-
-
-
-
-
-                </div>
-            </div>
-        </div>
+    <!-- Start Preloader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
     </div>
-    <!-- End Search Modal -->
-    <!-- Start Filter Sidebar -->
-    <div class="filter-sidebar" id="f-Sidebar">
-        <a class="closebtn" href="javascript:void(0)" onclick="closeNav()"><i class="fas fa-times"></i></a>
-        <div class="filter-accordion" id="accordion">
+    <!-- Preloader End -->
+  
+            <!-- Start Viral Videos -->
+            <section class="hollywood-movies">
+                <div class="container-fluid">
+                    <div class="row">
+                        
+                    </div>
 
 
- <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0"><button aria-controls="type" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#type" data-toggle="collapse">Display Type <span class="icofont-circled-down"></span></button></h2>
-                </div>
-                <!-- Card Header End -->
-                <div aria-labelledby="headingOne" class="collapse" data-parent="#accordion" id="type">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">All</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Drama</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Action</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Romantic</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Crime</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Excitement</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Comedy</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Ambiguity</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Adventures</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Fantasia</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Horror</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Fiction</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                    </div>
-                    <!-- Card Body End -->
-                </div>
-                <!-- Type Collapse End -->
-            </div>
-            <!-- Card End -->
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0"><button aria-controls="production" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#production" data-toggle="collapse">Year of Production <span class="icofont-circled-down"></span></button></h2>
-                </div>
-                <!-- Card Header End -->
-                <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordion" id="production">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">All</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2000</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2001</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2002</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2003</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2004</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2005</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2006</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2007</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2008</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2009</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2010</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2011</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2012</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2013</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2014</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2015</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2016</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2017</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2018</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2019</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2020</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2021</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-4 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">2022</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                    </div>
-                    <!-- Card Body End -->
-                </div>
-                <!-- Production Collapse End -->
-            </div>
-            <!-- Card End -->
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h2 class="mb-0"><button aria-controls="quality" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#quality" data-toggle="collapse">Display Quality <span class="icofont-circled-down"></span></button></h2>
-                </div>
-                <!-- Card Header End -->
-                <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="quality">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">All</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">720p HDTV</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">1080p BluRay</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">720p BluRay</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">1080p WEB-DL</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">720p WEBRip</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">720p HD</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">1080p HD</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">HDTV</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">720p WEB-Dl</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                    </div>
-                    <!-- Card Body End -->
-                </div>
-                <!-- Quality Collapse End -->
-            </div>
-            <!-- Card End -->
-            <div class="card">
-                <div class="card-header" id="headingFour">
-                    <h2 class="mb-0"><button aria-controls="country" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#country" data-toggle="collapse">Country of Production <span class="icofont-circled-down"></span></button></h2>
-                </div>
-                <!-- Card Header End -->
-                <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="country">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">All</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">France</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Canada</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">China</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Argentina</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Australia</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">United States</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Germany</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Japan</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Italy</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                    </div>
-                    <!-- Card Body End -->
-                </div>
-                <!-- Country Collapse End -->
-            </div>
-            <!-- Card End -->
-            <div class="card">
-                <div class="card-header" id="headingFive">
-                    <h2 class="mb-0"><button aria-controls="language" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#language" data-toggle="collapse">The Language <span class="icofont-circled-down"></span></button></h2>
-                </div>
-                <!-- Card Header End -->
-                <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="language">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">All</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Arabic</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">English</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">German</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Spanish</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">French</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Italian</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Russian</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                        <div class="row">
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Japanese</a>
-                            </div>
-                            <!-- Col End -->
-                            <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">Chinese</a>
-                            </div>
-                            <!-- Col End -->
-                        </div>
-                        <!-- Row End -->
-                    </div>
-                    <!-- Card Body End -->
-                </div>
-                <!-- Language Collapse End -->
-            </div>
-            <!-- Card End -->
-        </div>
-        <!-- Filter Accordion End -->
-    </div>
-    <!-- Filter Sidebar End -->
+
+ <a href="#"><img alt="lOGO" class="img-fluid" src="HINDI_knowledge_LOGO-removebg.png"></a><br><br>
+                         
+
+
+<!-- Ritesh shah -->
+<div class="unselectable">
+
+<center><strong>छत्तीसगढ़ राजभाषा आयोग सामान्य ज्ञान</strong></center>
+<center><strong>(CG Rajbhasha Aayog Gk in Hindi) </strong></center>
+
+
+
+
+
+
+<p><center><mark style="background-color:rgba(0, 0, 0, 0);color:#9c0000" class="has-inline-color"><strong>Share Now 👇👇👇</strong></mark></center></p>
+
+
+ <div class="share">
+
+        <a class="whatsapp" href="https://api.whatsapp.com/send?text=Ritesh" rel="nofollow" target="_blank" title="Whatsapp Share">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+            <path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z" />
+          </svg>
+        </a>
+        
+        
+        <a class="telegram" href="https://telegram.me/share/url?text=Ritesh" target="_blank" title="Telegram Share">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+            <path d="M.707 8.475C.275 8.64 0 9.508 0 9.508s.284.867.718 1.03l5.09 1.897 1.986 6.38a1.102 1.102 0 0 0 1.75.527l2.96-2.41a.405.405 0 0 1 .494-.013l5.34 3.87a1.1 1.1 0 0 0 1.046.135 1.1 1.1 0 0 0 .682-.803l3.91-18.795A1.102 1.102 0 0 0 22.5.075L.706 8.475z" />
+          </svg>
+        </a>
+        
+      </div>    
+</div>
+
+<br><br>
+
+
+
+
+ <p style="text-align: center;"><strong>छत्तीसगढ़ की राजभाषा आयोग क्या है ? Cg Rajbhasha Aayog kya Hai</strong></p>
+<h2 style="text-align: center;"><b> छत्तीसगढ़ राजभाषा दिवस कब मनाया जाता है ?</b></h2>
+<p><span style="font-weight: 400;">छत्तीसगढ़ राजभाषा आयोग के गठन हेतु विधेयक को छत्तीसगढ़ विधानसभा में </span><b>28 नवम्बर 2007</b><span style="font-weight: 400;"> को पारित किया गया। इसलिए छत्तीसगढ़ शासन द्वारा प्रतिवर्ष </span><b>28 नवम्बर</b><span style="font-weight: 400;"> को राजभाषा दिवस के रूप में मनाया जाने का निर्णय लिया गया।</span></p>
+<h2 style="text-align: center;"><b>छत्तीसगढ़ राजभाषा आयोग क्या है ?</b></h2>
+<p><span style="font-weight: 400;"><strong>छत्तीसगढ़ राजभाषा</strong> आयोग छत्तीसगढ़ का एक महत्वपूर्ण संगठन है जो छत्तीसगढ़ी भाषा को भारतीय संविधान के 8वें अनुसूची में एक विशेष दर्जा दिलाने जैसे बहुउद्देशीय लक्ष्यपूर्ति हेतु अगस्त <strong>2008</strong> को गठित की गई। जिसके लिए निम्नलिखित विधायी प्रक्रियाएं हुई –</span></p>
+<ul>
+<li><span style="font-weight: 400;">  <strong> विधेयक का नाम</strong> &#8211; छत्तीसगढ़ राजभाषा (संशोधन) विधेयक – <strong>2007</strong></span></li>
+<li><span style="font-weight: 400;">   <strong>विधेयक पारित</strong> &#8211; </span><b>28 नवंबर 2007</b></li>
+<li><span style="font-weight: 400;"><strong>   राजभाषा दिवस &#8211;</strong> 28 नवंबर (इसे छत्तीसगढ़ी दिवस भी कहा जाता है।) <strong>CG PSC(Mains)2012, 2016]</strong></span></li>
+<li><span style="font-weight: 400;"><strong>   राजपत्र में प्रकाशन</strong> &#8211; 11 जुलाई 2008 (छत्तीसगढ़ राजभाषा (संशोधन) अधिनियम 2007 का)</span></li>
+<li><span style="font-weight: 400;">  <strong> गठन</strong> &#8211;  अगस्त 2008 (राजभाषा आयोग का)</span></li>
+<li><span style="font-weight: 400;"><strong>   प्रथम बैठक</strong> &#8211;  14 अगस्त 2008 (कारोबारी बैठक)</span></li>
+<li><span style="font-weight: 400;">   <strong>कार्यालय स्थापना दिवस</strong> &#8211; 14 अगस्त (प्रतिवर्ष)</span><strong> [CG PSC(Mains)2017]</strong></li>
+</ul>
+<h2><b>छत्तीसगढ़ राजभाषा आयोग अध्यक्ष</b></h2>
+<ol>
+<li><b>प्रथम अध्यक्ष </b><span style="font-weight: 400;">&#8211; पंडित श्यामलाल चतुर्वेदी (2008 से 2011 तक)</span></li>
+<li><b>द्वितीय अध्यक्ष</b><span style="font-weight: 400;"> &#8211; श्री दानेश्वर शर्मा (2011 से 2013 तक)</span></li>
+<li><b>तृतीय अध्यक्ष</b><span style="font-weight: 400;">  &#8211; विनय कुमार पाठक (2016 से 2018 तक)</span></li>
+</ol>
+<h2><b>छत्तीसगढ़ राजभाषा आयोग सचिव</b></h2>
+<p><b>प्रथम सचिव &#8211; पद्मश्री डॉ. सुरेन्द्र दुबे</b></p>
+<img decoding="async" class="size-medium wp-image-6334" src="Surendra-Dubey-पद्मश्री-डॉ.-सुरेन्द्र-दुबे-300x171.jpg" alt="हास्य कवि सम्मेलन सुरेंद्र दुबे छत्तीसगढ़" width="300" height="171" em> <center>हास्य कवि सम्मेलन सुरेंद्र दुबे छत्तीसगढ़</center></em></div>
+<h2><b>छत्तीसगढ़ राजभाषा आयोग के उद्देश्य और लक्ष्य</b></h2>
+<ul>
+<li><span style="font-weight: 400;">   राजभाषा को संविधान की आठवीं अनुसूची में दर्जा दिलाना।</span></li>
+<li><span style="font-weight: 400;">   छत्तीसगढ़ी भाषा को राजकाज की भाषा के उपयोग में लाना।</span></li>
+<li><span style="font-weight: 400;">   त्रिभाषायी भाषा रूप में शामिल पाठ्यक्रम में शामिल करना।</span></li>
+</ul>
+<p><b>छत्तीसगढ़ राजभाषा आयोग के अन्य कार्य</b></p>
+<ul>
+<li><b>हिंदी</b><span style="font-weight: 400;"> &#8211; </span><span style="font-weight: 400;">छत्तीसगढ़ी प्रकाशन शोध</span></li>
+<li><span style="font-weight: 400;"> </span><b>छत्तीसगढ़ी </b><span style="font-weight: 400;">&#8211; हिन्दी शब्दकोश।</span></li>
+<li><b>प्रकाशन </b><span style="font-weight: 400;">&#8211; पांडुलिपि प्रकाशन।</span></li>
+<li><b>शोध  &#8211;</b><span style="font-weight: 400;"> रामचरित मानस में छत्तीसगढ़ी</span></li>
+</ul>
+
+<p><strong>छत्तीसगढ़ योजनाएं</strong></p>
+<ul>
+<li><b>माई कोठी योजना </b><span style="font-weight: 400;">&#8211; छत्तीसगढ़ राजभाषा आयोग में छत्तीसगढ़ या छत्तीसगढ़ी से संबंधित किसी भी भाषा की पुस्तकों का क्रय कर संग्रहीत करने की योजना है जो &#8216;माई कोठी योजना&#8217; के नाम से पूरे राज्य में लोकप्रिय है।</span></li>
+<li><b>बिजहा योजना &#8211;</b><span style="font-weight: 400;"> छत्तीसगढ़ी के लुप्त होते शब्दों को संग्रहीत करने हेतु एक &#8216;बिजहा योजना&#8217; प्रारंभ किया गया है जिसका उद्देश्य प्रचलन से बाहर हो रहे सभी शब्दों को संग्रह करने एवं प्रचलन में लाने की योजना है।</span></li>
+</ul>
+<h3><b>छत्तीसगढ़ राजभाषा आयोग प्रान्तीय सम्मेलनों की सूची</b></h3>
+<table>
+<tbody>
+<tr>
+<td><b>क्र.</b></td>
+<td><b>प्रांतीय सम्मेलन</b></td>
+<td><b>स्थान</b></td>
+<td><b>समर्पित व्यक्ति</b></td>
+<td><b>दिनांक</b></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">1</span></td>
+<td><span style="font-weight: 400;">प्रथम प्रांतीय सम्मेलन</span></td>
+<td><span style="font-weight: 400;">भिलाई</span></td>
+<td></td>
+<td><span style="font-weight: 400;">23 एवं 24 फरवरी 2013</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">2</span></td>
+<td><span style="font-weight: 400;">द्वितीय प्रांतीय सम्मेलन</span></td>
+<td><span style="font-weight: 400;">रायपुर</span></td>
+<td></td>
+<td><span style="font-weight: 400;">24 एवं 25 फरवरी 2014</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">3</span></td>
+<td><span style="font-weight: 400;">तृतीय प्रांतीय सम्मेलन</span></td>
+<td><span style="font-weight: 400;">बिलासपुर</span></td>
+<td></td>
+<td><span style="font-weight: 400;">20 एवं 21 फरवरी 2015</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">4</span></td>
+<td><span style="font-weight: 400;">चतुर्थ प्रांतीय सम्मेलन</span></td>
+<td><span style="font-weight: 400;">कोरबा</span></td>
+<td><span style="font-weight: 400;">स्व. डॉ. पालेश्वर प्रसाद शर्मा</span></td>
+<td><span style="font-weight: 400;">19 एवं 20 फरवरी 2016</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">5</span></td>
+<td><span style="font-weight: 400;">पंचम प्रांतीय सम्मेलन</span></td>
+<td><span style="font-weight: 400;">राजिम</span></td>
+<td><span style="font-weight: 400;">स्व. संत कवि पवन दीवान</span></td>
+<td><span style="font-weight: 400;">28 एवं 29 फरवरी 2017</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">6</span></td>
+<td><span style="font-weight: 400;">षष्ठम प्रांतीय सम्मेलन</span></td>
+<td><span style="font-weight: 400;">बेमेतरा</span></td>
+<td><span style="font-weight: 400;">स्व. डॉ. विमल कुमार पाठक</span></td>
+<td><span style="font-weight: 400;">19 से 21 जनवरी 2018</span></td>
+</tr>
+</tbody>
+</table>
+<p><b>राजभाषा आयोग के प्रमुख कदम</b></p>
+<ul>
+<li><span style="font-weight: 400;">   छत्तीसगढ़ी भाषा को लोकप्रिय बनाने के राज-काज के दिशा में इसके लिए कार्य किया गया।</span></li>
+<li><span style="font-weight: 400;">   &#8216;गुरतुर गोठ&#8217; नाम की छत्तीसगढ़ी वेब पत्रिका के संपादक संजीव ने छत्तीसगढ़ी में की-बोर्ड बनाने में गूगल को सहयोग दिया।</span></li>
+<li><span style="font-weight: 400;">   पंडित सुन्दरलाल शर्मा विश्वविद्यालय में छत्तीसगढ़ी भाषा में पी.जी. डिप्लोमा कोर्स प्रारंभ किया गया ।</span></li>
+<li><span style="font-weight: 400;">   कुशाभाऊ ठाकरे पत्रकारिता एवं जनसंचार वि.वि. में छत्तीसगढ़ी पाठ्यक्रम चालू करने की घोषणा।</span></li>
+<li><span style="font-weight: 400;">   राजभाषा अधिनियम धारा 7 में उच्च न्यायालय के फैसलों में हिन्दी या अन्य राजभाषाओं के वैकल्पिक उपयोग का प्रावधान है।</span></li>
+</ul>
+<h2><b>छत्तीसगढ़ राजभाषा आयोग से सम्बंधित महत्वपूर्ण प्रश्नोत्तर</b></h2>
+<ol>
+<li><span style="font-weight: 400;"> छत्तीसगढ़ी के लुप्त होते शब्दों को संग्रहीत करने के लिए छत्तीसगढ़ राजभाषा आयोग द्वारा कौन-सा कार्यक्रम चलाया</span> <span style="font-weight: 400;">गया है?</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(A) माई कोठी</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(B) बिजहा</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(C) कोठी</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(D) धान कोठी</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">उत्तर- (B)</span></li>
+</ol>
+<p style="text-align: center;"><b>  </b><b>[CGPSC(Pre.)2019]</b></p>
+<ol start="2">
+<li><span style="font-weight: 400;"> छत्तीसगढ़ राजभाषा दिवस की तिथि बतलाइए</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(A) 28 नवम्बर</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(B) 14 अगस्त</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(C) 21 फरवरी</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(D) 14 सितंबर</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"> उत्तर- (A)</span></li>
+</ol>
+<p style="text-align: center;"><b>[CG PSC(Pre)2018]</b></p>
+<ol start="3">
+<li><span style="font-weight: 400;"> छत्तीसगढ़ राजभाषा दिवस 28 नवंबर को ही क्यों मनाया</span> <span style="font-weight: 400;">जाता है?</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"> (A) इस दिनांक में अधिनियम प्रस्तुत हुआ</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(B) इस दिनांक को विधेयक पारित हुआ</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(C) इस दिनांक को राजपत्र में प्रकाशित हुआ</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(D) इस दिनांक को प्रथम अध्यक्ष ने पदभार ग्रहण किया</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">उत्तर- (B)</span></li>
+</ol>
+<p style="text-align: center;"><b>[CG Vyapam(FNDM)2019]</b></p>
+<ol start="4">
+<li><span style="font-weight: 400;"> &#8220;छत्तीसगढ़ी भाषा&#8221; को संविधान की किस अनुसूची में शामिल किए जाने की माँग राज्यसभा में की गयी ?</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(A) आठवीं</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(B) नवीं</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(C) दसवीं</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(D) ग्यारहवीं</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">उत्तर-(A)</span></li>
+</ol>
+<p style="text-align: center;"><b>[CG PSC (Pre.)2019]</b></p>
+<ol start="5">
+<li><span style="font-weight: 400;"> कथन-छ.ग. शासन ने राजभाषा आयोग गठित किया है।</span><span style="font-weight: 400;"><br />
+</span><b>कारण &#8211; </b><span style="font-weight: 400;">छत्तीसगढ़ी को सरकारी भाषा बनाना इसका उद्देश्य है।</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(A) कथन, कारण दोनों सही है व कारण, कथन की सही व्याख्या</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(B) कथन, कारण दोनों सही है पर कारण कथन की सही व्याख्या</span> <span style="font-weight: 400;">नहीं है।</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(C) कथन सही है, परन्तु कारण गलत है।</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">(D) कथन गलत है, परन्तु कारण सही है।<br />
+</span>उत्तर-<strong>(A)</strong></li>
+</ol>
+<p style="text-align: center;"><b>[CG PSC(CMO)2010]</b></p>
+<p><b> छ.ग. राज्य लोकसेवा आयोग मुख्य परीक्षा में</b> <b>पूछे गये प्रश्नों के मॉडल उत्तर</b></p>
+<p style="text-align: center;"><b>[CG PSC (Mains)2018]</b></p>
+<p><span style="font-weight: 400;"><strong>प्र.1.</strong> 19 से 21 जनवरी 2018 को बेमेतरा में आयोजित छत्तीसगढ़</span> <span style="font-weight: 400;">राजभाषा आयोग का षष्ठम प्रांतीय अधिवेशन (सम्मेलन)</span> <span style="font-weight: 400;">किस साहित्यकार को समर्पित था?<br />
+</span><span style="font-weight: 400;">उत्तर-<strong> स्व. डॉ. विमल कुमार पाठक</strong></span></p>
+<p style="text-align: center;"><b>[CG PSC(Mains)2017]</b></p>
+<p><span style="font-weight: 400;"><strong>प्र.2.</strong> छत्तीसगढ़ राजभाषा आयोग का कार्यालय स्थापना दिवस</span> <span style="font-weight: 400;">किस तारीख को मनाया जाता है? </span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">उत्तर &#8211; <strong>14 अगस्त</strong></span></p>
+<p><span style="font-weight: 400;"><strong>प्र.3:</strong> छत्तीसगढ़ राजभाषा आयोग का पाँचवाँ सम्मेलन सन् 2017</span> <span style="font-weight: 400;">में कहाँ हुआ था ?</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">उत्तर- <strong>राजिम में</strong></span></p>
+<p><span style="font-weight: 400;"><strong>प्र.4.</strong> छत्तीसगढ़ राजभाषा आयोग का <strong>&#8216;बिजहा</strong>&#8216; कार्यक्रम क्या है ?</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">उत्तर- <strong>बिजहा</strong> कार्यक्रम छत्तीसगढ़ राजभाषा आयोग द्वारा विलुप्त हो रहे</span> <span style="font-weight: 400;">छत्तीसगढ़ी शब्दों के संकलन हेतु आयोजित कार्यक्रम है।</span><span style="font-weight: 400;"> </span></p>
+<p style="text-align: center;"><b> [CG PSC(Mains)2016]</b></p>
+<p><span style="font-weight: 400;"><strong>प्र.5.</strong> छत्तीसगढ़ राजभाषा दिवस कब मनाया जाता है ?<br />
+</span><span style="font-weight: 400;">उत्तर- <strong>28 नवम्बर को</strong></span></p>
+<p><span style="font-weight: 400;"><strong>प्र.6.</strong> छत्तीसगढ़ राजभाषा आयोग के तीन अध्यक्षों का</span> <span style="font-weight: 400;">कालक्रमानुसार नामोल्लेख कीजिए। </span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">उत्तर-  </span></p>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">प्रथम अध्यक्ष &#8211; पं. श्यामलाल चतुर्वेदी</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"> </span><span style="font-weight: 400;">द्वतीय अध्यक्ष &#8211; श्री दानेश्वर शर्मा</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">तृतीय अध्यक्ष &#8211; विनय कुमार पाठक</span></li>
+</ol>
+<p><span style="font-weight: 400;"><strong> </strong><strong>प्र</strong>07 छत्तीसगढ़ राजभाषा आयोग द्वारा संचालित माई कोठी योजना क्या है ?</span><strong> (अंक 2)</strong></p>
+<p><span style="font-weight: 400;"><strong> उत्तर</strong>&#8211; छत्तीसगढ़ राजभाषा आयोग द्वारा संचालित माई कोठी योजना के</span> <span style="font-weight: 400;">तहत् लेखकों से उनकी छत्तीसगढ़ी में प्रकाशित रचनाओं की दो-दो प्रति खरीदी जाती है।</span></p>
+<p style="text-align: center;"><b>[CG PSC(Mains)2012]</b></p>
+<p><strong> </strong><span style="font-weight: 400;"><strong>प्र.8.</strong> छत्तीसगढ़ राजभाषा दिवस की तारीख क्या है?</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">उत्तर- <strong>28 नवम्बर</strong></span></p>
+<p>Q. Cg Rajbhasha Aayog ke Adhyaksh 2021?<br />
+<strong>Ans: Dr. Vinay Kumar Pathak Chhattisgarh</strong></p>                          
+            
+ 
+
+
+
+
+
+<br><br><br><br><br><br>
+
+
+
+
+
+      
+
+
+
+<style type="text/css">
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800;900&family=Caveat&display=swap";*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;scroll-behavior:smooth}html{line-height:1.15;-webkit-text-size-adjust:100%}:root{--color-1: #e69603;--color-2: #f7ed4a;--color-3: #fe0047;--color-4: #fff;--color-1-rgb: 59, 169, 177;--gradient-1: var(--color-3) 20%, var(--color-2) 90%;--gradient-2: #fc1795 50%, #e99e13 50%;--gradient-3: #f85d7f, #e100ff 36%, #6b81fa 68%, #a0fbcd;--font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;--font-primary: Poppins, var(--font-default);--border-1: 1px solid #333}body{background:#000;color:#bbb;font-family:var(--font-primary),var(--font-default);font-size:14.5px;line-height:2.3em;max-width:100%;overflow-wrap:break-word;-webkit-box-shadow:rgb(0 0 0/19%) 0 0 20px 0;box-shadow:rgb(0 0 0/19%) 0 0 20px 0}::-moz-selection{background-color:var(--color-1);color:#fff}::selection{background-color:var(--color-1);color:#fff}a{text-decoration:none;color:#fff}main,footer{max-width:80%;margin:auto}header{text-align:center}a.logo{display:block;color:var(--color-1);font-size:calc(1.4vw + 1.9em);font-weight:700;letter-spacing:1px;font-variant-caps:all-small-caps;line-height:2em}nav{padding:1em 0;margin:auto;font-size:calc(0.2vw + 13px);font-weight:500;letter-spacing:1px;white-space:nowrap;overflow-x:scroll;overflow-y:hidden;font-variant-caps:all-small-caps;-ms-overflow-style:none;scrollbar-width:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}nav::-webkit-scrollbar{display:none}nav a{display:inline-block;border:1px solid #444;padding:8px 20px;border-radius:50px;margin:0 2px;-webkit-transition:.3s cubic-bezier(.19,1,.22,1);-o-transition:.3s cubic-bezier(.19,1,.22,1);transition:.3s cubic-bezier(.19,1,.22,1)}nav a:hover{-webkit-transform:scale(1.05);-ms-transform:scale(1.05);transform:scale(1.05);border-color:var(--color-1)}.showcase{height:-webkit-max-content;height:-moz-max-content;height:max-content;background:url() no-repeat center fixed;background-size:cover;overflow:hidden;color:#fff;z-index:-1;text-align:center}.show{height:100%;background:-o-linear-gradient(bottom,#000000de,#000000d2);background:-webkit-gradient( linear,left bottom,left top,from(#000000de),to(#000000d2) );background:linear-gradient(0deg,#000000de,#000000d2)}.show-cnt{max-width:50%;margin:auto}.show-img{max-width:calc(5vw + 6em);margin:0 auto}.show ul{margin:1em 0}.show li{font-size:18px;list-style-type:none}.show p{font-size:17px;margin:10px 0;color:#fff;text-align:center;line-height:1.8em}.show li::before{content:"\25B6  "}.cnt p a::before,li a::before{content:"";position:absolute;height:1px;background:var(--color-1);width:0;bottom:0;-webkit-transition:width .3s cubic-bezier(.23,1,.32,1);-o-transition:width .3s cubic-bezier(.23,1,.32,1);transition:width .3s cubic-bezier(.23,1,.32,1)}.cnt p a:hover::before,li a:hover::before{width:100%}.cnt p a,li a{position:relative;color:var(--color-1);font-weight:700;border-bottom:1px dashed #8d8d8d}.cnt p a:hover,li a:hover{opacity:1;border-color:var(--color-1)}.cnt{padding:10px;background-color:#000}p{margin:26px 0;padding:0;color:#ccc;font-size:14.5px;line-height:2.5em}.bg-info{color:#bbb;font-size:13px;text-transform:uppercase;letter-spacing:2px;padding:20px 30px;border:var(--border-1);-webkit-box-shadow:rgb(0 0 0/50%) 0 0 13px 0;box-shadow:rgb(0 0 0/50%) 0 0 13px 0}h1,h2,h3,h4,h5,h6{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#ddd;font-weight:500;margin:.4em 0;line-height:1.5em;text-align:center}h3{font-size:calc(0.6vw + 1em)}h4:not(.faq){letter-spacing:2px;text-transform:uppercase;font-size:calc(0.5vw + 0.8em)}h1.title{padding:.4em 0;text-align:center;font-size:calc(0.8vw + 1.5em);overflow-wrap:break-word;color:#eee;font-weight:700;line-height:1.5em;margin:.5em 0}.toc{display:inline-block;border:var(--border-1);margin:1em 0;border-radius:10px;padding:10px 1em;-webkit-box-shadow:rgb(0 0 0/19%) 0 0 13px 0;box-shadow:rgb(0 0 0/19%) 0 0 13px 0}.toc li{margin:0 1em;list-style-type:square}.toc a{font-weight:500;color:var(--color-3);border-bottom:1px dashed #333}.toc a:hover{text-decoration:none;border-color:var(--color-3)}hr{margin:1em auto;width:30%;height:2px;border:none;background:-o-linear-gradient( left,#f85d7f,#e100ff 36%,#6b81fa 68%,#a0fbcd );background:-webkit-gradient( linear,left top,right top,from(#f85d7f),color-stop(36%,#e100ff),color-stop(68%,#6b81fa),to(#a0fbcd) );background:linear-gradient( 90deg,#f85d7f,#e100ff 36%,#6b81fa 68%,#a0fbcd )}.install-img{max-width:40%}.text-glow{display:block;background:-o-linear-gradient(60deg,var(--gradient-2));background:linear-gradient(30deg,var(--gradient-2));color:#fff;font-weight:700;margin:auto;padding:.5em 1em;border-radius:5px;font-size:calc(1vw + 2em);background-clip:text;-webkit-text-fill-color:transparent;-webkit-background-clip:text;font-variant-caps:titling-caps;text-shadow:var(--color-3) 0 5px 20px}.typewrite{margin:0}.typewrite .wrap{border-right:.1em solid #ffffff31}.dl-wrapper{display:-ms-grid;display:grid;place-items:center;margin:2em 0}.dl-wrapper p{margin:.2em 0}.downloading{font-weight:700;padding:0 1em;font-size:calc(0.5vw + 1.5rem);text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:#eee;border-radius:50px;animation:blink 1s infinite;-webkit-animation:blink 1s infinite}@-webkit-keyframes blink{0%{color:#777}50%{color:#333}100%{color:#777}}@keyframes blink{0%{color:#777}50%{color:#333}100%{color:#777}}.small-caps{font-variant-caps:small-caps}.fh-sm{font-weight:600;margin:1em auto;font-size:calc(0.3vw + 1em)}.fh{font-weight:700;margin:1em auto;font-size:calc(0.5vw + 1.3rem)}.fhcen{text-align:center;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;padding:0 .5em}.fh-1{display:block;background:-o-linear-gradient(60deg,var(--gradient-2));background:linear-gradient(30deg,var(--gradient-2));color:#fff;margin:1em auto;padding:0 1em;border-radius:5px;font-size:calc(1vw + 1.3em);line-height:2;background-clip:text;-webkit-text-fill-color:transparent;-webkit-background-clip:text}.fh-2{color:#eee;font-size:calc(0.5vw + 1.3rem);background:#111;display:inline-block;padding:5px 20px;-webkit-box-shadow:0 0 7px #00000040;box-shadow:0 0 7px #00000040;border:var(--border-1);border-left:5px dashed var(--color-1);letter-spacing:1px;font-variant-caps:all-small-caps;font-weight:500}.fh-3{display:block;position:relative;font-size:calc(1vw + 1.5em);font-weight:700;background-image:-o-linear-gradient(0deg,var(--gradient-2));background-image:-o-linear-gradient(bottom,var(--gradient-2));background-image:-webkit-gradient( linear,left bottom,left top,from(var(--gradient-2)) );background-image:linear-gradient(0deg,var(--gradient-2));padding:0 .5em;background-clip:text;-webkit-text-fill-color:transparent;-webkit-background-clip:text}footer p{font-size:11px;color:red;padding:.5em;margin:0;line-height:1.5em;font-weight:500}footer{color:#eee;background-color:#111;padding:10px 20px;font-size:.7em;line-height:4em;border-top:var(--border-1);text-align:center;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid var(--color-1)}.links a{padding:0 10px;display:inline-block}.center{text-align:center}.left{text-align:left}ul{margin:1em 0 1em 2.5em;list-style-type:"\279C   "}li{margin:6px 0}img{display:block;margin:1em auto;max-width:100%;border-radius:5px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-user-drag:none}.block-img{max-width:50%}table{margin:auto;width:100%;border-collapse:collapse}th{font-weight:700;background-color:#ffe60059}td,th{text-align:left;padding:6px 5px;vertical-align:top}tr:nth-child(odd){background-color:#e4e4e44d}a.btn{border:2px solid #fe0047;font-size:calc(0.2vw + 1em);border-radius:5px;font-weight:600;display:block;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:11px 20px;margin:1.5em auto;color:#fff;font-variant-caps:all-small-caps;letter-spacing:2px;-webkit-box-shadow:0 5px 10px 0 #00000052;box-shadow:0 5px 10px 0 #00000052;-webkit-transition:.2s ease-in-out;-o-transition:.2s ease-in-out;transition:.2s ease-in-out}a.btn:hover{-webkit-transform:translateY(-2px);-ms-transform:translateY(-2px);transform:translateY(-2px);color:var(--color-1);border-color:#fe0048a9;opacity:unset}a.download{font-size:22px;border:3px solid var(--color-1);border-radius:50px;padding:15px 20px;background:#000;-webkit-transition:.2s all;-o-transition:.2s all;transition:.2s all}a.download:hover{-webkit-transform:scale(1.03);-ms-transform:scale(1.03);transform:scale(1.03);border-color:#4e3f23;color:var(--color-1)}.faq-list{list-style-type:none;margin:auto;text-align:center;max-width:50%}.faq-box{opacity:.7;-webkit-transform:translateX(-5px);-ms-transform:translateX(-5px);transform:translateX(-5px);margin:1em 0;padding:0 5px;-webkit-transition:.2s ease-in-out;-o-transition:.2s ease-in-out;transition:.2s ease-in-out}.ans-box{max-height:0;overflow:hidden;-webkit-transition:max-height .5s ease-in-out;-o-transition:max-height .5s ease-in-out;transition:max-height .5s ease-in-out}.faq{cursor:pointer;position:relative;text-align:left;font-weight:700;font-size:calc(0.5vw + 0.9em);margin:0;border:var(--border-1);color:var(--color-1);font-weight:600;padding:10px;display:block;background:#222}.faq::after{content:"\279C ";position:absolute;right:10px;top:10px;-webkit-transition:.5s cubic-bezier(.23,1,.32,1);-o-transition:.5s cubic-bezier(.23,1,.32,1);transition:.5s cubic-bezier(.23,1,.32,1)}.ans{display:block;text-align:left;padding:1em;margin:0;border:var(--border-1);border-top:0;-webkit-box-shadow:0 2px 15px 0 #00000017;box-shadow:0 2px 15px 0 #00000017;-webkit-transition:.3s ease-in-out;-o-transition:.3s ease-in-out;transition:.3s ease-in-out}.ans::before{content:"\01F644  -  "}.faq.active::after{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.ans-box.active .ans{border-color:#fe0048a2}.ans-box.active{max-height:1200px}.share{text-align:center;overflow:hidden;max-width:50%;margin:0 auto;padding:1em 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.share a{list-style:none;-webkit-box-flex:1;-ms-flex:1;flex:1;font-size:17px;margin:1%;padding:7px 0;color:#fff;border-radius:20px;-webkit-transition:.4s;-o-transition:.4s;transition:.4s;border:none}.share a svg{fill:#fff;stroke:none;margin:0;vertical-align:middle;width:1em;height:1em}.whatsapp{background-color:#25d366}.facebook{background-color:#3b5998}.twitter{background-color:#55acee}.telegram{background-color:#08c}.email{background-color:#5a5a5a}.share a:hover{color:#fff;opacity:.9}.boxdiv{margin:4em 0;display:-ms-grid;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));-webkit-column-gap:1em;-moz-column-gap:1em;column-gap:1.5em;row-gap:2em}.box{background:0 0;border-bottom:2px solid #222;padding:1em;-webkit-transition:.2s ease-in-out;-o-transition:.2s ease-in-out;transition:.2s ease-in-out;-webkit-box-shadow:0 2px 15px 0 #00000017;box-shadow:0 2px 15px 0 #00000017;opacity:0;-webkit-transform:translateY(30px);-ms-transform:translateY(30px);transform:translateY(30px)}.box:hover{border-color:var(--color-1);-webkit-transform:scale(1.01) translateY(-5px);-ms-transform:scale(1.01) translateY(-5px);transform:scale(1.01) translateY(-5px)}.box p{margin:0}.boxtxt{display:block;background:-o-linear-gradient(60deg,var(--gradient-3));background:-o-linear-gradient(30deg,var(--gradient-3));background:linear-gradient(60deg,var(--gradient-3));color:#ccc;font-weight:500;margin:0;padding:10px 0;border-radius:5px;font-size:calc(0.5vw + 1em);text-align:left;letter-spacing:2px;text-transform:uppercase;background-clip:text;-webkit-text-fill-color:transparent;-webkit-background-clip:text}.box-icon svg{width:70px;height:70px;fill:#eee;-webkit-transition:.2s cubic-bezier(.68,-.55,.265,1.55);-o-transition:.2s cubic-bezier(.68,-.55,.265,1.55);transition:.2s cubic-bezier(.68,-.55,.265,1.55)}.ss{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:.5em 0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-ms-scroll-snap-type:x proximity;scroll-snap-type:x proximity;overflow-x:scroll}.ss img{max-width:16em;margin:0 1em;pointer-events:none;scroll-snap-align:center}#countdown{display:-webkit-box;display:-ms-flexbox;display:flex;border:4px solid #222;background:#000;border-radius:50%;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:inherit;margin:1em auto;text-align:center;width:100px;height:100px;font-size:40px;color:#fff;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#hidden-cnt{display:none}.cards{width:100%;display:-ms-grid;display:grid;grid-template-columns:repeat(auto-fit,minmax(50px,400px));grid-gap:2em 2em;place-content:center;place-items:center;margin:2em auto}.card{width:100%;height:calc(4vw + 150px);border-radius:2px;border:1px solid #4d4d4d;position:relative;-webkit-transition:all .25s ease;-o-transition:all .25s ease;transition:all .25s ease;cursor:pointer;overflow:hidden;opacity:0;-webkit-transform:translateY(10px);-ms-transform:translateY(10px);transform:translateY(10px)}.card-thumb{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-webkit-transition:all .25s ease;-o-transition:all .25s ease;transition:all .25s ease;margin:0}.card-desc{text-align:center;z-index:3}.card-title{position:absolute;-webkit-transform:translateY(50%);-ms-transform:translateY(50%);transform:translateY(50%);bottom:50%;left:0;right:0;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;padding:5px 1em;margin:0 auto;text-align:center;font-weight:500;font-size:calc(0.3vw + 1em);letter-spacing:2px;text-transform:uppercase;color:#ccc;-webkit-transition:.5s cubic-bezier(.165,.84,.44,1);-o-transition:.5s cubic-bezier(.165,.84,.44,1);transition:.5s cubic-bezier(.165,.84,.44,1);text-shadow:0 0 10px #000000fa;background:#00000077;z-index:2}.card:after{position:absolute;bottom:0;left:0;width:100%;height:100%;content:"";background:-webkit-gradient( linear,left top,left bottom,from(#00000050),to(#000000dc) );background:-o-linear-gradient(top,#00000050,#000000dc);background:linear-gradient(to bottom,#00000050,#000000dc);z-index:1}.card:hover .card-thumb{-webkit-transform:scale(1.07) rotateZ(2deg);-ms-transform:scale(1.07) rotate(2deg);transform:scale(1.07) rotateZ(2deg);-webkit-filter:blur(5px);filter:blur(5px)}.card:hover .card-title{background:#000000d7}.item-appear{-webkit-transform:none;-ms-transform:none;transform:none;opacity:1}@media screen and (max-width:700px){body,main,img,footer,.show-cnt,.install-img,.block-img,.share,.faq-list{max-width:100%;margin:auto}}</style>
+
+
 
     <!-- Javascript Files
     ================================================== -->

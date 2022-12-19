@@ -641,7 +641,7 @@
             </section>
             <!-- Trending Section End -->
 
- 
+
 
 
 
@@ -815,7 +815,80 @@
             <!-- Last Seasons Section End -->
 
 
+ <!-- Start WHATSAPP MESSAGE Section -->
+<br><br>
+       <div class="container register">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
+                    aria-labelledby="home-tab">
+                     <center><p class="mb-4">अगर आप किसी पीडीएफ फाइल या किसी कोर्स के बारे में जानना चाहते हैं 
+                        और वह कोर्स या पीडीऍफ़ हमारी वेबसाइट में नहीं है
+ तो आप हमें मैसेज कर सकते हैं। हम उस फाइल को जल्द से जल्द अपलोड करेंगे | (और यह मैसेज व्हाट्सएप के जरिए भेजा जाएगा)</p></center>
+                    <div class="row register-form">
+                        <div class="col-md-12">
+                            <form autocomplete="off">
+                                <div class="form-group">
+                                    <input type="text" name="Name" id="name" class="form-control"
+                                        placeholder="अपना नाम लिखें *" value="" required="" />
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" name="Message" id="message" class="form-control"
+                                        placeholder="कोर्स का नाम लिखें *" value="" required="" />
+                                </div>
 
+                               
+                                <div class="form-group">
+                                    <input type="button" name="Message send" class="btn hvr-sweep-to-right" onclick="gotowhatsapp()" value="Message send" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+function gotowhatsapp() {
+    
+    var name = document.getElementById("name").value;
+    var message = document.getElementById("message").value;
+    
+
+
+    var url = "https://wa.me/917587344337?text=" 
+    + "Name: " + name + "%0a"
+    + "Message: " + message;
+
+
+
+    window.open(url, '_blank').focus();
+}
+</script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function gotowhatsapp() {
+
+            var name = document.getElementById("name").value;
+            var message = document.getElementById("message").value;
+   
+
+
+            var url = "https://wa.me/917587344337?text="
+                + "Name: " + name + "%0a"
+                + "Message: " + message;
+  
+  
+
+            window.open(url, '_blank').focus();
+        }
+    </script>
+            
+    <!-- end WHATSAPP MESSAGE Section -->
 
 
 
@@ -826,7 +899,7 @@
          
 
 
-
+<br><br><br><br>
         <!-- Start Copyrights Section -->
         <div class="copyright">
             <div class="container-fluid">

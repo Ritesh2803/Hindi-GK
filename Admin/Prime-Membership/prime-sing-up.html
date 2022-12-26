@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page -->
+    <meta charset="UTF-8">
+    <title>hindi knowledge</title>
+    <!-- Mobile Specific -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Favicon -->
+    <link href="Photos/HINDI_knowledge_SORT_LOGO-removebg.png" rel="shortcut icon" type="image/x-icon">
+    <link href="Photos/HINDI_knowledge_SORT_LOGO-removebg.png" rel="icon" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome Styles -->
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <!-- Iconfonts Styles -->
+    <link href="css/icofont.css" rel="stylesheet">
+    <!-- Owl Carousel Styles -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Slick Slider Styles -->
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <!-- Swiper Slider Styles -->
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <!-- Animate Styles -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Hover Styles -->
+    <link href="css/hover-min.css" rel="stylesheet">
+    <!-- Magnific Styles -->
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <!-- Bootstrap Datepicker Styles -->
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- Main Styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Responsive Styles -->
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+
+<script type = "text/javascript">
+
+// Note: Like all Javascript password scripts, this is hopelessly insecure as the user can see 
+//the valid usernames/passwords and the redirect url simply with View Source.  
+// And the user can obtain another three tries simply by refreshing the page.  
+//So do not use for anything serious!
+
+var count = 2;
+function validate() {
+var un = document.myform.username.value;
+var pw = document.myform.pword.value;
+var valid = false;
+
+var unArray = ["RITESH", "SHAH", "BABU"];  // as many as you like - no comma after final entry
+var pwArray = ["12345", "*****", "00000"];  // the corresponding passwords;
+
+for (var i=0; i <unArray.length; i++) {
+if ((un == unArray[i]) && (pw == pwArray[i])) {
+valid = true;
+break;
+}
+}
+
+if (valid) {
+
+window.location = "admin-main-page.html";
+return false;
+}
+
+var t = " tries";
+if (count == 1) {t = " try"}
+
+if (count >= 1) {
+alert ("Invalid username and/or password.  You have " + count + t + " left.");
+document.myform.username.value = "";
+document.myform.pword.value = "";
+setTimeout("document.myform.username.focus()", 25);
+setTimeout("document.myform.username.select()", 25);
+count --;
+}
+
+else {
+alert ("Still incorrect! You have no more tries left!");
+document.myform.username.value = "No more tries allowed!";
+document.myform.pword.value = "";
+document.myform.username.disabled = true;
+document.myform.pword.disabled = true;
+return false;
+}
+
+}
+
+</script>
+
+
+
+
+<!-- Ritesh shah start -->
+
+<head>
+    <title>The Live Show -login</title>
+    <meta charset="utf-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Favicon -->
+    <link href="Photos/lOGO.png" rel="shortcut icon" type="image/x-icon">
+    <link href="Photos/lOGO.png" rel="icon" type="image/x-icon">
+
+</head>
+
+
+<!-- Start SignUp Section -->
+            <section class="signup">
+                <div class="container">
+                    <div class="row text-center intro">
+                        <div class="col-12">
+                            <h2>Create an Account</h2>
+                            <p class="text-max-800">Fill the form to become a Prime member</p>
+                        </div>
+                        <!-- Col End -->
+                    </div>
+                    <!-- Row End -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Start Form -->
+
+                            <form method="post" name="google-sheet">
+                                <div class="error-container"></div>
+                               
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>First Name</label>
+                                            <input class="form-control form-control-name" name="First Name" id="first-name" placeholder="" type="text" required="required">
+                                        </div>
+                                    </div>
+                                    <!-- Col End -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Last Name</label>
+                                            <input class="form-control form-control-name" name="Last Name" id="last-name" placeholder="" type="text" >
+                                        </div>
+                                    </div>
+                                    <!-- Col End -->
+                                </div>
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Gender</label>
+                                    <select class="form-control" name="Gender" aria-label="" id="Gender" required="required">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Female">Other</option>
+                                    </select>
+                                        </div>
+                                    </div>
+                                    <!-- Col End -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Age</label>
+                                            <input type="number" class="form-control" name="Age" required="required">
+                                        </div>
+                                    </div>
+                                    <!-- Col End -->
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Gmail</label>
+                                            <input type="gmale" class="form-control" name="gmail" id="gmail" required="required">
+                                        </div>
+                                    </div>
+                                    <!-- Col End -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Mobile Number</label>
+                                            <input type="Number" class="form-control" name="Mobile Number" id="Mobile Number" required="required">
+                                        </div>
+                                    </div>
+                                    <!-- Col End -->
+                                </div>
+                                <div class="form-group">
+                                    <label>Select Plan</label>
+                                    <select class="form-control" name="select-plan" aria-label="Default select example" id="select-plan">
+                                        <option value="STANDARD - Free">STANDARD - Free</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-inline mb-3" style="width:100%;"><input type="checkbox" required="required"> I accept the <a href="terms.html">Terms of Use</a> &amp; <a href="privacy.html">Privacy Policy</a>.</label>
+                                    <button class="btn hvr-sweep-to-right" type="submit">Sign Up</button>
+                                </div>
+                            </form>
+                            <!-- Form End -->
+                            <div class="text-center">क्या आपके पास पहले से एक खाता मौजूद है? <a href="prime-login.html">यहां लॉगिन करें</a></div>
+                        </div>
+                        <!-- Col End -->
+                    </div>
+                    <!-- Row End -->
+                </div>
+                <!-- Container End -->
+            </section>
+            <!-- SignUp Section End -->
+
+ <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyxd0PM6owlv6b3vbvIUcJ3vKFqyqoTJ4ivCqXdjvpwraDpk0bym09Rtco0oHO0gQtT/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("हमें आपका Request प्राप्त हो गया है | हमारे द्वारा इस Request को स्वीकार करने के बाद ही आप Prime Member बन पाएंगे और हमारी टीम आपके Request को जल्द से जल्द स्वीकार करेगी । आप लॉगिन Section में अपना Username और Password दर्ज करके देख सकते हैं कि आप prime member बनें है या नहीं। धन्यवाद "))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    <!-- end googel sheet MESSAGE Section -->
+
+
+
+
+
+
+

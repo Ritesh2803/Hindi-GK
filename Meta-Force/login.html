@@ -93,8 +93,8 @@ count --;
 }
 
 else {
-alert ("बार-बार LOGIN करने की कोशिश न करें यदि आपने सही मोबाइल नंबर दर्ज किया है और अपना खाता बनाया है तो APPROVAL मिलने  की प्रतीक्षा करें");
-document.myform.username.value = "आपने 3 बार गलत प्रयास किया है, इसलिए कुछ समय बाद आकर प्रयास करें।";
+alert ("आपने 3 बार गलत प्रयास किया है, इसलिए कुछ समय बाद आकर प्रयास करें। बार-बार LOGIN करने की कोशिश न करें यदि आपने सही मोबाइल नंबर दर्ज किया है और अपना खाता बनाया है तो APPROVAL मिलने  की प्रतीक्षा करें");
+document.myform.username.value = "";
 document.myform.pword.value = "";
 document.myform.username.disabled = true;
 document.myform.pword.disabled = true;
@@ -149,7 +149,7 @@ return false;
             -->
 
             <form name = "myform" >
-<p ><input type="text" placeholder="अपना मोबाइल नंबर दर्ज करें" class="form-control" name="username" id="username"><br><input placeholder="दोबारा अपना मोबाइल नंबर दर्ज करें" class="form-control" type="password" name="pword" id="password">
+<p ><input type="number" placeholder="अपना मोबाइल नंबर दर्ज करें" class="form-control" name="username" id="username"><br><input placeholder="दोबारा अपना मोबाइल नंबर दर्ज करें" class="form-control" type="number" name="pword" id="password">
 
 <p class="form-row d-flex flex-wrap justify-content-between">
                                                 <label class="woocommerce-form__label d-flex woocommerce-form__label-for-checkbox inline">

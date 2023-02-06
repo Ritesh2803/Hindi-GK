@@ -112,7 +112,7 @@ body {
                         <div class="pricing-featur">
                             <ul>
                                 <li><span><i class="fas fa-check"></i></span>
-                                मेटाफोर्स के दस्तावेज</li>
+                                भुगतान के बाद ही डॉक्यूमेंटेशन बनेगा</li>
                                 <li><span><i class="fas fa-check"></i></span> 
                                 आपके विवरण के अनुसार </li>
                                 <li><span><i class="fas fa-check"></i></span>
@@ -122,7 +122,7 @@ body {
 
 
 
-                                <li class=""><span class="price-icon-text"><i class=""></i></span>  No return policy after payment</li> 
+                                <li class=""><span class="price-icon-text"><i class=""></i></span> No return policy after payment</li> 
                             </ul>
                         </div>
                         <div class="pricing-button">
@@ -139,7 +139,7 @@ body {
                 <div class="container">
                     <div class="row text-center intro">
                         <div class="col-12">
-                            <h6>दस्तावेज़ बनाने के लिए अपना विवरण दर्ज करें</h6><br><br>
+                            <h6>दस्तावेज़ बनवाने के लिए अपना विवरण दर्ज करें</h6><br><br>
                             
                         </div>
                         <!-- Col End -->
@@ -149,14 +149,16 @@ body {
                         <div class="col-lg-12">
                             <!-- Start Form -->
 
+                            <img src="assets/All-Website-pic/tran-ss.jpg" alt="Logo" width="100%" height="">
+
                             <form method="post" name="google-sheet">
                                 <div class="error-container"></div>
                                
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <br><label>जिले का नाम</label>
-                                            <input class="form-control form-control-name" name="Name of district" id="Name of district" placeholder="" type="text" required="required">
+                                            <br><label>जब आपने 249 रुपये का भुगतान किया, तो आपको एक transaction ID मिला होगा, निचे transaction ID दर्ज करें।</label>
+                                            <input type="gmale" class="form-control" name="transaction number" id="Transaction Number" required="required">
                                         </div>
                                     </div>
                                     <!-- Col End -->
@@ -181,7 +183,7 @@ body {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                            <br> <label>मोबाइल नंबर</label>
-                                            <input type="text" class="form-control" name="mobile number" id="mobile number" required="required">
+                                            <input type="number" class="form-control" name="mobile number" id="mobile number" required="required">
                                         </div>
                                     </div>
                                     <!-- Col End -->
@@ -211,10 +213,12 @@ body {
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
+                                        <div class="col-md-6">
                                         <div class="form-group">
-                                            <br><label>Transaction Number</label>
-                                            <input type="gmale" class="form-control" name="transaction number" id="Transaction Number" required="required">
+                                            <br><label>जिले का नाम</label>
+                                            <input class="form-control form-control-name" name="Name of district" id="Name of district" placeholder="" type="text" required="required">
                                         </div>
+                                    </div>
                                     </div>
                                     <!-- Col End -->
                                     <div class="col-md-6">
@@ -229,14 +233,14 @@ body {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <br><label>मेटा फोर्स से जुड़ने का दिनांक</label>
-                                            <input type="gmale" class="form-control" name="date of joining meta force" id="date of joining meta force" required="required">
+                                            <input type="date" class="form-control" name="date of joining meta force" id="date of joining meta force" required="required">
                                         </div>
                                     </div>
                                     <!-- Col End -->
                                     <div class="col-md-6">
                                         <div class="form-group">
                                            <br> <label>आपने मेटा फ़ोर्स में कितना पैसा निवेश किया था?</label>
-                                            <input type="text" class="form-control" name="invest amount" id="invest amount" required="required">
+                                            <input type="number" class="form-control" name="invest amount" id="invest amount" required="required">
                                         </div>
                                     </div>
                                     <!-- Col End -->
@@ -247,14 +251,14 @@ body {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                            <br> <label>आपने मेटा फ़ोर्स से कितनी राशि अब तक निकाली है?</label>
-                                            <input type="gmale" class="form-control" name="withdrawal amount" id="withdrawal amount" required="required">
+                                            <input type="number" class="form-control" name="withdrawal amount" id="withdrawal amount" required="required">
                                         </div>
                                     </div>
                                     <!-- Col End -->
                                     <div class="col-md-6">
                                         <div class="form-group">
                                           <br>  <label>आपके मेटा फ़ोर्स वॉलेट में कितना पैसा बचा है?</label>
-                                            <input type="text" class="form-control" name="wallet amount" id="wallet amount" required="required">
+                                            <input type="number" class="form-control" name="wallet amount" id="wallet amount" required="required">
                                         </div>
                                     </div>
                                     <!-- Col End -->
@@ -265,7 +269,7 @@ body {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                         <br>    <label>आधार कार्ड नंबर</label>
-                                            <input type="gmale" class="form-control" name="aadhar number" id="aadhar number" required="required">
+                                            <input type="number" class="form-control" name="aadhar number" id="aadhar number" required="required">
                                         </div>
                                     </div>
                                     <!-- Col End -->
@@ -318,7 +322,7 @@ body {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                         <br>    <label>आप मेटा फ़ोर्स में किसके द्वारा जुड़े थे?(उस व्यक्ति का नाम)</label>
-                                            <input type="gmale" class="form-control" name="referral person" id="referral person" required="required">
+                                            <input type="text" class="form-control" name="referral person" id="referral person" required="required">
                                         </div>
                                     </div>
                                     <!-- Col End -->
@@ -326,18 +330,21 @@ body {
 
 
                                 <div class="form-group">
-                                 <br>   <label>Select Plan</label>
+                                 <br>   <label>आपने कितने रूपये भुगतान किया है?</label>
                                     <select class="form-control" name="select-plan" aria-label="Default select example" id="select-plan">
                                         <option value="STANDARD - Free">249.00</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                <br>    <label class="checkbox-inline mb-3" style="width:100%;"><input type="checkbox" required="required"> I accept the <a href="terms.html">Terms of Use</a> &amp; <a href="privacy.html">Privacy Policy</a>.</label>
-                                    <button class="btn hvr-sweep-to-right" type="submit">Sign Up</button>
+                                <br><label class="checkbox-inline mb-3" style="width:100%;"><input type="checkbox" required="required"> I accept the <a href="terms.html">Terms of Use</a> &amp; <a href="privacy.html">Privacy Policy</a>.</label>
+                                    <button class="btn btn-outline-danger" type="submit">SUBMIT NOW</button>
                                 </div>
+
+
+
                             </form>
                             <!-- Form End -->
-                            <div class="text-center">क्या आपके पास पहले से एक खाता मौजूद है? <a href="prime-login.html">यहां लॉगिन करें</a></div>
+                            
                         </div>
                         <!-- Col End -->
                     </div>
@@ -385,163 +392,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row process-bg">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-process-box wow fadeInLeft" data-wow-delay=".4s">
-                            <div class="single-process-thumb">
-            <img src="assets/All-Website-pic/creat-ac.svg" alt="Logo" width="90%" height="">
-                                <div class="process-number">
-                                    <span>01</span>
-                                </div>
-                            </div>
-                            <div class="single-process-content">
-                                <div class="process-title">
-                                    <h4>पहले अपना अकाउंट बनाएं </h4>👇👇<br>
- <img src="assets/All-Website-pic/sign-up-button.png" alt="Logo" width="30%" height="">
-
-                                </div>
-                                <div class="process-text">
-                                    <p>अगर आपने अपना अकाउंट पहले ही बना लिया है तो स्टेप नंबर 2 में लॉगिन करें</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-process-box wow fadeInLeft" data-wow-delay=".5s">
-                            <div class="single-process-thumb">
-<img src="assets/All-Website-pic/login-security.webp" alt="Logo" width="90%" height="">
-                                <div class="process-number">
-                                    <span>02</span>
-                                </div>
-                            </div>
-                            <div class="single-process-content">
-                                <div class="process-title">
-                                    <h4>लॉग इन करें</h4>👇👇<br>
-        <img src="assets/All-Website-pic/Login-button.png" alt="Logo" width="30%" height="">
-                                </div>
-                                <div class="process-text">
-                                    <p>आपको अपना मोबाइल नंबर डालकर लॉगिन करना है</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-process-box wow fadeInLeft" data-wow-delay=".6s">
-                            <div class="single-process-thumb">
-<img src="assets/All-Website-pic/aproove.png" alt="Logo" width="70%" height="">
-                                <div class="process-number">
-                                    <span>03</span>
-                                </div>
-                            </div>
-                            <div class="single-process-content">
-                                <div class="process-title">
-                                    <h4>अप्रूवल</h4>
-                                </div>
-                                <div class="process-text">
-                                    <p>अगर आप लॉगिन नहीं कर पा रहे हैं तो आपको अप्रूवल नहीं मिला है |
-अगर आपने सिंगअप कर रखा है तो 24 घंटे इंतजार करें आपको अप्रूवल मिल जाएगा | 
-
-(इस प्रक्रिया में समय लगता है क्योंकि हम आपके मोबाइल नंबर की जांच करते हैं और फिर उसे मंजूरी देते हैं।)
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-process-box wow fadeInLeft" data-wow-delay=".6s">
-                            <div class="single-process-thumb">
-<img src="assets/All-Website-pic/round-scam-stamp-png.png" alt="Logo" width="90%" height="">
-                                <div class="process-number">
-                                    <span>04</span>
-                                </div>
-                            </div>
-                            <div class="single-process-content">
-                                <div class="process-title">
-                                    <h4>लॉगिन होने के बाद शिकायत दर्ज करें</h4>
-                                </div>
-                                <div class="process-text">
-                                    <p> अगर आपको लगता है कि कंपनी ने आपके साथ धोखा किया है तो शिकायत दर्ज करें |</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--==================================================-->
-<!-- End Cryptobit process Area -->
-<!--==================================================-->
-
-
- 
-<!--==================================================-->
-<!-- Start cryptobit about Area -->
-<!--==================================================-->
-<div class="about-area pt-90 pb-90" id="about">
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                 <div class="dreamit-section-title upper1 pb-5 wow fadeInLeft" data-wow-delay=".5s">
-                    
-                    <h1 class="section-title">META-FORCE कंपनी के बारे में कुछ बातें </h1>
-                  
-                    <p class="section-text1">(हम इन सारी बातों की पुष्टि नहीं करते हैं | ये बातें काल्पनिक भी हो सकती हैं ) <br> इस कम्पनी से जोड़ने के लिए कुछ लोग एजेंट बन कर लोगो को कुछ बातें बता रहे हैं जैसे की 👇👇 </p>
-                    <div class="about-check-text">
-
-
-                        <p><span><i class="fas fa-angle-double-right"></i></span> Meta force business यह एक ऐसी website है जिससे हम money earn कर सकते है यह एक ऐसा प्लान है जो लाइफ change opportunity हैं यदि आप इसमें मेहनत करके अपना 50% भी देगे तो यकीन मानिए आप 6 महीने के अदरं करोड़ पति बन सकते है |</p>
-
-                        <p><span><i class="fas fa-angle-double-right"></i></span>यह Website Mr. Lado ne अप्रलै 2022 में लॉन्च की थी जो की रूस के रहने वाले हैं Meta Force घर बठै पैसे कमाने का एक अच्छा विकल्प हो सकता है अब तक 5 lakh व्यक्ति Join कर चुके है। </p>
-                        <p><span><i class="fas fa-angle-double-right"></i></span>यह भारत की वेबसाइट नहीं है इसमें आपको सोच समझ के ही invest करना चाहिए यह एक तरीके से member जोड़ने का काम है जैसे जैसे person जड़ुते जाते है वैसे वैसे आपकी income बड़ती जाती है | Meta force के बारे मे जानकारी आपको हर जगह से मिल जाती है जैसे you tube,Twitter, Google etc. कुछ लोग होते है कि आपको अपनी जानकारी से गुमराह कर देते है। वो आपको इधर उधर की बाते बता कर आपका brain wash कर देते है जिस से आप confuse हो जाते हो कि आपको करना क्या है इसलिए आपको अपना काम अपनी समझ से ही करना चाहिए </p>
-
-
-
-
-<br><br><h1 class="section-title">Meta force के लिए उठने वाले सवाल ? </h1><br>
-
-
-
-<hr><p><span><i class="fas fa-question"></i></span>क्या मेटा फोर्स भारत में Legal है? </p>
-<p><span><i class="fas fa-angle-double-right"></i></span>नही, यह MCA के अतंर्गत registerd नहीं है तो भारत के लोगो को इस पर यकीन नही करना चाहिए यह भारत में लीगल नही है। <hr> </p>
-
-<p><span><i class="fas fa-question"></i></span>वास्तव में meta force kya है?  </p>
-<p><span><i class="fas fa-angle-double-right"></i></span>Meta force यह एक ऐसी स्कीम है जिसमे लोगों का पैसा  ही लोगो को मिलता रहता है मतलब की पैसा नेटवर्क में ही घूमता रहता है। <hr> </p>
-
-<p><span><i class="fas fa-question"></i></span>Meta force के founder कोन है? </p>
-<p><span><i class="fas fa-angle-double-right"></i></span>Meta force के founder Mr. Lado है जो कि रूस के रहने वाले है। <hr> </p>
-
-<p><span><i class="fas fa-question"></i></span>क्या Meta force के साथ जड़ुना चाहिए? </p>
-<p><span><i class="fas fa-angle-double-right"></i></span>ये आप पर depend करता है की आपको इसमें जड़ुना है या नही वैसे इसमें invest करना कोई समझदारी का काम नही है तो आप इसमें invest ना ही करो तो ही अच्छा है। <hr> </p>
-
-
-<center><h5 class="section-title">| Mr. Sonu Sharma | fraud & Scam </h5></center><br>
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/w3_htsn4v1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--==================================================-->
-<!-- End cryptobit about Area -->
-<!--==================================================-->
 
 
 

@@ -126,7 +126,7 @@ function autoResize(iframe) {
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("हमें आपका Request प्राप्त हो गया है | हमारे द्वारा इस Request को स्वीकार करने के बाद ही आप Prime Member बन पाएंगे और हमारी टीम आपके Request को जल्द से जल्द स्वीकार करेगी । आप लॉगिन Section में अपना Username और Password दर्ज करके देख सकते हैं कि आप prime member बनें है या नहीं। धन्यवाद "))
+                
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

@@ -82,7 +82,7 @@
                             
                              <form method="post" name="google-sheet" >
 <div class="form-group">
-<input type="number" name="transaction number" class="form-control" placeholder="यंहा आपका आवेदन नंबर डालें *" value="" required=""/>
+<input type="number" name="application Number" class="form-control" placeholder="यंहा आपका आवेदन नंबर डालें *" value="" required=""/>
 </div><br>
 
 <h5>फॉर्म में जो भी गलती है उसे लिखें</h5><br>
@@ -116,13 +116,13 @@
     </div>
 
     <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzhhl_lx_AM8Vv0tU8ZnQ3q1sRJt8kqWIquZf_AuvzuU6NIPPFkzCfcULxKXaPt2glqHg/exec'
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyWL05vnlzlIRjPFNRMheGOn2ZtR6DMf__YnYJFKyidM7f5KaTPGUh0JAJzd0yjxMgI/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("हमें आपकी जानकारी मिल गई है, हमारी टीम जल्द से जल्द इस पर काम करेगी । हम आपके पीडीएफ को 24 घंटे के भीतर आपके व्हाट्सएप नंबर पर भेज देंगे |  धन्यवाद "))
+                .then(response => alert("हमें आपकी जानकारी मिल गई है, हमारी टीम जल्द से जल्द आपके आवेदन में सुधार करेगी । हम आपके पीडीएफ को 24 घंटे के भीतर आपके व्हाट्सएप नंबर पर भेज देंगे |  धन्यवाद "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

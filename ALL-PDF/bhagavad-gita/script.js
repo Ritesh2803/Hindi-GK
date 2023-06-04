@@ -1,4 +1,4 @@
-var url = './bhagwat-geeta.pdf';
+var url = 'https://ia902804.us.archive.org/18/items/sherlockholmeskilokpriyakahaniyanhindi/Sherlock%20Holmes%20Ki%20Lokpriya%20Kahaniyan%20%20%28Hindi%29.pdf';
 
 var pdfjsLib = window['pdfjs-dist/build/pdf'];
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.2/pdf.worker.js';

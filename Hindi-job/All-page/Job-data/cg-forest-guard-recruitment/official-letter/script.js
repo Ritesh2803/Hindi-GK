@@ -1,4 +1,4 @@
-var url = 'http://forest.cg.gov.in/cms/media/655b8589-27bd-4a01-97ca-75b4ec1653c9_recruitment_FG_4987.pdf';
+var url = 'pdf.pdf';
 
 var pdfjsLib = window['pdfjs-dist/build/pdf'];
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.2/pdf.worker.js';

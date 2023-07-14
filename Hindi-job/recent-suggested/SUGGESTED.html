@@ -330,7 +330,7 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("हमें मैसेज मिल गया है, हमारी टीम जल्द से जल्द इस पर काम करेगी । हम इसे 24 घंटों के अंदर अपडेट कर देंगे |  धन्यवाद "))
+                .then(response => alert("हमें मैसेज मिल गया है, हमारी टीम जल्द से जल्द इस पर काम करेगी । हम आपके संदेश का जल्द से जल्द जवाब देंगे, कृपया कुछ समय इंतज़ार करें  | धन्यवाद "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

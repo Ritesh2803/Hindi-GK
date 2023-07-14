@@ -87,16 +87,7 @@
                                     <ul class="nav navbar-nav">
                 
 
-<li class="nav-item"><a class="nav-link" href="Pages/हिंदी_सामान्य_ज्ञान/01.html">हिंदी </a></li>
-
-<li class="nav-item"><a class="nav-link" href="Pages/कंप्यूटर/01.html">कंप्यूटर</a></li>
-
-<li class="nav-item"><a class="nav-link" href="Pages/विज्ञान/01.html">विज्ञान</a></li>
-
-<li class="nav-item"><a class="nav-link" href="Pages/इतिहास/01.html">इतिहास</a></li>
-
-<li class="nav-item"><a class="nav-link active" href="Pages/साॉल्वड-पेपर्स/01.html">साॉल्वड पेपर्स </a></li>
-                                       
+                       
 
                                      
                                  
@@ -105,12 +96,10 @@
                                             <ul class="dropdown-menu fade-up" role="menu">
                                                 
                                                 <li>
-                                                    <a class="dropdown-item" href="Pages/छत्तीसगढ़/01.html">छत्तीसगढ</a>
+                                                    <a class="dropdown-item" href="index.html">छत्तीसगढ</a>
                                                 </li>
                                                 <!-- Sub Nav Item 2 End -->
-                                                <li>
-                                                    <a class="dropdown-item" href="Pages/मध्य-प्रदेश/01.html">मध्य प्रदेश</a>
-                                                </li>
+                                                
                                                 <!-- Sub Nav Item 4 End -->
                                                 
                                                 <!-- Sub Nav Item 5 End -->
@@ -217,7 +206,7 @@
                                     </div>
                                     <p data-animation-in="fadeInUp" data-delay-in="1">कंप्यूटर (अंग्रेजी: Computer) (अन्य हिन्दी नाम - अभिकलित्र, संगणक, अभिकलक, परिकलक) वस्तुतः एक अभिकलक यंत्र (programmable machine) है जो दिये गये गणितीय तथा तार्किक संक्रियाओं को क्रम से स्वचालित रूप से करने में सक्षम है।</p>
                                     <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <a class="btn hvr-sweep-to-right" href="Pages/कंप्यूटर/01.html" tabindex="0"><i aria-hidden="true" class="fa fa-book mr-2"></i>Read Now</a>
+                                        <a class="btn hvr-sweep-to-right" href="All-page/computer/Page-01.html" tabindex="0"><i aria-hidden="true" class="fa fa-book mr-2"></i>Read Now</a>
                                     </div>
                                 </div>
                                 <!-- Col End -->
@@ -241,7 +230,7 @@
                                     </div>
                                     <p data-animation-in="fadeInUp" data-delay-in="1">छत्तीसगढ़ भारत का एक राज्य है। इसका गठन 1 नवम्बर 2000 को हुआ था और यह भारत का 26वां राज्य है। पहले यह मध्य प्रदेश के अन्तर्गत था। डॉ॰ हीरालाल के मतानुसार छत्तीसगढ़ 'चेदीशगढ़' का अपभ्रंश हो सकता है।</p>
                                     <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">
-                                        <a class="btn hvr-sweep-to-right" href="Pages/छत्तीसगढ़/01.html" tabindex="0"><i aria-hidden="true" class="fa fa-book mr-2"></i> Read Now</a>
+                                        <a class="btn hvr-sweep-to-right" href="All-page/chhattisgarh/Page-01.html" tabindex="0"><i aria-hidden="true" class="fa fa-book mr-2"></i> Read Now</a>
                                     </div>
                                 </div>
                                 <!-- Col End -->
@@ -257,6 +246,8 @@
             <!-- Slide Wrap End -->
         </div>
         <!-- Main Slider End -->
+
+
 
 
 <!-- Start Trending Section -->
@@ -1124,7 +1115,7 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("हमें मैसेज मिल गया है, हमारी टीम जल्द से जल्द इस पर काम करेगी । हम इसे 24 घंटों के अंदर अपडेट कर देंगे |  धन्यवाद "))
+                .then(response => alert("हमें मैसेज मिल गया है, हमारी टीम जल्द से जल्द इस पर काम करेगी । हम आपके संदेश का जल्द से जल्द जवाब देंगे, कृपया कुछ समय इंतज़ार करें  | धन्यवाद "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
@@ -1342,7 +1333,271 @@ function myFunction() {
         <a class="closebtn" href="javascript:void(0)" onclick="closeNav()"><i class="fas fa-times"></i></a>
         <div class="filter-accordion" id="accordion">
 
+<!-- Start subject @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+             <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0"><button aria-controls="gk" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#gk" data-toggle="collapse">सामान्य ज्ञान<span class="icofont-circled-down"></span></button></h2>
+                </div>
+                <!-- Card Header End -->
+                <div aria-labelledby="headingOne" class="collapse" data-parent="#accordion" id="gk">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="All-page/Hindi-samanygyan/Page-01.html"><strong>हिंदी</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="All-page/english-samanygyan/english.html"><strong>अंग्रेज़ी</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>छत्तीसगढ़ी</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>करंट अफेयर्स</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                       
+                       <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>सामान्य विज्ञान</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>इतिहास</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                       
+                                   <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>भारत की राजनीति और भूगोल</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>भारत का सामाजिक और आर्थिक भूगोल</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
 
+                                    <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>साहित्य और संस्कृति</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>अंक शास्त्र</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+
+                                    <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>पर्यावरण</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>भारतीय दर्शन</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+
+                              
+
+                      <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>कला</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>भौतिक</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                       
+                                   <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>भूगोल</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>भारतीय अर्थव्यवस्था</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+
+                                    <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>छत्तीसगढ़ के करंट अफेयर्स</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>तीज एंड फ़ेस्टिवल्स ऑफ़ छत्तीसगढ़</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+
+                                    <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>विशेष परंपराएं</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>जनजाति</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+
+                                    <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>जलवायु</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>शारीरिक स्थिति</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+<div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>स्वतंत्रता आंदोलन में छत्तीसगढ़ का योगदान</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>छत्तीसगढ़ के पुरातत्व और पर्यटन केंद्र</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+<div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>प्रशासनिक संरचना</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>ऊर्जा</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>छत्तीसगढ़ का इतिहास</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>जनगणना</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>साहित्य</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>संगीत</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>नृत्य</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>मुहावरे</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>पहेली</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>छत्तीसगढ़ का गायन</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>अर्थव्यवस्था</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>जंगल</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>छत्तीसगढ़ की कृषि</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>छत्तीसगढ़ में उद्योग</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>स्थानीय सरकार और छत्तीसगढ़ के पंचायती राज</strong></a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#"><strong>छत्तीसगढ़ के जल और खनिज संसाधन</strong></a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End --> 
+
+                       
+
+                       
+                    </div>
+                    <!-- Card Body End -->
+                </div>
+                <!-- Type Collapse End -->
+            </div>
+            <!-- Card End -->
+     
+            
+                
+<!-- end subject @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+<!-- Start subject @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
              <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0"><button aria-controls="type" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#type" data-toggle="collapse">सामान्य ज्ञान<span class="icofont-circled-down"></span></button></h2>
@@ -1352,22 +1607,22 @@ function myFunction() {
                     <div class="card-body">
                         <div class="row">
                             <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">hindi</a>
+                                <a class="btn d-block" href="#"><strong>हिंदी</strong></a>
                             </div>
                             <!-- Col End -->
                             <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">english</a>
+                                <a class="btn d-block" href="#"><strong>अंग्रेज़ी</strong></a>
                             </div>
                             <!-- Col End -->
                         </div>
                         <!-- Row End -->
                         <div class="row">
                             <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">छत्तीसगढ़</a>
+                                <a class="btn d-block" href="#"><strong>छत्तीसगढ़ी</strong></a>
                             </div>
                             <!-- Col End -->
                             <div class="col-6 col-xl mb-xl-0">
-                                <a class="btn d-block" href="#">हिंदी सामान्य ज्ञान</a>
+                                <a class="btn d-block" href="#"></a>
                             </div>
                             <!-- Col End -->
                         </div>
@@ -1386,10 +1641,7 @@ function myFunction() {
      
             
                 
-
-
-
-
+<!-- end subject @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
 
 

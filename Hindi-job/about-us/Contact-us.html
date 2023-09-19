@@ -89,13 +89,13 @@
                         <div class="col-md-12">
                              <form method="post" name="google-sheet" >
                                         <div class="form-group">
-                                            <input type="text" name="Name" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
+                                            <input type="text" name="नाम" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" name="Phone" class="form-control" placeholder="आपका मोबाइल नंबर *" value="" required=""/>
+                                            <input type="number" name="मोबाइल नंबर" class="form-control" placeholder="आपका मोबाइल नंबर *" value="" required=""/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="Message" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
+                                            <input type="text" name="समस्या" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
                                         </div>
                                                                         
                                         <div class="form-group">
@@ -114,7 +114,7 @@
     </div>
 
     <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzzDXF4cxs0va9U8W1YzFfuqZwlPzuSVBefrJrXai50VYqawCLc3ZAB-hkHQotIXhGR/exec'
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwZeBwEWojFOba6p8MuD-tiNCz0XiHGBpZJ6BzbKVvR4nhdsSqcEcuD2rf2vhOK2iTR/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {

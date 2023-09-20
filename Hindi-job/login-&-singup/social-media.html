@@ -59,7 +59,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-12">
                         <nav aria-label="breadcrumb" class="text-center breadcrumb-nav">
-                            <h2 class="">हमसे संपर्क करें<BR> </h2> Contact us
+                            <h2 class="">सोशल मीडिया<BR> </h2> Social Media
                           
                         </nav>
                         <!-- Breadcrumb End -->
@@ -76,82 +76,167 @@
                             
                                
 
-
-<!-- Start  googel sheet MESSAGE Section -->
 <br><br>
-       <div class="container register">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
-                    aria-labelledby="home-tab">
-                     <center><p class="mb-4">अगर आपके पास इस वेबसाइट से सम्बन्धी कोई शिकायत या सुझाव है या आपको किसी प्रकार की सहायता की जरुरत है तो आप हमें मैसेज कर सकतें है, हमारी टीम 24 से 48 घंटों के भीतर जवाब देगी </p></center>
-                    <div class="row register-form">
-                        <div class="col-md-12">
-                             <form method="post" name="google-sheet" >
-                                        <div class="form-group">
-                                            <input type="text" name="नाम" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
-                                        </div>
-                                        <div class="form-group">
 
-                                        <input type="phone" placeholder="आपका मोबाइल नंबर *" name="मोबाइल नंबर" class="form-control" id="मोबाइल नंबर" required=""/>
+ <center><h6 style="color:whitesmoke;">सोशल मीडिया से जुड़ने के लिए नीचे दिए गए बटन पर क्लिक करें </h6> </center>
 
-                                          
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="समस्या" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
-                                        </div>
-                                                                        
-                                        <div class="form-group">
-                                            <input type="submit" name="submit" class="btn hvr-sweep-to-right"  value="संदेश भेजें >>" /></a>
-                                        
-                                        </div>
 
-                 
+<!-- edit start .......  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<center>
 
-                             </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwZeBwEWojFOba6p8MuD-tiNCz0XiHGBpZJ6BzbKVvR4nhdsSqcEcuD2rf2vhOK2iTR/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर इस समस्या का समाधान कर देगी, जैसे ही इसका समाधान हो जाएगा हम आपको व्हाट्सएप पर संदेश भेजेंगे । धन्यवाद "))
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
+<a href="#" target="_blank"class="fa fa-whatsapp"></a>
+<a href="#" target="_blank"class="fa fa-telegram"></a>
+<a href="#" target="_blank"class="fa fa-instagram"></a>
+<a href="#" target="_blank"class="fa fa-youtube"></a>
+<a href="#" target="_blank"class="fa fa-twitter"></a>
+<a href="#" target="_blank"class="fa fa-facebook"></a>
 
-    <script src="website-to-exel data-transfer-script/script-01.js"></script>
-    <script src="website-to-exel data-transfer-script/script-02.js"></script>
+
+
+
+
+</center>
+ <!-- edit end .......  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
    
-    <!-- end googel sheet MESSAGE Section -->
-<p>&nbsp;</p>
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+  padding: 10px;
+  font-size: 60px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-whatsapp {
+  background: green;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #E4405F;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-telegram {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-envelope {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+</style>
+
+
+
+
+
+
+</center></div>
 
 
 </body>
 
 
-<script type="text/javascript">
-setInterval(function() {
 
-  original = document.getElementById("मोबाइल नंबर").value;
-
-  if (original.length > 10) {
-    lastCharRemove =
-      original.slice(0, original.length - 1);
-    document.getElementById('मोबाइल नंबर').value = lastCharRemove;
-
-  }
-}, 100);
-</script>
 
  
 <script type="text/javascript">

@@ -92,10 +92,7 @@
                                             <input type="text" name="नाम" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
                                         </div>
                                         <div class="form-group">
-
-                                        <input type="phone" placeholder="आपका मोबाइल नंबर *" name="मोबाइल नंबर" class="form-control" id="मोबाइल नंबर" required=""/>
-
-                                          
+                                            <input type="number" name="मोबाइल नंबर" class="form-control" placeholder="आपका मोबाइल नंबर *" value="" required=""/>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" name="समस्या" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
@@ -123,13 +120,13 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर इस समस्या का समाधान कर देगी, जैसे ही इसका समाधान हो जाएगा हम आपको व्हाट्सएप पर संदेश भेजेंगे । धन्यवाद "))
+                .then(response => alert("हमें मैसेज मिल गया है, हमारी टीम जल्द से जल्द इस पर काम करेगी । हम आपके संदेश का जल्द से जल्द जवाब देंगे, कृपया कुछ समय इंतज़ार करें  | धन्यवाद "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
 
-    <script src="website-to-exel data-transfer-script/script-01.js"></script>
-    <script src="website-to-exel data-transfer-script/script-02.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    
     <!-- end googel sheet MESSAGE Section -->
 <p>&nbsp;</p>
@@ -139,19 +136,7 @@
 </body>
 
 
-<script type="text/javascript">
-setInterval(function() {
 
-  original = document.getElementById("मोबाइल नंबर").value;
-
-  if (original.length > 10) {
-    lastCharRemove =
-      original.slice(0, original.length - 1);
-    document.getElementById('मोबाइल नंबर').value = lastCharRemove;
-
-  }
-}, 100);
-</script>
 
  
 <script type="text/javascript">

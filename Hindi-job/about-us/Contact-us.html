@@ -123,7 +123,7 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर इस समस्या का समाधान कर देगी, जैसे ही इसका समाधान हो जाएगा हम आपको व्हाट्सएप पर संदेश भेजेंगे । धन्यवाद "))
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
@@ -152,6 +152,17 @@ setInterval(function() {
   }
 }, 100);
 </script>
+
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+function autoResize(iframe) {
+    $(iframe).height($(iframe).contents().find('html').height());
+}
+</script>
+
+<iframe src="https://script.google.com/macros/s/AKfycbzGB9rvaacHvgNAQfwTpKlluroyPVmnXirLyxBRDELjwaVn93zeCqLxpSG6XbjLDRdFKQ/exec" width="100%" height="1000" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
 
  
 <script type="text/javascript">

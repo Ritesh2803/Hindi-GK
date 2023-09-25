@@ -189,7 +189,7 @@
 
 
 <div class="form-group">
-<input type="text" name="व्यवसाय का विवरण" class="form-control" placeholder="आप कहां काम करते हैं? *" value="" required=""/>
+<input type="text" name="व्यवसाय का विवरण" class="form-control" placeholder="अप क्या काम करते हो? *" value="" required=""/>
 </div>
 
 <div class="form-group">
@@ -303,7 +303,7 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("हमें आपकी जानकारी मिल गई है, आपका किरायानामा जल्द से जल्द तैयार हो जाएगा । किरायानामा तैयार होते ही हम आपको व्हाट्सएप पर मैसेज करेंगे |  धन्यवाद "))
+                .then(response => alert("मुझे आपकी जानकारी मिल गई है, आपका किरायानामा जल्द से जल्द तैयार हो जाएगा । किरायानामा तैयार होते ही मैं आपको कॉल करूंगा |  धन्यवाद "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

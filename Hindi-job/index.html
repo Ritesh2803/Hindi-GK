@@ -917,15 +917,18 @@
  तो आप हमें मैसेज कर सकते हैं। हम उस फाइल को जल्द से जल्द अपलोड करेंगे |</p></center>
                     <div class="row register-form">
                         <div class="col-md-12">
-                             <form method="post" name="google-sheet" >
+                      <form method="post" name="google-sheet" >
                                         <div class="form-group">
-                                            <input type="text" name="Name" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
+                                            <input type="text" name="नाम" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" name="Phone" class="form-control" placeholder="आपका मोबाइल नंबर *" value="" required=""/>
+
+                                        <input type="phone" placeholder="आपका मोबाइल नंबर *" name="मोबाइल नंबर" class="form-control" id="मोबाइल नंबर" required=""/>
+
+                                          
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="Message" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
+                                            <input type="text" name="समस्या" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
                                         </div>
                                                                         
                                         <div class="form-group">
@@ -943,14 +946,28 @@
         </div>
     </div>
 
-    <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzzDXF4cxs0va9U8W1YzFfuqZwlPzuSVBefrJrXai50VYqawCLc3ZAB-hkHQotIXhGR/exec'
+<script type="text/javascript">
+setInterval(function() {
+
+  original = document.getElementById("मोबाइल नंबर").value;
+
+  if (original.length > 10) {
+    lastCharRemove =
+      original.slice(0, original.length - 1);
+    document.getElementById('मोबाइल नंबर').value = lastCharRemove;
+
+  }
+}, 100);
+</script>
+
+ <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwZeBwEWojFOba6p8MuD-tiNCz0XiHGBpZJ6BzbKVvR4nhdsSqcEcuD2rf2vhOK2iTR/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("हमें मैसेज मिल गया है, हमारी टीम जल्द से जल्द इस पर काम करेगी । हम आपके संदेश का जल्द से जल्द जवाब देंगे, कृपया कुछ समय इंतज़ार करें  | धन्यवाद "))
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
@@ -961,9 +978,16 @@
     <!-- end googel sheet MESSAGE Section -->
 
 
+<br><br>
+
+<center>आपको Whatsapp के द्वारा एक टोकन नंबर मिला होगा, उसे किसी एक सर्वर पर डाल कर देखें | इससे आपको पता चलेगा कि आपके संदेश की स्थिति क्या है 
+<br>
+<a href="user-message/tokan-number-find-page/server-01.html"><button class="button button3"> सर्वर - 01 </button></a>  
+<a href="user-message/tokan-number-find-page/server-02.html"><button class="button button3"> सर्वर - 02 </button></a> 
 
 
-        
+
+</center>
            
 
          

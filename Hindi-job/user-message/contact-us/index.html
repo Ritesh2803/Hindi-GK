@@ -87,7 +87,7 @@
                      <center><p class="mb-4">अगर आपके पास इस वेबसाइट से सम्बन्धी कोई शिकायत या सुझाव है या आपको किसी प्रकार की सहायता की जरुरत है तो आप हमें मैसेज कर सकतें है, हमारी टीम 24 से 48 घंटों के भीतर जवाब देगी </p></center>
                     <div class="row register-form">
                         <div class="col-md-12">
-                             <form method="post" name="google-sheet" >
+                      <form method="post" name="google-sheet" >
                                         <div class="form-group">
                                             <input type="text" name="नाम" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
                                         </div>
@@ -116,30 +116,7 @@
         </div>
     </div>
 
-    <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwZeBwEWojFOba6p8MuD-tiNCz0XiHGBpZJ6BzbKVvR4nhdsSqcEcuD2rf2vhOK2iTR/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
-
-    <script src="website-to-exel data-transfer-script/script-01.js"></script>
-    <script src="website-to-exel data-transfer-script/script-02.js"></script>
-   
-    <!-- end googel sheet MESSAGE Section -->
-<p>&nbsp;</p>
-
-
-
-</body>
-
-
-<script type="text/javascript">
+    <script type="text/javascript">
 setInterval(function() {
 
   original = document.getElementById("मोबाइल नंबर").value;
@@ -152,6 +129,103 @@ setInterval(function() {
   }
 }, 100);
 </script>
+
+ <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwZeBwEWojFOba6p8MuD-tiNCz0XiHGBpZJ6BzbKVvR4nhdsSqcEcuD2rf2vhOK2iTR/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    <!-- end googel sheet MESSAGE Section -->
+
+
+<br><br>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+
+<center><table style="width:95%">
+  <tr>
+    <th><center>आपको Whatsapp के द्वारा एक टोकन नंबर मिला होगा, उसे किसी एक सर्वर पर डाल कर देखें |</center></th>
+
+  </tr>
+</table></center><br>
+ <center><table style="width:95%"> 
+  <tr>
+    <td style="width:50%"><center>टोकन सर्वर - 01</center></td>
+    <td style="width:50%"><center>टोकन सर्वर - 02</center></td>
+
+  </tr>
+  <tr>
+    <td><br><center><a href="user-message/tokan-number-find-page/server-02.html"><button class="btn hvr-sweep-to-right">टोकन नंबर</button></center><br></td>
+
+    <td><br><center><a href="user-message/tokan-number-find-page/server-01.html"><button class="btn hvr-sweep-to-right">टोकन नंबर</button></center></a><br></td>
+
+  </tr>
+</table></center>
+
+<br><center><table style="width:95%">
+  <tr>
+    <th><center>अगर आपने हमें मैसेज किया है, और टोकन नंबर नहीं मिला है, तो कृपया कुछ देर इंतजार करें, हम आपको व्हाट्सप्प पर टोकन नंबर भेज देंगे |</center></th>
+
+  </tr>
+</table></center>
+
+
+
+<br><br>
+        <!-- Start Copyrights Section -->
+        <div class="copyright">
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-md-6">
+                        <p>© Copyright 2022, All Rights Reserved</p>
+                    </div>
+                    <!-- Col End -->
+                    <div class="col-md-6">
+                        <div class="copyright-menu text-right">
+                            <ul>
+                                <li>
+                                    <a href="https://instagram.com/ritesh_shah69?igshid=ZDc4ODBmNjlmNQ==">Developed by Ritesh shah</a>
+                                </li>
+                                <li>
+                                    <a href="../../about-us/About-this-website.html">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Copyrights Menu End -->
+                    </div>
+                    <!-- Col End -->
+                </div>
+                <!-- Row End -->
+            </div>
+            <!-- Container End -->
+        </div>
+        <!-- Copyrights Section End -->
+
+
+
+
+
+
+
+
+
+
+
 
 
 

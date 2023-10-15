@@ -12,31 +12,31 @@
     <link href="" rel="shortcut icon" type="image/x-icon">
     <link href="" rel="icon" type="image/x-icon">
     <!-- Bootstrap -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- Fontawesome Styles -->
-    <link href="../../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
     <!-- Iconfonts Styles -->
-    <link href="../../css/icofont.css" rel="stylesheet">
+    <link href="../css/icofont.css" rel="stylesheet">
     <!-- Owl Carousel Styles -->
-    <link href="../../css/owl.carousel.min.css" rel="stylesheet">
-    <link href="../../css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
     <!-- Slick Slider Styles -->
-    <link href="../../css/slick.css" rel="stylesheet">
-    <link href="../../css/slick-theme.css" rel="stylesheet">
+    <link href="../css/slick.css" rel="stylesheet">
+    <link href="../css/slick-theme.css" rel="stylesheet">
     <!-- Swiper Slider Styles -->
-    <link href="../../css/swiper.min.css" rel="stylesheet">
+    <link href="../css/swiper.min.css" rel="stylesheet">
     <!-- Animate Styles -->
-    <link href="../../css/animate.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
     <!-- Hover Styles -->
-    <link href="../../css/hover-min.css" rel="stylesheet">
+    <link href="../css/hover-min.css" rel="stylesheet">
     <!-- Magnific Styles -->
-    <link href="../../css/magnific-popup.css" rel="stylesheet">
+    <link href="../css/magnific-popup.css" rel="stylesheet">
     <!-- Bootstrap Datepicker Styles -->
-    <link href="../../css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datepicker.min.css" rel="stylesheet">
     <!-- Main Styles -->
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     <!-- Responsive Styles -->
-    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
           <script src="js/html5shiv.js"></script>
@@ -44,158 +44,31 @@
         <![endif]-->
 </head>
 
-<body>
-    <!-- Start Preloader -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div>
-    <!-- Preloader End -->
-   
-        <!-- Start Sub Header Section -->
-        <div class="sub-header">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12">
-                        <nav aria-label="breadcrumb" class="text-center breadcrumb-nav">
-                            <h2 class="">हमसे संपर्क करें<BR> </h2> Contact us
-                          
-                        </nav>
-                        <!-- Breadcrumb End -->
-                    </div>
-                    <!-- Col End -->
-                </div>
-                <!-- Row End -->
-            </div>
-            <!-- Container end -->
-        </div>
-        <!-- Sub Header Section End -->
+<html>
+<body style="background-color:black;">
 
-                            
-                            
-                               
-
-
-<!-- Start  googel sheet MESSAGE Section -->
-<br><br>
-       <div class="container register">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
-                    aria-labelledby="home-tab">
-                     <center><p class="mb-4">अगर आपके पास इस वेबसाइट से सम्बन्धी कोई शिकायत या सुझाव है या आपको किसी प्रकार की सहायता की जरुरत है तो आप हमें मैसेज कर सकतें है, हमारी टीम 24 से 48 घंटों के भीतर जवाब देगी </p></center>
-                    <div class="row register-form">
-                        <div class="col-md-12">
-                      <form method="post" name="google-sheet" >
-                                        <div class="form-group">
-                                            <input type="text" name="नाम" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
-                                        </div>
-                                        <div class="form-group">
-
-                                        <input type="phone" placeholder="आपका मोबाइल नंबर *" name="मोबाइल नंबर" class="form-control" id="मोबाइल नंबर" required=""/>
-
-                                          
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="समस्या" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
-                                        </div>
-                                                                        
-                                        <div class="form-group">
-                                            <input type="submit" name="submit" class="btn hvr-sweep-to-right"  value="संदेश भेजें >>" /></a>
-                                        
-                                        </div>
-
-                 
-
-                             </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script type="text/javascript">
-setInterval(function() {
-
-  original = document.getElementById("मोबाइल नंबर").value;
-
-  if (original.length > 10) {
-    lastCharRemove =
-      original.slice(0, original.length - 1);
-    document.getElementById('मोबाइल नंबर').value = lastCharRemove;
-
-  }
-}, 100);
-</script>
-
- <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwZeBwEWojFOba6p8MuD-tiNCz0XiHGBpZJ6BzbKVvR4nhdsSqcEcuD2rf2vhOK2iTR/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
-    <!-- end googel sheet MESSAGE Section -->
-
-
-<br><br>
-
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
-
-
-<center><table style="width:95%">
-  <tr>
-    <th><center>आपको Whatsapp के द्वारा एक टोकन नंबर मिला होगा, उसे किसी एक सर्वर पर डाल कर देखें |</center></th>
-
-  </tr>
-</table></center><br>
- <center><table style="width:95%"> 
-  <tr>
-    <td style="width:50%"><center>टोकन सर्वर - 01</center></td>
-    <td style="width:50%"><center>टोकन सर्वर - 02</center></td>
-
-  </tr>
-  <tr>
-    <td><br><center><a href="../tokan-number-find-page/server-02.html"><button class="btn hvr-sweep-to-right">टोकन नंबर</button></center><br></td>
-
-    <td><br><center><a href="../tokan-number-find-page/server-01.html"><button class="btn hvr-sweep-to-right">टोकन नंबर</button></center></a><br></td>
-
-  </tr>
-</table></center>
-
-<br><center><table style="width:95%">
-  <tr>
-    <th><center>अगर आपने हमें मैसेज कर दिया है, और आपको अभी तक टोकन नंबर नहीं मिला है, तो कृपया कुछ देर इंतजार करें, हम आपको व्हाट्सप्प पर टोकन नंबर भेज देंगे (कभी-कभी हमें जवाब देने में 24 से 48 घंटे लग जाते हैं)</center></th>
-
-  </tr>
-</table></center>
-
-
-
-<br><br>
         <!-- Start Copyrights Section -->
         <div class="copyright">
             <div class="container-fluid">
                 <div class="row justify-content-between">
                     <div class="col-md-6">
-                       <iframe src="../../about-us/copy-right-ifream.html" width="100%" height="80px" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
+                        <p>© Copyright 2023 , All Rights Reserved</p>
                     </div>
                     <!-- Col End -->
-                    
+                    <div class="col-md-6">
+                        <div class="copyright-menu text-right">
+                            <ul>
+                                <li>
+                                    <a href="https://instagram.com/ritesh_shah69?igshid=ZDc4ODBmNjlmNQ==" target="_blank">Developed by Ritesh shah</a>
+                                </li>
+                                <li>
+                                    <a href="About-this-website.html" target="_blank">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Copyrights Menu End -->
+                    </div>
+                    <!-- Col End -->
                 </div>
                 <!-- Row End -->
             </div>
@@ -204,23 +77,9 @@ table, th, td {
         <!-- Copyrights Section End -->
 
 
+</body>
 
 
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script type="text/javascript">
-function autoResize(iframe) {
-    $(iframe).height($(iframe).contents().find('html').height());
-}
-</script>
 
 
  

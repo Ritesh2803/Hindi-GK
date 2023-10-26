@@ -1,106 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <!-- Basic Page -->
     <meta charset="UTF-8">
+    <title>Ridirect</title>
+    <!-- Mobile Specific -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Favicon -->
+    <link href="Website-css-use-pic/WEBSITE-SMALL-LOGO.png" rel="shortcut icon" type="image/x-icon">
+    <link href="Website-css-use-pic/WEBSITE-SMALL-LOGO.png" rel="icon" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome Styles -->
+    <link href="../../../../css/fontawesome.min.css" rel="stylesheet">
+    <!-- Iconfonts Styles -->
+    <link href="../../../../css/icofont.css" rel="stylesheet">
+    <!-- Owl Carousel Styles -->
+    <link href="../../../../css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../../../css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Slick Slider Styles -->
+    <link href="../../../../css/slick.css" rel="stylesheet">
+    <link href="../../../../css/slick-theme.css" rel="stylesheet">
+    <!-- Swiper Slider Styles -->
+    <link href="../../../../css/swiper.min.css" rel="stylesheet">
+    <!-- Animate Styles -->
+    <link href="../../../../css/animate.css" rel="stylesheet">
+    <!-- Hover Styles -->
+    <link href="../../../../css/hover-min.css" rel="stylesheet">
+    <!-- Magnific Styles -->
+    <link href="../../../../css/magnific-popup.css" rel="stylesheet">
+    <!-- Bootstrap Datepicker Styles -->
+    <link href="../../../../css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- Main Styles -->
+    <link href="../../../../css/style.css" rel="stylesheet">
+    <!-- Responsive Styles -->
+    <link href="../../../../css/responsive.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143314085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143314085-1');
+</script>
 
 
-<link href="../../../../Website-css-use-pic/WEBSITE-SMALL-LOGO.png" rel="shortcut icon" type="image/x-icon">
-<link href="../../../../Website-css-use-pic/WEBSITE-SMALL-LOGO.png" rel="icon" type="image/x-icon">
+<script type="text/javascript">
+
+// Set the date we're counting down to
+var countDownDate = new Date(Date.now() + 14000).getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML =seconds + " सेकंड में पीडीऍफ़ का लिंक जेनरेट हो जायेगा";
+
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = '<a class="btn hvr-sweep-to-right" href="index-ridirect.html" tabindex="0">पीडीऍफ़ को देखें</a>';
+  }
+}, 1000);
+
+</script>
 
 
 
-<div class="header"><center><p class="mb-4"> <center><a href="../../../../index.html"><img alt="lOGO" width="70%" height="" class="img-fluid" src="../../../../Website-css-use-pic/logo-transparent.png"></a></center>
+<iframe src="../../../../Ad-publish/Pdf-pe-ads/Ridirect-ads.html" width="100%" height="1500px" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
 
 
-
-
-
-    <style type="text/css" media="print">
-BODY {display:none;visibility:hidden;}
-</style>
-
-  <style>
-      .unselectable {
-        -webkit-user-select: none;
-        -webkit-touch-callout: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        
-      }
-      b, strong {
-   color: green;
-   }
-    </style>
-
-    <style type="text/css">
-html, body {
-  height: 0%;
-  margin: 10;
-}
-.wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.header, .footer {
- position: fixed;
-  left: 0;
-  bottom: 100;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-.content {
-  flex: 10;
-  overflow: auto;
-  background:black;
-}
-</style>
-
-
-
-
-
-</center></div>
-  <div class="content">
-   
-  </div>
-  <div class="footer"></div>
-</div>
-    
-
-    
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <title>Developed By Ritesh Shah</title>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.2/pdf.min.js"></script>
-
-  <div id="canvases"></div>
-  <script type="text/javascript" src="./script.js"></script>
-  <style type="text/css">
-    body {
-      background-color: black;
-    }
-    #canvases canvas {
-      margin: 10px auto;
-      display: block;
-    }
-  </style>
-<br><br><br><br><br><br>
-   <center>
-    <img alt="lOGO" width="35%" height="" class="img-fluid" src="../../../book-flip.gif">
-</a>
-
-
-  </center>
-
-</body>
-</html>
 
 <style>
-.ads {
-   position:fixed;
+.footer {
+   position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
@@ -110,9 +105,7 @@ html, body {
 }
 </style>
 
-<div class="ads">
-<a href="../../../../Ad-publish/pdf-ads/Ridirect-ads.html" target="_blank">
-<img alt="" width="100%" height="" class="img-fluid" src="../../../../Ad-publish/pdf-ads/ads-01.gif">
 
+<div class="footer"><br>
+  <p id="demo" class="countdown-live" style="text-align:center;"></p>
 </div>
-

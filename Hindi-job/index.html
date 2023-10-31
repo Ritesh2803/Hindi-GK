@@ -1164,9 +1164,7 @@
             <div class="col-md-12">
                 <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
                     aria-labelledby="home-tab">
-                     <center><p class="mb-4">अगर आप किसी पीडीएफ फाइल या किसी कोर्स के बारे में जानना चाहते हैं ।
-                        और वह कोर्स या पीडीऍफ़ हमारी वेबसाइट में नहीं है
- तो आप हमें मैसेज कर सकते हैं। हम उस फाइल को जल्द से जल्द अपलोड करेंगे |</p></center>
+                     <center><p class="mb-4">अगर आप किसी पीडीएफ फाइल या किसी कोर्स को खोज रहें हैं, और वह कोर्स या पीडीऍफ़ हमारी वेबसाइट में नहीं है, तो आप हमें मैसेज कर सकते हैं, हम उस फाइल को जल्द से जल्द अपलोड करेंगे </p></center>
                     <div class="row register-form">
                         <div class="col-md-12">
                       <form method="post" name="google-sheet" >
@@ -1179,17 +1177,19 @@
 
                                           
                                         </div>
-                                        <div class="form-group">
+                                                    <div class="form-group">
                                             <input type="text" name="समस्या" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
                                         </div>
                                                                         
-                                        <div class="form-group">
-                                             <div class="buttons">
-                                             <input  mat-fab type="submit" name="submit" class="btn hvr-sweep-to-right"  value="संदेश भेजें >>" /></a></div>
-                                        
-                                        </div>
+                                             
 
-             
+                                        <div class="form-group" data-animation-in="fadeInUp" data-delay-in="1">
+                           
+                                        <input  mat-fab type="submit" name="submit" class="btn hvr-sweep-to-right"  value="संदेश भेजें >>" /> </a>
+
+                                        <a class="btn hvr-sweep-to-right ml-3" href="user-message/Mobile-number-find-message/servers.html" target="_blank" tabindex="0"><i class="fas fa-envelope-open"></i> मैसेज का स्टेटस देखें</a>
+                                    
+                                    </div>
 
 
 
@@ -1236,7 +1236,7 @@ setInterval(function() {
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । *मैसेज का स्टेटस देखें* वाले बटन पर क्लिक करके आप इस मैसेज का लाइव स्टेटस देख सकतें हैं"))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

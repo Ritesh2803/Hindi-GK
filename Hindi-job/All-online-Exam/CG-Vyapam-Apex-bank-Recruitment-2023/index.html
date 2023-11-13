@@ -97,7 +97,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("nov 12, 2023 23:59:59").getTime();
+var countDownDate = new Date("nov 15, 2023 10:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -115,7 +115,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "जल्दी रजिस्टर करें, और एडमिट कार्ड डाउनलोड कर लें, एग्जाम शुरू होने में "+ days +" दिन " + hours + " घंटे "
+  document.getElementById("demo").innerHTML = "एग्जाम शुरू होने में "+ days +" दिन " + hours + " घंटे "
   + minutes + " मिनट  " + seconds + " सेकंड बचें है";
     
   // If the count down is over, write some text 
@@ -127,7 +127,7 @@ var x = setInterval(function() {
 </script>
 
 
-<center><p class="mb-4" id="demo"></p></center>
+<center>जल्दी रजिस्टर करें, और एडमिट कार्ड डाउनलोड कर लें, <p class="mb-4" id="demo"></p></center>
 
 <style>
 table, th, td {
@@ -145,11 +145,12 @@ table, th, td {
 
 
                                              <tr>
-                                                <td> <br> <center><a class="btn hvr-sweep-to-right ml-3" href="user-message/Mobile-number-find-message/servers.html" target="_blank">रजिस्टर करें</a></center><br></td>
+                                                <td><br><center><a class="nav-link modal-popup" href="#search-popup"><button class="btn hvr-sweep-to-right ml-3">रजिस्टर</button></a></center><br></td>
 
-                                                <td> <br> <center><a class="btn hvr-sweep-to-right ml-3" href="user-message/Mobile-number-find-message/servers.html" target="_blank">डाउनलोड करें</a></center><br></td>
+                                                <td><br><center><a class="nav-link modal-popup" href="#search-popup"><button class="btn hvr-sweep-to-right ml-3">डाउनलोड</button></a></center><br></td>
 
-                                                  <td> <br> <center><a class="btn hvr-sweep-to-right ml-3" href="user-message/Mobile-number-find-message/servers.html" target="_blank">एग्जाम दें</a></center><br></td>
+                                                <td><br><center><a class="nav-link modal-popup" href="#search-popup"><button class="btn hvr-sweep-to-right ml-3">एग्जाम</button></a></center><br></td>
+
 
                                                 
                                               </tr>
@@ -256,6 +257,68 @@ table, th, td {
                 <!-- Last Season End -->
             </section>
             <!-- Last Seasons Section End -->
+
+
+
+
+
+
+<!-- Start Search Modal -->
+    <div class="zoom-anim-dialog mfp-hide modal-searchPanel search-form" id="search-popup">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="search-panel">
+                    
+
+
+
+
+<center><h6 id="demo">hello</h6><br>
+
+<span class="video-age"> परीक्षा की तारीख :- 15 नवम्बर सुबह 10 बजे से </span>
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Search Modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

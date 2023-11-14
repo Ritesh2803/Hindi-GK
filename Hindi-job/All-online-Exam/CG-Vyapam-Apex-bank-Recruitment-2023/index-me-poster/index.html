@@ -61,7 +61,7 @@ body {
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("nov 15, 2023 23:59:59").getTime();
+var countDownDate = new Date("nov 20, 2023 10:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -79,13 +79,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "परीक्षा शुरू होने में "+ days +" दिन " + hours + " घंटे "
+  document.getElementById("demo").innerHTML = "ऑनलाइन परीक्षा शुरू होने में "+ days +" दिन " + hours + " घंटे "
   + minutes + " मिनट  " + seconds + " सेकंड बचें है";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "इस फॉर्म को भरने की तारीख निकल चुकी है";
+    document.getElementById("demo").innerHTML = "ऑनलाइन एग्जाम शुरू हो चुकी है";
   }
 }, 1000);
 </script>

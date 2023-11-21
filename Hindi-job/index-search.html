@@ -112,7 +112,7 @@ img {
 
 
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="खोजने के लिए यहां टाइप करें....." title="खोजने के लिए यहां टाइप करें.....">
+<center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="खोजने के लिए यहां टाइप करें....." title="खोजने के लिए यहां टाइप करें....."></center>
 
 <ul id="myUL">
 
@@ -619,11 +619,106 @@ img {
 <br><br>
 उदाहरण :- अगर आप जीवविज्ञान खोजना चाहतें हैं और खोज नहीं पा रहें हैं | तो आप विज्ञान या science लिखकर देखें और विज्ञान के पेज पर क्लिक करें आपको इसमें जीव विज्ञान मिल जायेगा । (किसी टॉपिक को खोजने पर वह नहीं मिल रहा है तो, उस टॉपिक के सब्जेक्ट का नाम लिखकर खोजने का प्रयास करें)
 <br><br>
-<center><p class="mb-4">अगर आपको वह टॉपिक नही मिलता है, जो आप खोज रहें है, तो आप हमें बता सकतें है हम जल्द से जल्द उस टॉपिक को अपलोड कर देंगे </p></center>
 
 
 
- <a class="btn hvr-sweep-to-right" href="user-message/contact-us/index.html" tabindex="0">मैसेज करें</a>
+
+ <!-- Start  googel sheet MESSAGE Section -->
+
+       <div class="container register">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
+                    aria-labelledby="home-tab">
+                     <center><p class="mb-4">अगर आपको वह टॉपिक नही मिलता है, जो आप खोज रहें है, तो आप हमें बता सकतें है हम जल्द से जल्द उस टॉपिक को अपलोड कर देंगे </p></center>
+                    <div class="row register-form">
+                        <div class="col-md-12">
+                      <form method="post" name="google-sheet" >
+                                        <div class="form-group">
+                                            <input type="text" name="नाम" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group">
+
+                                        <input type="phone" placeholder="आपका मोबाइल नंबर *" name="मोबाइल नंबर" class="form-control" id="मोबाइल नंबर" required=""/>
+
+                                          
+                                        </div>
+                                                    <div class="form-group">
+                                            <input type="text" name="समस्या" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
+                                        </div>
+
+
+<mat-card>
+                                        <div class="buttons">
+                                        <input  mat-fab type="submit" name="submit" class="btn hvr-sweep-to-right"  value="संदेश भेजें >>" />
+                                        </div>
+</mat-card>                          
+                                             
+                                        <div class="form-group" data-animation-in="fadeInUp" data-delay-in="1">
+                           
+                            
+
+                                        
+                                    
+                                    </div>
+
+
+                             
+
+
+
+                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style type="text/css">
+.mat-card{ position: relative }
+
+h1{ margin-right: 120px; }
+
+.buttons{
+  position: left;
+  top:50%;
+  right: 0;
+  width: 120px;
+  transform: translateY(-10%);
+}
+    </style>
+
+<script type="text/javascript">
+setInterval(function() {
+
+  original = document.getElementById("मोबाइल नंबर").value;
+
+  if (original.length > 10) {
+    lastCharRemove =
+      original.slice(0, original.length - 1);
+    document.getElementById('मोबाइल नंबर').value = lastCharRemove;
+
+  }
+}, 100);
+</script>
+
+ <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwZeBwEWojFOba6p8MuD-tiNCz0XiHGBpZJ6BzbKVvR4nhdsSqcEcuD2rf2vhOK2iTR/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । *मैसेज का स्टेटस देखें* वाले बटन पर क्लिक करके आप इस मैसेज का लाइव स्टेटस देख सकतें हैं"))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    <!-- end googel sheet MESSAGE Section -->
                                                                         
 
     

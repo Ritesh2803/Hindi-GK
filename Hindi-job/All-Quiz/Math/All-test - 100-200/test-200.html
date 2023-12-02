@@ -1,0 +1,359 @@
+
+ <link href="../../css/style.css" rel="stylesheet">
+<script async src="../timer.js"></script>
+
+  <br><br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <a href="../../../index.html"><img alt="" class="img-fluid" src="../../../Website-css-use-pic/logo-transparent.png"></a>
+   </div></div></center>
+
+<br><br>
+<div id='baca-juga'>
+
+
+</div>
+<div class='' id=''>
+<meta content='test' itemprop='description'/>
+<div id='body-post-it'>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
+<head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+
+
+</head> 
+ <div class="quiz-home-box custom-box show" sryle="">
+
+
+ <br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../test-number.png"><a style="font-size:40px; color:black;">100</a>
+   </div>  </div></center><br><br>
+
+
+ <center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../timer.png" width="100%">
+   </div>  </div></center>
+
+
+ <br><center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../note.png" width="100%">
+   </div>  </div></center><br><br>
+
+
+ <button class="start-quiz-btn btn" type="button"><strong>टेस्ट शुरु करें</strong></button>
+</div>
+<div class="quiz-box custom-box">
+<div class="stats">
+<div class="quiz-time">
+<div class="remaining-time"></div>
+<span class="time-up-text">उत्तर देने का समय ख़त्म हो चूका है</span>
+</div>
+<div class="score-board">
+<span class="score-text">सही जवाब:</span>
+<span class="correct-answer"></span>
+</div>
+</div>
+<div class="question-box">
+<div class="current-question-num">
+</div>
+<div class="question-text">
+    
+</div>
+</div>
+<div class="option-box">
+
+</div>
+<div class="next-question">
+<button class="next-question-btn btn" type="button">अगला सवाल</button>
+<button class="see-result-btn btn" type="button">अपना परिणाम देखें</button>
+</div>
+<div class="answer-description">
+    
+</div>
+
+</div>
+<div class="quiz-over-box custom-box">
+<h3>रिज़ल्ट</h3>
+<h4>कुल सवाल: <span class="total-questions"></span></h4>
+<h4>कितने किये: <span class="total-attempt"></span></h4>
+<h4>सही: <span class="total-correct"></span></h4>
+<h4>गलत: <span class="total-wrong"></span></h4>
+<h4>प्राप्तांक: <span class="your-score"></span></h4>
+<h4>प्रतिशत: <span class="percentage"></span></h4>
+<button class="start-again-quiz-btn btn" type="button">फिर से शुरू करें</button>
+<a href="test-101.html"><button class="go-home-btn btn" type="button">दूसरे प्रश्न देखें</button></a>
+
+</div>
+
+<script>
+
+
+const questionText=document.querySelector(".question-text");
+const optionBox=document.querySelector(".option-box");
+const currentQuestionNum=document.querySelector(".current-question-num");
+const answerDescription=document.querySelector(".answer-description");
+const nextQuestionBtn=document.querySelector(".next-question-btn");
+const correctAnswers=document.querySelector(".correct-answer");
+const seeResultBtn=document.querySelector(".see-result-btn");
+const remainingTime=document.querySelector(".remaining-time");
+const timeUpText=document.querySelector(".time-up-text");
+const quizHomeBox=document.querySelector(".quiz-home-box");
+const quizBox=document.querySelector(".quiz-box");
+const quizOverBox=document.querySelector(".quiz-over-box");
+const startAgainQuizBtn=document.querySelector(".start-again-quiz-btn");
+const goHomeBtn=document.querySelector(".go-home-btn");
+const startQuizBtn=document.querySelector(".start-quiz-btn");
+let attempt=0;
+let questionIndex=0;
+let score=0;
+let number=0;
+let myArray=[];
+let interval;
+    // You can put Questions Here
+    // answer id 1-0, 2-1, 3-2, 4-3, 
+myApp=[
+
+
+
+
+
+
+ 
+{question:'उस र&#2375;ख&#2368;य सम&#2368;करण ज&#2381;ञ&#2366;त क&#2368;ज&#2367;य&#2375; ज&#2379; X-अक&#2381;ष क&#2375; स&#2366;थ 45&#176; क&#2366; क&#2379;ण बन&#2366;त&#2368; ह&#2376; और Y-अक&#2381;ष पर 8 इक&#2366;ई क&#2366; अन&#2381;त&#2307; ख&#2306;ड क&#2366;टत&#2368; ह&#2376;?',options:['y - x + 7 = 0',' x - y + 8 = 0',' y - y + 9 = 0',' 2y - x + 7 = 0',],answer:1,},
+{question:' ब&#2367;न&#2381;द&#2369;ओ&#2306; (-3, 4) तथ&#2366; (6, 3) क&#2379; X -अक&#2381;ष क&#2367;स अन&#2369;प&#2366;त म&#2375;&#2306; व&#2367;भ&#2366;ज&#2367;त करत&#2366; ह&#2376;?',options:['5 : 3','4 : 4','4 : 3','3 : 4',],answer:2,},
+{question:'द&#2367;ए गय&#2375; त&#2368;न ब&#2367;&#2306;द&#2369; (a, b), (4, 2), (-4, 3) त&#2379; a, b म&#2375;&#2306; सम&#2381;बन&#2381;ध ज&#2381;ञ&#2366;त क&#2368;ज&#2367;य&#2375;?',options:['35','25','20','15',],answer:2,},
+{question:' समक&#2379;ण ΔMNO क&#2366; &#8736;O समक&#2379;ण ह&#2376; और ब&#2367;&#2306;द&#2369; M = (-2, 0), ब&#2367;&#2306;द&#2369; N = (3, -2) ब&#2367;&#2306;द&#2369; O = (8, -3) ह&#2376; त&#2379; त&#2381;र&#2367;भ&#2369;ज MNO क&#2366; क&#2381;ष&#2375;त&#2381;रफल ज&#2381;ञ&#2366;त कर&#2375;&#2306;?',options:['3 सह&#2368; 3/1','2 सह&#2368; 1/2','2 सह&#2368; 1/3','इनम&#2375; स&#2375; क&#2379;ई नह&#2368;',],answer:1,},
+{question:'एक र&#2375;ख&#2366; PQ क&#2366; ब&#2367;&#2306;द&#2369; P = (3, 4) तथ&#2366; ब&#2367;&#2306;द&#2369; Q = (5, y) ह&#2376; और र&#2375;ख&#2366; PQ क&#2368; लम&#2381;ब&#2366;ई 2&#8730;2 इक&#2366;ई ह&#2379; त&#2379; y क&#2366; म&#2366;न ज&#2381;ञ&#2366;त क&#2368;ज&#2367;य&#2375;?',options:['x = - 9','y = -7','y = - 6','2y - 0 = 0',],answer:2,},
+{question:'र&#2375;ख&#2366; 3x + 4y - 24 = 0, x - अक&#2381;ष क&#2379; A पर तथ&#2366; y-अक&#2381;ष क&#2379; B पर क&#2366;टत&#2368; ह&#2376; त&#2379; त&#2381;र&#2367;भ&#2369;ज OAB क&#2366; पर&#2367;क&#2375;&#2306;द&#2381;र, जह&#2366;&#2305; O म&#2370;ल ब&#2367;&#2306;द&#2369; ह&#2376; क&#2381;य&#2366; ह&#2376;?',options:['(2, 3)','(3, 3)','(4, 3)','इनम&#2375; स&#2375; क&#2379;ई नह&#2368;',],answer:2,},
+{question:'यद&#2367; 3x + 2y - a = 0 म&#2370;ल ब&#2367;&#2306;द&#2369; स&#2375; ग&#2369;जरत&#2368; ह&#2376; त&#2379; a क&#2366; म&#2366;न क&#2381;य&#2366; ह&#2379;ग&#2366;?',options:[' -2','0',' 3',' -1',],answer:1,},
+{question:'p क&#2375; सभ&#2368; म&#2366;न&#2379; क&#2375; ल&#2367;ए र&#2375;ख&#2366; (4x + y - 9) + A(3x - 2y - 4) = 0 एक स&#2381;थ&#2367;र ब&#2367;&#2306;द&#2369; स&#2375; ह&#2379;कर ज&#2366;त&#2368; ह&#2376;?',options:['(2, 1)',' (1, 2)','(3, 2)','(4, 3)',],answer:0,},
+{question:'a क&#2366; म&#2366;न, ज&#2367;सक&#2375; ल&#2367;ए (a-1) x + 3y - 5 = 0 और (3 - a) x - 4y + 2 = 0 क&#2375; ग&#2381;र&#2366;फ सम&#2366;&#2306;तर ह&#2376;?',options:['1','-5','-1','3',],answer:1,},
+{question:'x + 3y = 5 और 4x - 3y = 1 ग&#2381;र&#2366;फ क&#2375; Y-अक&#2381;ष क&#2379; द&#2379; ब&#2367;न&#2381;द&#2369;ओ&#2306; पर म&#2367;लत&#2375; ह&#2376; ज&#2367;नक&#2368; ब&#2368;च क&#2368; द&#2369;र&#2368; ज&#2381;ञ&#2366;त कर&#2375;&#2306;?',options:['3 इक&#2366;ई','4 इक&#2366;ई','1 इक&#2366;ई','2 इक&#2366;ई',],answer:3,},
+ 
+ 
+  
+  
+  
+  
+  
+  ];
+
+function load(){
+    number++;
+   questionText.innerHTML=myApp[questionIndex].question;
+    creatOptions();
+    scoreBoard();
+    currentQuestionNum.innerHTML=number + " / " +myApp.length;
+}
+function creatOptions(){
+    optionBox.innerHTML="";
+    let animationDelay=0.2;
+    for(let i=0; i<myApp[questionIndex].options.length; i++){
+        const option=document.createElement("div");
+              option.innerHTML=myApp[questionIndex].options[i];
+              option.classList.add("option");
+              option.id=i;
+              option.style.animationDelay=animationDelay + "s";
+              animationDelay=animationDelay+0.2;
+              option.setAttribute("onclick","check(this)");
+              optionBox.appendChild(option);
+        
+    }
+}
+
+function generateRandomQuestion(){
+    const randomNumber=Math.floor(Math.random() * myApp.length);
+   let hitDuplicate=0;
+   if(myArray.length == 0){
+        questionIndex=randomNumber;
+    }
+    else{
+        for(let i=0; i<myArray.length; i++){
+            if(randomNumber == myArray[i]){
+                //if duplicate found
+                hitDuplicate=1;
+                
+            }
+        }
+        if(hitDuplicate == 1){
+            generateRandomQuestion();
+            return;
+        }
+        else{
+            questionIndex=randomNumber;
+        }
+    }
+    
+    myArray.push(randomNumber);
+    console.log(myArray)
+    load();
+}
+
+function check(ele){
+    const id=ele.id;
+    if(id==myApp[questionIndex].answer){
+       ele.classList.add("correct");
+        score++;
+        scoreBoard();
+    }
+    else{
+        ele.classList.add("wrong");
+        //show correct option when clicked answer is wrong
+        for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+            }
+        }
+    }
+    attempt++;
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+    stopTimer();
+    
+    if(number == myApp.length){
+        quizOver();
+    }
+}
+function timeIsUp(){
+    showTimeUpText();
+    //when time is up Show Correct Answer
+    for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+    
+            }
+        }
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+ if(number == myApp.length){
+        quizOver();
+      }
+}
+
+function stopTimer(){
+    clearInterval(interval);
+}
+function disableOptions(){
+    for(let i=0; i<optionBox.children.length; i++){
+        optionBox.children[i].classList.add("already-answered")
+    }
+}
+function showAnswerDescription(){
+    if(typeof myApp[questionIndex].description !== 'undefined'){
+        answerDescription.classList.add("show");
+        answerDescription.innerHTML=myApp[questionIndex].description;
+    }
+    
+}
+function hideAnswerDescription(){
+    answerDescription.classList.remove("show");
+    answerDescription.innerHTML="";
+}
+
+function showNextQuestionBtn(){
+    nextQuestionBtn.classList.add("show");
+}
+function hideNextQuestionBtn(){
+    nextQuestionBtn.classList.remove("show");
+}
+function showTimeUpText(){
+    timeUpText.classList.add("show");
+}
+function hideTimeUpText(){
+    timeUpText.classList.remove("show");
+    
+}
+function scoreBoard(){
+    correctAnswers.innerHTML=score;
+}
+
+nextQuestionBtn.addEventListener("click",nextQuestion);
+
+function nextQuestion(){
+   generateRandomQuestion();
+    hideNextQuestionBtn();
+    hideAnswerDescription();
+    hideTimeUpText();
+    startTimer();
+}
+function quizResult(){
+    document.querySelector(".total-questions").innerHTML=myApp.length;
+    document.querySelector(".total-attempt").innerHTML=attempt;
+    document.querySelector(".total-correct").innerHTML=score;
+    document.querySelector(".your-score").innerHTML=score;
+    document.querySelector(".total-wrong").innerHTML=attempt-score;
+    const percentage=(score/myApp.length)*100;
+    document.querySelector(".percentage").innerHTML=percentage.toFixed(2) +"%";
+}
+function resetQuiz(){
+  attempt=0;
+  //questionIndex=0;
+  score=0;
+  number=0;
+  myArray=[];
+}
+
+function quizOver(){
+    nextQuestionBtn.classList.remove("show");
+    seeResultBtn.classList.add("show");
+}
+seeResultBtn.addEventListener("click", ()=>{
+    quizBox.classList.remove("show");
+    seeResultBtn.classList.remove("show");
+    quizOverBox.classList.add("show");
+    quizResult();
+     })
+
+startAgainQuizBtn.addEventListener("click", ()=>{
+    quizBox.classList.add("show");
+    quizOverBox.classList.remove("show");
+    resetQuiz();
+    nextQuestion();
+})
+
+goHomeBtn.addEventListener("click", ()=>{
+    quizOverBox.classList.remove("show");
+    quizHomeBox.classList.add("show")
+    resetQuiz();
+})
+  
+startQuizBtn.addEventListener("click", ()=>{
+    quizHomeBox.classList.remove("show");
+    quizBox.classList.add("show");
+    nextQuestion();
+})
+
+//window.onload=()=>{
+    
+//}
+</script>
+
+
+
+<br><br><br>
+<h2 class="block-title"><a style="font-size:20px; color:whitesmoke;">आप के लिए कुछ ट्रेंडिंग टॉपिक</a></h2>
+
+
+<iframe src="../../../recent-suggested/SUGGESTED.html" width="100%" height="5000px" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143314085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143314085-1');
+</script>
+
+
+
+
+
+
+

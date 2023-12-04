@@ -241,10 +241,10 @@
 </div>
 <div class="button-joined" align="center" id="test-ctrl-btn-container-box" >
 <div id="button-control-section">
-<button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="markforReview()" id="review">बाद में करूँगा</button>
-<button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="saveNext()" id="next"  >सेव करें और दूसरा प्रश्न देखें</button>
+<button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="markforReview()" id="review">इस प्रश्न को बाद में करेंगे</button>
+<button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="saveNext()" id="next"  >सेव करें/अगला सवाल</button>
 <button style="box-shadow:0px 0px 0px 0.6px #111;" type="button"   onclick="pre()" title="Click to view previous question" id="Prev" disabled="disabled"  >पिछला प्रश्न देखें</button>
-<button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="clearResponse()" id="clear">किसी को </button>
+<button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="clearResponse()" id="clear">विकल्प का चयन न करें </button>
 <label style="box-shadow:0px 0px 0px 0.6px #111;" style="padding:2px 5px;" for="menu-toggle">एग्जाम का स्टेटस देखें</label>
 <button style="box-shadow:0px 0px 0px 1px #111;width:%;display:block;background:#ff6600;color:#fff;" type="button"  id="test-submit-by-user" class="test-btn-clr"  data-question="Are you sure want To Submit Exam?" data-toggle="modal" data-target="#confirmModal" data-backdrop="static" data-keyboard="false">परीक्षा खत्म करें</button>
 </div></div>
@@ -257,32 +257,32 @@
       <h1 align="center" >Congratulations</h1>
 <ul class="bg-bubbles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
     </div>
-<div class="bottomHalf"><p>Congratulations, Your test submitted Successfully. You can review your test.</p></div></div> 
+<div class="bottomHalf"><p>आपका परीक्षा सफलतापूर्वक सबमिट हो गया। आप अपने परीक्षा का स्टेटस देख सकते हैं.</p></div></div> 
 <br>
 <div align="center" id="after" style="display:none;"> 
 <div align="center" id="aftertop">
 <fieldset class="summary-fieldset">
-<legend class="summary-legend">View Status of Your Test</legend>
+<legend class="summary-legend">अपने परीक्षा की स्थिति देखें</legend>
 <span style="padding:5px;margin:5px;display:block;background:#111;color:#fff;text-align:center;font-weight:bold;" id="taken_time"></span>
 <div id="user-result-after-submit"style="align-content:center;align-items:center;" align="center">
 <table align="center" id="final-tabled-result"  style="display:;">
-<tr><td><b>Section</b></td><td><b>Answered</b></td><td><b>Visted but Not Answered</b></td><td><b>Not Visited</b></td></tr>
-<tr><td id="section_name">section_name</td><td id="answered2">Answered</td><td id="visited2">Not Answered</td><td id="notvisited2">Not Visited</td></tr>
+<tr><td><b>परीक्षा का नाम</b></td><td><b>कितने प्रश्न किये</b></td><td><b>प्रश्न देखा लेकिन उत्तर नहीं दिया गया</b></td><td><b>प्रश्न नही देखा गया</b></td></tr>
+<tr><td id="section_name">छत्तीसगढ़ व्यापम अपेक्स बैंक</td><td id="answered2">Answered</td><td id="visited2">Not Answered</td><td id="notvisited2">Not Visited</td></tr>
 <tr style="background:#ff6600;color:#fff;"><td><b>Total</b></td><td id="answered7">Answered</td><td id="visited7">Not Answered</td><td id="notvisited7">Not Visited</td></tr>
 </table>
-<div id="test-dis" style="display:none;">Your score in "<span id="sb_mark_time">English</span>" is <label id="score">Score</label>/<label id="tscore">Total</label>.</div>
+<div id="test-dis" style="display:none;">आपका स्कोर "<span id="sb_mark_time">छत्तीसगढ़ व्यापम अपेक्स बैंक</span>" में  <label id="score">Score</label>/<label id="tscore">Total</label> रहा</div>
 <span id="charactor_status"></span>
-<div id="according_status_button"><button id="practice-button"style="background:#ff6600;color:#fff;cursor:pointer;"><a style="color:#fff !important;text-decoration:none;display:block;" id="practice-button-link" href="" >Take Practice</a></button>
-<button id="preparation-button"style="background:#efc;cursor:pointer;"><a style="color:blue;text-decoration:none;display:block;" id="preparation-button-link" href="" >Try Other test Series</a></button>
+<div id="according_status_button"><button id="practice-button"style="background:#ff6600;color:#fff;cursor:pointer;"><a style="color:#fff !important;text-decoration:none;display:block;" id="practice-button-link" href="../example/index.html" >और अभ्यास करें</a></button>
+<button id="preparation-button"style="background:#efc;cursor:pointer;"><a style="color:blue;text-decoration:none;display:block;" id="preparation-button-link" href="../example/index.html" >और दूसरी परीक्षा देखें</a></button>
 </div></div></fieldset>
 </br>
 <div id="test-restartq" style="display:none;">
 <fieldset class="summary-fieldset">
-<legend class="summary-legend">View Answer of Your Test</legend>
+<legend class="summary-legend">आपके द्वारा दी गई परीक्षा के सभी उत्तर देखें</legend>
 <div id="button-control-section">
-<button id="view_all" class="view_all" onclick="viewQuestions('testup724464qns')">View Answer</button>
-<button onclick="alert('Not available')"><a style="color:#111;" href="" id="view_explanation" target="_blank">View explanations</a></button>
-<button onclick="window.location.reload();">Re-Attempt</button>
+<button id="view_all" class="view_all" onclick="viewQuestions('ritesh7587qns')">उत्तर देखें</button>
+<button onclick="alert(' उपलब्ध नहीं है ')"><a style="color:#111;" href="" id="view_explanation" target="_blank">स्पष्टीकरण देखें</a></button>
+<button onclick="window.location.reload();">पुन: प्रयास</button>
 </div></fieldset></div>
 </br>
 </div>
@@ -2202,11 +2202,15 @@
  </label></div>   
  <div align="center" valign="middle"class="test-wrapper-container-part-2" id="test-qn-btn-pallete">
  <div style="border-top: 1px solid #b4daed;margin-top:0;"  id="button-control-section">
- <button style="border:none;" type="button"><span class="test-img-button answered" id="answered_count"></span> Answered</button>
- <button style="border:none;" type="button"><span class="test-img-button not-answered" id="unanswered_count"></span>Not Answered</button>
- <button style="border:none;" type="button"><span class="test-img-button not-visited" id="notvisited_count"></span> Not Visited</button>
- <button style="border:none;" type="button"><span class="test-img-button review" id="bookmarked_count"></span> Marked for Review</button>
- <button style="border:none;width:100%;display:block;"type="button"><span class="test-img-button review-marked" id="ans_bookmarked_count">0</span> Ans &amp; Marked for Review </button>
+ <button style="border:none;width:100%;display:block;" type="button"><span class="test-img-button answered" id="answered_count"></span>प्रश्न किये</button>
+ <button style="border:none;width:100%;display:block;" type="button"><span class="test-img-button not-answered" id="unanswered_count"></span>प्रश्न देखा लेकिन जवाब नहीं दिया</button>
+ <button style="border:none;width:100%;display:block;" type="button"><span class="test-img-button not-visited" id="notvisited_count"></span>प्रश्न अभी तक नहीं देखा</button>
+
+
+ <button style="border:none;width:100%;display:block;" type="button"><span class="test-img-button review" id="bookmarked_count"></span> बाद में करने के लिए छोड़ा है</button>
+
+
+ <button style="border:none;width:100%;display:block;"type="button"><span class="test-img-button review-marked" id="ans_bookmarked_count">0</span>सेव नहीं किया है </button>
  </div>
     <style type="text/css">
  #view-qn-paper-pdf ,#view-instructions2 {border:none;background:#b4daed;}
@@ -2368,11 +2372,11 @@ var deductive_number = 0.50; //"null" if you want keep no negative mark.
 var test_numbering = 1;
 var Subject_cum_exam = "CA"; //"Exam and subject" value specify here.
 var subject_name= "General Intelligence & Reasoning,General Awareness, Quantitative Aptitude, English Comprehension"; //Subject name
-var exam_name = "SSC CGL"; //Exam name
+var exam_name = "Online exam"; //Exam name
 var test_lang_avl = "Hindi & English";
 var attemp_limitations = "Unlimited"; //Attempt limit
-var start_practice_link ="https://www.testup.in";
-var start_preparation_link = "https://www.testup.in";
+var start_practice_link ="";
+var start_preparation_link = "../index.html";
 var view_explanation_link = "#";
 var lbl1 = 5; //set mark level for appreciation
 var lbl2 = 3; //set mark level for appreciation
@@ -3620,7 +3624,7 @@ document.getElementById("test-qn-btn-nv-side").style.display="";
 document.getElementById("test-congrat-message").style.display="none";
 document.getElementById("test-qn-btn-pallete").style.display="block";
 i=0;
-if(vari=="testup724464qns")
+if(vari=="ritesh7587qns")
 {
 j=0;temp=question_fetch.length;
 document.getElementById("test-qn-btn-nv-side").style.display="block";
@@ -4277,7 +4281,7 @@ function autosubmitpop(){
 function submit()
 {
 endTime = new Date();
-document.getElementById("taken_time").innerHTML="Taken Time : "+QuizTime(startTime, endTime)
+document.getElementById("taken_time").innerHTML="आपको परीक्षा देने में लगा: "+QuizTime(startTime, endTime)
 document.getElementById("pallate").style.display="none";
 document.getElementById("currentsection").style.display="none";
 document.getElementById("test-wrapper-container").style.display="none";
@@ -4337,22 +4341,22 @@ document.getElementById("tscore").innerHTML=x;
 }
 if(score*Positive_number>=lbl1){
 document.getElementById("test-dis").style.backgroundColor="green";
-document.getElementById("charactor_status").innerHTML="You preparation in this subject is Excellent.";
+document.getElementById("charactor_status").innerHTML="इस परीक्षा में आपकी तैयारी बहुत बढ़िया है.";
 document.getElementById("practice-button").style.display="none";
 }
 else if(score*Positive_number>=lbl2){
 document.getElementById("test-dis").style.backgroundColor="#fc0";
-document.getElementById("charactor_status").innerHTML="You preparation in this subject is Good.";
+document.getElementById("charactor_status").innerHTML="इस परीक्षा में आपकी तैयारी अच्छी है.";
 document.getElementById("practice-button").style.display="none";
 }
 else if(score*Positive_number>=lbl3){
 document.getElementById("test-dis").style.backgroundColor="#111";
-document.getElementById("charactor_status").innerHTML="You preparation in this subject is Poor.";
+document.getElementById("charactor_status").innerHTML="इस परीक्षा में आपकी तैयारी ख़राब है. (और अभ्यास करे)";
 document.getElementById("practice-button").style.display="block";
 }
 else if(score*Positive_number<lbl4){
 document.getElementById("test-dis").style.backgroundColor="red";
-document.getElementById("charactor_status").innerHTML="You Are weak in this subject.";
+document.getElementById("charactor_status").innerHTML="आप इस परीक्षा में कमजोर हैं. (और अभ्यास करे)";
 document.getElementById("practice-button").style.display="block";}
 
 document.getElementById("final-tabled-result").style.display="block";

@@ -9,14 +9,12 @@
 
 3.    एक सवाल गलत होने पर -0.50 नंबर कटेंगे
              var deductive_number = 0.50; 
+                 <span id="negative-marks">-0.50</span></span>
 
 4.    1 सही उत्तर देने पर : </td><td><span id="pr-qn-mark">1 नंबर मिलेंगे
               var Positive_number = 1;   
 
 5.  कुल अंक : </td><td id="t-mark">100 अंक 
-
-6.
-
 
 
 
@@ -103,12 +101,12 @@
 <div  class="test-rgl-padding">
 
 
-<p align="center" style="margin:5px;padding:5px;" >यह ऑनलाइन परीक्षा Hindi-job.com द्वारा आयोजित की जा रही है, उम्मीदवारों को अपनी परीक्षा की बेहतर तरीके से तैयारी करने के लिए इस परीक्षा का अभ्यास करना चाहिए।</p>
+<p align="center" style="margin:5px;padding:5px;" >उम्मीदवारों को अपनी परीक्षा की बेहतर तरीके से तैयारी करने के लिए इस परीक्षा का अभ्यास करना चाहिए।</p>
 
 
 
 <table align="center" style="width:100%">
-<tr><td align="center" colspan="2" style="background:red;color:#fff;">इस ऑनलाइन परीक्षा का विवरण</td></tr>
+<tr><td align="center" colspan="2" style="background:red;color:#fff;">ऑनलाइन परीक्षा का विवरण</td></tr>
 
 
 
@@ -203,7 +201,7 @@
 <div align="left"  class="panel">
   1. परीक्षा की कुल अवधि 60 मिनट है।<br><br>
 
-  2. घड़ी 60 मिनट पर सेट की जाएगी. स्क्रीन के ऊपरी दाएं कोने में काउंटडाउन टाइमर आपके परीक्षा पूरी करने के लिए उपलब्ध शेष समय प्रदर्शित करेगा। जब टाइमर शून्य पर पहुंच जाएगा, तो परीक्षा अपने आप समाप्त हो जाएगी। आपको अपनी परीक्षा समाप्त करने या जमा करने की आवश्यकता नहीं होगी।<br><br>
+  2. घड़ी 60 मिनट पर सेट की जाएगी. काउंटडाउन टाइमर आपके परीक्षा पूरी करने के लिए उपलब्ध शेष समय प्रदर्शित करेगा। जब टाइमर शून्य पर पहुंच जाएगा, तो परीक्षा अपने आप समाप्त हो जाएगी। आपको अपनी परीक्षा समाप्त करने या जमा करने की आवश्यकता नहीं होगी।<br><br>
 
 
   3. आपको "एग्जाम का स्टेटस देखे" वाले बटन पर क्लिक करना है, आप जो एग्जाम दे रहें है उसका स्टेटस देख सकतें है, निम्नलिखित प्रतीकों में से किसी एक का उपयोग करके प्रत्येक प्रश्न की स्थिति दिखाएगा की आपने कौन से प्रश्न कर लिए हैं और कौन से प्रश्न नही किये है:<br><br>
@@ -318,7 +316,7 @@ for (i = 0; i < acc.length; i++) {
 
 <strong><center><h3>छत्तीसगढ़ व्यापम अपेक्स बैंक</h3></center></strong>
   <div style="width:100%;" align="center" id="test-top-head" >
-  <button style="overflow-x:scroll;width:28% !important" class="test-section1  enabled" id="test-section3"><b style="overflow:scroll;white-space: nowrap;" id="exam_test_subject"></b><strong>ऑनलाइन परीक्षा</strong></button>
+  <button style="overflow-x:scroll;width:20% !important" class="test-section1  enabled" id="test-section3"><b style="overflow:scroll;white-space: nowrap;" id="exam_test_subject"></b><strong>समय :</strong></button>
 
   <button style="background:#ff6600;width:40%;"  class="timer-time-bg" ><span class="test-remain-timer" id="test-countdown" align="right">Timer</span></button>
 </div>
@@ -326,7 +324,6 @@ for (i = 0; i < acc.length; i++) {
 <table align="center">
 <tr><td width=""colspan="2">प्रश्न क्रमांक <span id="qn-no-testp"></span></td><td><span style="white-space:nowrap;" id="mark-distribution">अंक : <span id="positive-marks">+1.00</span><span id="negative-marks">-0.50</span></span></td>
 <td>
-<label style="visibility:hidden;" disabled="disabled" class="icon-close-open-pallate" id="report_qn"><i class="fa fa-exclamation-triangle" style="font-size:16px"></i></label>
  <label id="icon-close-open-pallate" for="menu-toggle" >  
   <i id="icon-opener-menu" class="fa fa-th"></i>
   </label></td></tr>
@@ -346,11 +343,16 @@ for (i = 0; i < acc.length; i++) {
 <button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="markforReview()" id="review">बाद में करेंगे</button>
 <button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="saveNext()" id="next"  >सेव करें</button>
 <button style="box-shadow:0px 0px 0px 0.6px #111;" type="button"   onclick="pre()" title="Click to view previous question" id="Prev" disabled="disabled"  >पिछला प्रश्न देखें</button>
-<button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="clearResponse()" id="clear">कलियर करें </button>
+<button style="box-shadow:0px 0px 0px 0.6px #111;" type="button" class="" onclick="clearResponse()" id="clear">क्लियर करें </button>
 <label style="box-shadow:0px 0px 0px 0.6px #111;" style="padding:2px 5px;" for="menu-toggle">स्टेटस देखें</label>
 <button style="box-shadow:0px 0px 0px 1px #111;width:%;display:block;background:#ff6600;color:#fff;" type="button"  id="test-submit-by-user" class="test-btn-clr"  data-question="क्या आप परीक्षा समाप्त करना चाहते हैं?" data-toggle="modal" data-target="#confirmModal" data-backdrop="static" data-keyboard="false">परीक्षा खत्म करें</button>
+
 </div></div>
 </div>
+
+
+
+
 <div id="test-congrat-message"align="center" style="display:none;" class="wrapperAlert">
 <div align="center"  class="topHalf">
 <p align="center" valign="middle" ><svg viewBox="0 0 512 512" width="50" title="check-circle">
@@ -3658,7 +3660,7 @@ if (startTime === null) {
  }
 if(answerOptions[i]==undefined)
 {
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (i+1)+"] " +question_fetch[i].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (i+1)+"] " +question_fetch[i].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(i+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(i+1)+"</span> "+question_fetch[i].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[i].gsx$qnimage.$t;
@@ -3670,7 +3672,7 @@ document.getElementById("q"+(i+1)).className="notAnswered";
 }
 else
 {
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (i+1) +"] " +question_fetch[i].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (i+1) +"] " +question_fetch[i].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(i+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(i+1)+"</span> "+question_fetch[i].gsx$question.$t;
 document.getElementById("queims").src = question_fetch[i].gsx$qnimage.$t;
@@ -3850,7 +3852,7 @@ ibv=ques;
 if(answerOptions[ques]==undefined)
 {
 clear();
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -3863,7 +3865,7 @@ button.className="notAnswered";}
 }
 else
 {
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -3973,7 +3975,7 @@ document.getElementById("q"+(ibv+1)).className="answeredButton";
 ibv++;
 if(answerOptions[ibv]==undefined)
 {
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -3993,7 +3995,7 @@ clear();
 }
 else
 {
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4027,7 +4029,7 @@ else if(answerOptions[ibv+1]==undefined)
 {
 
 ibv++;
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4051,7 +4053,7 @@ clear();
 else
 {
 ibv++;
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4129,7 +4131,7 @@ document.getElementById("q"+(ibv+1)).className="answeredButton";
 ibv--;
 if(answerOptions[ibv]==undefined)
 {
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4147,7 +4149,7 @@ document.getElementById("q"+(ibv)).className="notAnswered";
 clear();}
 else
 {
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4184,7 +4186,7 @@ else if(answerOptions[ibv-1]==undefined)
 {
 
 ibv--;
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4197,7 +4199,7 @@ clear();
 else
 {
 ibv--;
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4263,7 +4265,7 @@ document.getElementById("q"+(ibv+1)).className="review";
 ibv++;
 if(answerOptions[ibv]==undefined)
 {
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4281,7 +4283,7 @@ clear();
 }
 else
 {
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4318,7 +4320,7 @@ document.getElementById("r5").checked = true;
 else if(answerOptions[ibv+1]==undefined)
 {
 ibv++;
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+ "and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4332,7 +4334,7 @@ if(document.getElementById("q"+(ibv+1)).className=="review" || document.getEleme
 }clear();}
 else{
 ibv++;
-document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=918931075294&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+"and Post link is "+ window.location.href+". Please check this Question.";
+document.getElementById("report_in_whatsapp_qn").href="https://api.whatsapp.com/send?phone=917587344337&text="+"My confusion in this Qn [" + (ibv+1) +"] " +question_fetch[ibv].gsx$question.$t+"and Post link is "+ window.location.href+". Please check this Question.";
 document.getElementById("qn-no-testp").innerHTML="<span id='test-question-number1'>"+(ibv+1)+"</span> ";
 document.getElementById("test-questions").innerHTML="<span id='test-question-number'>"+(ibv+1)+"</span> "+question_fetch[ibv].gsx$question.$t;
 document.getElementById("queims").src=question_fetch[ibv].gsx$qnimage.$t;
@@ -4507,8 +4509,8 @@ ConfirmBox.prototype = {
       if( document.querySelector( "#test-confirm-wrapp" ) === null ) {
       var wrapper = document.createElement( "div" );
         wrapper.id = "test-confirm-wrapp";
-      var html = "<div align='center' id='test-confirm-box'><img style='border:none;' src='https://1.bp.blogspot.com/--zLAu1T1avE/YT2FpRCjUkI/AAAAAAAAAG0/ymkxbJ_IAJQZ6UCbxnVo8fqvXPs8DM1YgCLcBGAsYHQ/s0/IMG_20210912_101310.jpg' valign='middle' id='submit-time-logo' align='center'><h2  id='confirm-header'></h2><br><div class='uvp-list'><ul><li><span class='test-data-title'>शेष समय : </span><span id='test-time-left' class='test-data-get'>---</span></li><li><span class='test-data-title'>प्रयास किया गया : </span><span  id='test-qn-attempted' class='test-data-get'>---</span></li><li><span class='test-data-title'>प्रयास नहीं किया गया : </span><span  id='test-qn-unattempted' class='test-data-get'>---</span></li><li><span class='test-data-title'>बाद में करने के लिए छोड़ा है : </span><span id='test-qn-review'  class='test-data-get'>---</span></li><li><span class='test-data-title'>बाद में फिर चेक करना चाहता है : </span><span id='test-qn-markreview' class='test-data-get'>---</span></li></ul></div>";
-        html += "<div id='test-confirm-buttons'><div id='test-confirm-output'></div><br><button class='test-btn btn-success' style='background:#389B10;' onclick='submit()' id='confirm-ok'>रिजल्ट देखें</button><button class='test-btn btn-danger' style='background:red;' type='button' id='confirm-cancel'>आगे परीक्षा दें</button></div>";
+      var html = "<div align='center' id='test-confirm-box'><img style='border:none;' src='../photo/confuse-icon.jpg' valign='middle' id='submit-time-logo' align='center'><h2  id='confirm-header'></h2><br><div class='uvp-list'><ul><li><span class='test-data-title'>शेष समय : </span><span id='test-time-left' class='test-data-get'>---</span></li><li><span class='test-data-title'>प्रयास किया गया : </span><span  id='test-qn-attempted' class='test-data-get'>---</span></li><li><span class='test-data-title'>प्रयास नहीं किया गया : </span><span  id='test-qn-unattempted' class='test-data-get'>---</span></li><li><span class='test-data-title'>बाद में करने के लिए छोड़ा है : </span><span id='test-qn-review'  class='test-data-get'>---</span></li><li><span class='test-data-title'>बाद में फिर चेक करना चाहता है : </span><span id='test-qn-markreview' class='test-data-get'>---</span></li></ul></div>";
+        html += "<div id='test-confirm-buttons'><div id='test-confirm-output'></div><br><button class='test-btn btn-success' style='background:red;' onclick='submit()' id='confirm-ok'>समाप्त करें</button><button class='test-btn btn-danger' style='background:green;' type='button' id='confirm-cancel'>अभी नहीं</button></div>";
         html += "</div>";
         
         wrapper.innerHTML = html;
@@ -4598,7 +4600,7 @@ var span_report = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn_report.onclick = function() {
-  modal_report.style.display = "block";
+  modal_report.style.display = "none";
 }
 
 // When the user clicks on <span> (x), close the modal

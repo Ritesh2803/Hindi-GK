@@ -1,0 +1,372 @@
+
+ <link href="../../css/style.css" rel="stylesheet">
+<script async src="../timer.js"></script>
+
+  <br><br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <a href="../../../index.html"><img alt="" class="img-fluid" src="../../../Website-css-use-pic/logo-transparent.png"></a>
+   </div>  </div>   </center>
+
+<br><br>
+<div id='baca-juga'>
+
+
+</div>
+<div class='' id=''>
+<meta content='test' itemprop='description'/>
+<div id='body-post-it'>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
+<head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+
+
+</head> 
+ <div class="quiz-home-box custom-box show" sryle="">
+
+
+ <br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../test-number.png"><a style="font-size:40px; color:black;">216</a>
+   </div>  </div></center><br><br>
+
+
+ <center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../timer.png" width="100%">
+   </div>  </div></center>
+
+
+ <br><center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../note.png" width="100%">
+   </div>  </div></center><br><br>
+
+
+ <button class="start-quiz-btn btn" type="button"><strong>टेस्ट शुरु करें</strong></button>
+</div>
+<div class="quiz-box custom-box">
+<div class="stats">
+<div class="quiz-time">
+<div class="remaining-time"></div>
+<span class="time-up-text">उत्तर देने का समय ख़त्म हो चूका है</span>
+</div>
+<div class="score-board">
+<span class="score-text">सही जवाब:</span>
+<span class="correct-answer"></span>
+</div>
+</div>
+<div class="question-box">
+<div class="current-question-num">
+</div>
+<div class="question-text">
+    
+</div>
+</div>
+<div class="option-box">
+
+</div>
+<div class="next-question">
+<button class="next-question-btn btn" type="button">अगला सवाल</button>
+<button class="see-result-btn btn" type="button">अपना परिणाम देखें</button>
+</div>
+<div class="answer-description">
+    
+</div>
+
+</div>
+<div class="quiz-over-box custom-box">
+<h3>रिज़ल्ट</h3>
+<h4>कुल सवाल: <span class="total-questions"></span></h4>
+<h4>कितने किये: <span class="total-attempt"></span></h4>
+<h4>सही: <span class="total-correct"></span></h4>
+<h4>गलत: <span class="total-wrong"></span></h4>
+<h4>प्राप्तांक: <span class="your-score"></span></h4>
+<h4>प्रतिशत: <span class="percentage"></span></h4>
+<button class="start-again-quiz-btn btn" type="button">फिर से शुरू करें</button>
+<a href="test-217.html"><button class="go-home-btn btn" type="button">दूसरे प्रश्न देखें</button></a>
+
+</div>
+
+<script>
+
+
+const questionText=document.querySelector(".question-text");
+const optionBox=document.querySelector(".option-box");
+const currentQuestionNum=document.querySelector(".current-question-num");
+const answerDescription=document.querySelector(".answer-description");
+const nextQuestionBtn=document.querySelector(".next-question-btn");
+const correctAnswers=document.querySelector(".correct-answer");
+const seeResultBtn=document.querySelector(".see-result-btn");
+const remainingTime=document.querySelector(".remaining-time");
+const timeUpText=document.querySelector(".time-up-text");
+const quizHomeBox=document.querySelector(".quiz-home-box");
+const quizBox=document.querySelector(".quiz-box");
+const quizOverBox=document.querySelector(".quiz-over-box");
+const startAgainQuizBtn=document.querySelector(".start-again-quiz-btn");
+const goHomeBtn=document.querySelector(".go-home-btn");
+const startQuizBtn=document.querySelector(".start-quiz-btn");
+let attempt=0;
+let questionIndex=0;
+let score=0;
+let number=0;
+let myArray=[];
+let interval;
+    // You can put Questions Here
+    // answer id 1-0, 2-1, 3-2, 4-3, 
+myApp=[
+
+
+
+
+
+ 
+{question:'एक प&#2369;र&#2370;ष और एक लड़क&#2375; न&#2375; म&#2367;लकर 5 द&#2367;न क&#2366;म क&#2367;य&#2366; और उन&#2381;ह&#2375;&#2306; क&#2369;ल म&#2367;ल&#2366;कर र&#2369; 1000 मजद&#2370;र&#2368; प&#2381;र&#2366;प&#2381;त ह&#2369;ई&#2404; प&#2369;र&#2370;ष लड़क&#2375; क&#2368; अप&#2375;क&#2381;ष&#2366; त&#2368;न ग&#2369;न&#2366; क&#2366;र&#2381;यक&#2369;शल ह&#2376;&#2404; लड़क&#2375; क&#2368; द&#2376;न&#2367;क मजद&#2370;र&#2368; क&#2367;तन&#2368; ह&#2376;?',options:['र&#2369; 30','र&#2369; 40','र&#2369; 50','र&#2369; 60',],answer:2,
+description:'1 प&#2369;र&#2370;ष और 1 लड़क&#2375; क&#2368; 5 द&#2367;न क&#2368; मजद&#2370;र&#2368; = र&#2369; 1000<div>&#8756; 1 प&#2369;र&#2370;ष और 1 लड़क&#2375;&#2375; क&#2368; 1 द&#2367;न क&#2368; मजद&#2370;र&#2368; = 1/5&#215;1000<div>= र&#2369;200<div>म&#2366;न&#2366; एक लड़क&#2375; क&#2368; मजद&#2370;र&#2368; = र&#2369; X प&#2381;रत&#2367; द&#2367;न<div>एक प&#2369;र&#2370;ष क&#2368; मजद&#2370;र&#2368; = 3x प&#2381;रत&#2367; द&#2367;न<div>= 3x + x = र&#2369;200<div>&#10233;4x = 200<div>x = 200/4 = र&#2369;'},
+{question:'5 प&#2369;र&#2370;ष क&#2367;स&#2368; क&#2366;र&#2381;य क&#2379; 4 द&#2367;न म&#2375;&#2306; करत&#2375; ह&#2376;&#2306;&#2404; 10 प&#2369;र&#2370;ष&#2379;&#2306; द&#2381;व&#2366;र&#2366; उस क&#2366;र&#2381;य क&#2379; प&#2370;र&#2366; करन&#2375; म&#2375;&#2306; द&#2367;न&#2379;&#2306; क&#2368; स&#2306;ख&#2381;य&#2366; ह&#2379;ग&#2368;',options:['2 द&#2367;न','3 द&#2367;न','4 द&#2367;न','5 द&#2367;न',],answer:0,
+ description:'2 द&#2367;न'},
+{question:'4 प&#2369;र&#2370;ष और 6 लड़क&#2375; क&#2367;स&#2368; क&#2366;र&#2381;य क&#2379; 4 द&#2367;न म&#2375;&#2306; सम&#2366;प&#2381;त करत&#2375; ह&#2376;&#2306;, जबक&#2367; उस&#2368; क&#2366;र&#2381;य क&#2379; 2 प&#2369;र&#2370;ष और 4 लड़क&#2375; 7 द&#2367;न म&#2375;&#2306; कर सकत&#2375; ह&#2376;&#2306;, त&#2379; 10 प&#2369;र&#2370;ष और 8 लड़क&#2375; उस&#2375; प&#2370;र&#2366; कर ल&#2375;&#2306;ग&#2375;',options:['1 द&#2367;न म&#2375;&#2306;','2 द&#2367;न म&#2375;&#2306;','3 द&#2367;न म&#2375;&#2306;','4 द&#2367;न म&#2375;&#2306;',],answer:1,
+ description:'म&#2366;न&#2366; एक प&#2369;र&#2370;ष और एक लड़क&#2375; क&#2366; एक द&#2367;न क&#2366; क&#2366;र&#2381;य क&#2381;रमश&#2307; x और y ह&#2376;&#2404;<div>प&#2381;रश&#2381;न&#2366;न&#2369;स&#2366;र,<div>4x + 6y = 1/4&#10233;2x + 3y = 1/8 &#8230;(i)<div>और 2x + 4y = 1/ 7 &#10233;x + 2y = 1/14 &#8230;.(ii)<div>सम&#2368; (i) और (ii) क&#2379; हल करन&#2375; पर,<div>x = 1/28और y = 1/56<div>10 प&#2369;र&#2370;ष&#2379;&#2306; और 8 लड़क&#2379;&#2306; क&#2366; एक द&#2367;न क&#2366; क&#2366;र&#2381;य<div>=10&#10799;1/28 + 8&#10799;1/56<div>= 28/56 = 1/2<div>अत&#2307; 10 प&#2369;र&#2370;ष और 8 लड़क&#2375; इस क&#2366;र&#2381;य क&#2379; 2 द&#2367;न म&#2375;&#2306; प&#2370;र&#2366; कर&#2375;&#2306;ग'},
+{question:'पवन अक&#2375;ल&#2375; एक क&#2366;र&#2381;य क&#2379; 30 घण&#2381;ट&#2375; म&#2375;&#2306; तथ&#2366; प&#2306;कज क&#2375; स&#2366;थ म&#2367;लकर 15 घण&#2381;ट&#2375; म&#2375;&#2306; प&#2370;र&#2366; कर ल&#2375;त&#2366; ह&#2376;, त&#2379; अक&#2375;ल&#2375; प&#2306;कज उस क&#2366;र&#2381;य क&#2379; कर सकत&#2366; ह&#2376;',options:['30 घण&#2381;ट&#2375; म&#2375;&#2306;','45 घण&#2381;ट&#2375; म&#2375;&#2306;','15 घण&#2381;ट&#2375; म&#2375;&#2306;','2 घण&#2381;ट&#2375; म&#2375;&#2306;',],answer:0,
+ description:'पवन क&#2367;स&#2368; क&#2366;र&#2381;य क&#2379; अक&#2375;ल&#2375; 30 घण&#2381;ट&#2375; म&#2375;&#2306; करत&#2366; ह&#2376;&#2404;<div>&#8756; पवन क&#2366; एक घण&#2381;ट&#2375; क&#2366; क&#2366;र&#2381;य = 1/30 भ&#2366;ग<div>पवन तथ&#2366; प&#2306;कज क&#2366; 1 घण&#2381;ट&#2375; क&#2366; क&#2366;र&#2381;य = 1/15 भ&#2366;ग<div>प&#2306;कज क&#2366; 1 घण&#2381;ट&#2375; क&#2366; क&#2366;र&#2381;य = 1/15 &#8211; 1/30 = 1/30 भ&#2366;ग<div>अर&#2381;थ&#2366;त&#2381; प&#2306;कज उस&#2368; क&#2366;र&#2381;य क&#2379; 30 घण&#2381;ट&#2375; म&#2375;&#2306; अक&#2375;ल&#2375; कर&#2375;ग&#2366;&#2404;<div>स&#2306;क&#2381;ष&#2367;प&#2381;त व&#2367;ध&#2367; xy / y-xस&#2375;, 15 30 /30 &#8211; 15 = 30 घण&#2381;ट&#2375;'},
+{question:'मजद&#2370;र&#2379;&#2306; क&#2366; एक सम&#2370;ह क&#2367;स&#2368; क&#2366;र&#2381;य क&#2379; 10 द&#2367;न म&#2375;&#2306; करन&#2375; क&#2366; आश&#2381;व&#2366;सन द&#2375;त&#2366; ह&#2376; ल&#2375;क&#2367;न उनम&#2375;&#2306; स&#2375; 5 अन&#2369;पस&#2381;थ&#2367;त ह&#2379; ज&#2366;त&#2375; ह&#2376;&#2306;&#2404; यद&#2367; श&#2375;ष मजद&#2370;र क&#2366;र&#2381;य क&#2379; 15 द&#2367;न म&#2375;&#2306; प&#2370;र&#2366; कर द&#2375;त&#2375; ह&#2376;&#2306;, त&#2379; मजद&#2370;र&#2379;&#2306; क&#2368; म&#2370;ल स&#2306;ख&#2381;य&#2366; क&#2381;य&#2366; थ&#2368;?',options:['30','20','15','इनम&#2375;&#2306; स&#2375; क&#2379;ई नह&#2368;&#2306;',],answer:2,
+description:'म&#2366;न&#2366; मजद&#2370;र&#2379;&#2306; क&#2368; क&#2369;ल स&#2306;ख&#2381;य&#2366; x<div>मजद&#2370;र द&#2367;न<div>x (x-5)&#8593; 10&#166;15&#8595;<div>10/15 = x &#8211; 5 / x<div>&#10233;15x &#8211; 75 = 10x &#10233;5x = 75<div>&#10233;x = 15'},
+
+ {question:'A क&#2367;स&#2368; क&#2366;र&#2381;य क&#2379; 120 द&#2367;न&#2379;&#2306; म&#2375;&#2306; तथ&#2366;, B 150 द&#2367;न&#2379;&#2306; म&#2375;&#2306; कर सकत&#2366; ह&#2376;&#2306;&#2404; द&#2379;न&#2379;&#2306; एक स&#2366;थ 20 द&#2367;न क&#2366;र&#2381;य करत&#2375; ह&#2376;&#2306;&#2404; फ&#2367;र B चल&#2366; ज&#2366;त&#2366; ह&#2376; और A अक&#2375;ल&#2375; क&#2366;र&#2381;य करत&#2366; ह&#2376;&#2404; इसक&#2375; 12 द&#2367;न पश&#2381;च&#2366;त&#2381; C आ ज&#2366;त&#2366; ह&#2376; और तय क&#2366;र&#2381;य अगल&#2375; 48 द&#2367;न&#2379;&#2306; म&#2375;&#2306; सम&#2366;प&#2381;त ह&#2379; ज&#2366;त&#2366; ह&#2376;&#2404; C अक&#2375;ल&#2375; उस क&#2366;र&#2381;य क&#2379; सम&#2366;प&#2381;त कर सकत&#2366; ह&#2376;',options:['200 द&#2367;न म&#2375;&#2306;','260 द&#2367;न म&#2375;&#2306;','180 द&#2367;न म&#2375;&#2306;','240 द&#2367;न म&#2375;&#2306;',],answer:3,
+description:'म&#2366;न&#2366; C अक&#2375;ल&#2375; X द&#2367;न म&#2375;&#2306; क&#2366;र&#2381;य सम&#2366;प&#2381;त कर सकत&#2366; ह&#2376;&#2404; A न&#2375; 20 द&#2367;न म&#2375;&#2306; B क&#2375; स&#2366;थ, 12 द&#2367;न अक&#2375;ल&#2375; तथ&#2366; 48 द&#2367;न C क&#2375; स&#2366;थ क&#2366;र&#2381;य क&#2367;य&#2366;&#2404; इस प&#2381;रक&#2366;र A न&#2375; क&#2369;ल 20 + 12 + 48 = 80 द&#2367;न क&#2366;र&#2381;य क&#2367;य&#2366;&#2404; B न&#2375; क&#2375;वल 20 द&#2367;न तथ&#2366; C न&#2375; क&#2375;वल 48 द&#2367;न क&#2366;र&#2381;य क&#2367;य&#2366;&#2404;<div>&#8756;A क&#2366; क&#2366;र&#2381;य +B क&#2366; क&#2366;र&#2381;य +C क&#2366; क&#2366;र&#2381;य = 1<div>80/120 + 20/150 + 48/x = 1<div>&#10233;48/x = 1-&#8532; &#8211; 2/15 = 15-10-2 / 15 = &#8533;<div>&#10233;x = 5 40 = 240 द&#2367;न'},
+{question:'यद&#2367; A, B तथ&#2366; C क&#2367;स&#2368; क&#2366;र&#2381;य क&#2379; अक&#2375;ल&#2375; क&#2381;रमश&#2307; 12, 15 व 18 द&#2367;न म&#2375;&#2306; प&#2370;र&#2366; करत&#2375; ह&#2376;&#2306;&#2404; यद&#2367; त&#2368;न&#2379;&#2306; म&#2367;लकर इस&#2368; क&#2366;र&#2381;य क&#2379; करन&#2366; च&#2366;ह&#2375;&#2306;, त&#2379; क&#2366;र&#2381;य क&#2367;तन&#2375; द&#2367;न&#2379;&#2306; म&#2375;&#2306; सम&#2366;प&#2381;त कर सक&#2375;&#2306;ग&#2375;?',options:['5 44/51','6 51/44','4 37/32','4 32/37',],answer:3,
+description:'A, B तथ&#2366; C क&#2366; एक द&#2367;न क&#2366; क&#2366;म क&#2381;रमश&#2307; 1/12, 1/15 व 1/18 ह&#2379;ग&#2366;&#2404;<div>त&#2368;न&#2379;&#2306; क&#2366; एक द&#2367;न क&#2366; क&#2366;र&#2381;य<div>= 1/12 + 1/15 + 1/18 = 15+12 + 18 / 180 = 37 /18 भ&#2366;ग<div>अत&#2307; त&#2368;न&#2379;&#2306; प&#2370;र&#2375; क&#2366;र&#2381;य क&#2379; कर&#2375;&#2306;ग&#2375; 4 32/37 द&#2367;न&#2379;&#2306; म&#2375;&#2306;<div>स&#2306;क&#2381;ष&#2367;प&#2381;त व&#2367;ध&#2367; xyz / xy+yz+zx स&#2375;,<div>=12&#215;15&#215;18 / 12&#215;15 + 15&#215;18 + 18&#215;12<div>= 3240 / 666 = 180 / 37 = 4 32/37 द&#2367;न&#2379;&#2306; म&#2375;&#2306;'},
+{question:'क&#2367;स&#2368; क&#2366;र&#2381;य क&#2379; A,B तथ&#2366; C क&#2381;रमश&#2307; 24 द&#2367;न, 9 द&#2367;न व 12 द&#2367;न म&#2375;&#2306; प&#2370;र&#2366; कर सकत&#2375; ह&#2376;&#2306;&#2404; B तथ&#2366; C क&#2366;र&#2381;य प&#2381;र&#2366;रम&#2381;भ करत&#2375; ह&#2376;&#2306;, परन&#2381;त&#2369; उन&#2381;ह&#2375; 3 द&#2367;न ब&#2366;द यह क&#2366;र&#2381;य छ&#2379;ड़न&#2366; पडत&#2366; ह&#2376;&#2404; श&#2375;ष क&#2366;र&#2381;य क&#2379; करन&#2375; म&#2375;&#2306; A क&#2379; लग&#2366; समय ह&#2376;',options:['5 द&#2367;न','6 द&#2367;न','10 द&#2367;न','10 1/2 द&#2367;न',],answer:2,
+description:'B तथ&#2366; C क&#2366; 1 द&#2367;न क&#2366; क&#2366;र&#2381;य<div>= 1/9 + 1/12 = 4+3 / 36 = 7/36<div>B तथ&#2366; C क&#2366; 3 द&#2367;न क&#2366; क&#2366;र&#2381;य = 7 / 12<div>श&#2375;ष क&#2366;र&#2381;य = 1-7/12 = 5/12<div>क&#2366;र&#2381;य द&#2367;न<div>1 5/12&#8595; 24 x&#8595;<div>&#8756;1: 5/12 24 = : x<div>&#10233;x = 5 / 12&#10799;24 =10 द&#2367;न'},
+{question:'प&#2366;इप अ तथ&#2366; ब एक ट&#2306;क&#2368; क&#2379; क&#2381;रमश&#2307; 20 एव&#2306; 30 म&#2367;नट म&#2375;&#2306; भर सकत&#2375; ह&#2376;&#2306;&#2404; प&#2366;इप स इस&#2375; 24 म&#2367;नट म&#2375;&#2306; ख&#2366;ल&#2368; कर सकत&#2366; ह&#2376;&#2404; यद&#2367; प&#2366;इप अ, ब तथ&#2366; स क&#2379; क&#2381;रम&#2367;क र&#2370;प स&#2375; एक-एक म&#2367;नट क&#2375; ल&#2367;ए ख&#2379;ल&#2375; रख&#2366; ज&#2366;ए, त&#2379; यह ट&#2306;क&#2368; क&#2367;तन&#2375; समय म&#2375;&#2306; भर&#2375;ग&#2368;?',options:['26 म&#2367;नट','74 म&#2367;नट','72 म&#2367;नट','68 म&#2367;नट',],answer:2,
+description:'प&#2366;इप अ, ब तथ&#2366; स द&#2381;व&#2366;र&#2366; 1 म&#2367;नट म&#2375;&#2306; भर&#2366; भ&#2366;ग क&#2381;रमश&#2307; 1/20, 1/30 तथ&#2366; 1/24 ह&#2376;&#2404;<div>त&#2368;न&#2379;&#2306; प&#2366;इप&#2379;&#2306; क&#2379; एक-एक म&#2367;नट क&#2375; ल&#2367;ए ख&#2379;लन&#2375; पर ट&#2306;क&#2368; क&#2366; भर&#2366; भ&#2366;ग (1/20 + 1/30 &#8211; 1/24) भ&#2366;ग = 5/120 भ&#2366;ग<div>5/120 भ&#2366;ग भरत&#2366; ह&#2376; = 3&#215;120/ 5 = 72 म&#2367;नट म&#2375;&#2306;'},
+{question:'A क&#2367;स&#2368; क&#2366;र&#2381;य क&#2366; 2/5 भ&#2366;ग 12 द&#2367;न म&#2375;&#2306; तथ&#2366; B इस क&#2366;र&#2381;य क&#2366; 3/4 भ&#2366;ग 18 द&#2367;न म&#2375;&#2306; कर सकत&#2366; ह&#2376;&#2404; द&#2379;न&#2379;&#2306; म&#2367;लकर इस क&#2366;र&#2381;य क&#2379; क&#2367;तन&#2375; द&#2367;न म&#2375;&#2306; कर ल&#2375;&#2306;ग&#2375;?',options:['7 3/7 द&#2367;न म&#2375;&#2306;','13 1/3 द&#2367;न म&#2375;&#2306;','6 2/3 द&#2367;न म&#2375;&#2306;','8 5/11 द&#2367;न म&#2375;&#2306;',],answer:1,
+description:'13 1/3 द&#2367;न म&#2375;&#2306;'},
+
+ 
+  
+  
+  
+  
+  
+ ];
+
+function load(){
+    number++;
+   questionText.innerHTML=myApp[questionIndex].question;
+    creatOptions();
+    scoreBoard();
+    currentQuestionNum.innerHTML=number + " / " +myApp.length;
+}
+function creatOptions(){
+    optionBox.innerHTML="";
+    let animationDelay=0.2;
+    for(let i=0; i<myApp[questionIndex].options.length; i++){
+        const option=document.createElement("div");
+              option.innerHTML=myApp[questionIndex].options[i];
+              option.classList.add("option");
+              option.id=i;
+              option.style.animationDelay=animationDelay + "s";
+              animationDelay=animationDelay+0.2;
+              option.setAttribute("onclick","check(this)");
+              optionBox.appendChild(option);
+        
+    }
+}
+
+function generateRandomQuestion(){
+    const randomNumber=Math.floor(Math.random() * myApp.length);
+   let hitDuplicate=0;
+   if(myArray.length == 0){
+        questionIndex=randomNumber;
+    }
+    else{
+        for(let i=0; i<myArray.length; i++){
+            if(randomNumber == myArray[i]){
+                //if duplicate found
+                hitDuplicate=1;
+                
+            }
+        }
+        if(hitDuplicate == 1){
+            generateRandomQuestion();
+            return;
+        }
+        else{
+            questionIndex=randomNumber;
+        }
+    }
+    
+    myArray.push(randomNumber);
+    console.log(myArray)
+    load();
+}
+
+function check(ele){
+    const id=ele.id;
+    if(id==myApp[questionIndex].answer){
+       ele.classList.add("correct");
+        score++;
+        scoreBoard();
+    }
+    else{
+        ele.classList.add("wrong");
+        //show correct option when clicked answer is wrong
+        for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+            }
+        }
+    }
+    attempt++;
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+    stopTimer();
+    
+    if(number == myApp.length){
+        quizOver();
+    }
+}
+function timeIsUp(){
+    showTimeUpText();
+    //when time is up Show Correct Answer
+    for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+    
+            }
+        }
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+ if(number == myApp.length){
+        quizOver();
+      }
+}
+
+function stopTimer(){
+    clearInterval(interval);
+}
+function disableOptions(){
+    for(let i=0; i<optionBox.children.length; i++){
+        optionBox.children[i].classList.add("already-answered")
+    }
+}
+function showAnswerDescription(){
+    if(typeof myApp[questionIndex].description !== 'undefined'){
+        answerDescription.classList.add("show");
+        answerDescription.innerHTML=myApp[questionIndex].description;
+    }
+    
+}
+function hideAnswerDescription(){
+    answerDescription.classList.remove("show");
+    answerDescription.innerHTML="";
+}
+
+function showNextQuestionBtn(){
+    nextQuestionBtn.classList.add("show");
+}
+function hideNextQuestionBtn(){
+    nextQuestionBtn.classList.remove("show");
+}
+function showTimeUpText(){
+    timeUpText.classList.add("show");
+}
+function hideTimeUpText(){
+    timeUpText.classList.remove("show");
+    
+}
+function scoreBoard(){
+    correctAnswers.innerHTML=score;
+}
+
+nextQuestionBtn.addEventListener("click",nextQuestion);
+
+function nextQuestion(){
+   generateRandomQuestion();
+    hideNextQuestionBtn();
+    hideAnswerDescription();
+    hideTimeUpText();
+    startTimer();
+}
+function quizResult(){
+    document.querySelector(".total-questions").innerHTML=myApp.length;
+    document.querySelector(".total-attempt").innerHTML=attempt;
+    document.querySelector(".total-correct").innerHTML=score;
+    document.querySelector(".your-score").innerHTML=score;
+    document.querySelector(".total-wrong").innerHTML=attempt-score;
+    const percentage=(score/myApp.length)*100;
+    document.querySelector(".percentage").innerHTML=percentage.toFixed(2) +"%";
+}
+function resetQuiz(){
+  attempt=0;
+  //questionIndex=0;
+  score=0;
+  number=0;
+  myArray=[];
+}
+
+function quizOver(){
+    nextQuestionBtn.classList.remove("show");
+    seeResultBtn.classList.add("show");
+}
+seeResultBtn.addEventListener("click", ()=>{
+    quizBox.classList.remove("show");
+    seeResultBtn.classList.remove("show");
+    quizOverBox.classList.add("show");
+    quizResult();
+     })
+
+startAgainQuizBtn.addEventListener("click", ()=>{
+    quizBox.classList.add("show");
+    quizOverBox.classList.remove("show");
+    resetQuiz();
+    nextQuestion();
+})
+
+goHomeBtn.addEventListener("click", ()=>{
+    quizOverBox.classList.remove("show");
+    quizHomeBox.classList.add("show")
+    resetQuiz();
+})
+  
+startQuizBtn.addEventListener("click", ()=>{
+    quizHomeBox.classList.remove("show");
+    quizBox.classList.add("show");
+    nextQuestion();
+})
+
+//window.onload=()=>{
+    
+//}
+</script>
+
+
+
+<br><br><br>
+
+
+
+
+<iframe src="../../SUGGESTED.html" width="100%" height="7000px" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143314085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143314085-1');
+</script>
+
+
+
+
+
+
+

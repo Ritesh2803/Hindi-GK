@@ -1,0 +1,372 @@
+
+ <link href="../../css/style.css" rel="stylesheet">
+<script async src="../timer.js"></script>
+
+  <br><br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <a href="../../../index.html"><img alt="" class="img-fluid" src="../../../Website-css-use-pic/logo-transparent.png"></a>
+   </div></div></center>
+
+<br><br>
+<div id='baca-juga'>
+
+
+</div>
+<div class='' id=''>
+<meta content='test' itemprop='description'/>
+<div id='body-post-it'>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
+<head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+
+
+</head> 
+ <div class="quiz-home-box custom-box show" sryle="">
+
+
+ <br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../test-number.png"><a style="font-size:40px; color:black;">166</a>
+   </div>  </div></center><br><br>
+
+
+ <center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../timer.png" width="100%">
+   </div>  </div></center>
+
+
+ <br><center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../note.png" width="100%">
+   </div>  </div></center><br><br>
+
+
+ <button class="start-quiz-btn btn" type="button"><strong>टेस्ट शुरु करें</strong></button>
+</div>
+<div class="quiz-box custom-box">
+<div class="stats">
+<div class="quiz-time">
+<div class="remaining-time"></div>
+<span class="time-up-text">उत्तर देने का समय ख़त्म हो चूका है</span>
+</div>
+<div class="score-board">
+<span class="score-text">सही जवाब:</span>
+<span class="correct-answer"></span>
+</div>
+</div>
+<div class="question-box">
+<div class="current-question-num">
+</div>
+<div class="question-text">
+    
+</div>
+</div>
+<div class="option-box">
+
+</div>
+<div class="next-question">
+<button class="next-question-btn btn" type="button">अगला सवाल</button>
+<button class="see-result-btn btn" type="button">अपना परिणाम देखें</button>
+</div>
+<div class="answer-description">
+    
+</div>
+
+</div>
+<div class="quiz-over-box custom-box">
+<h3>रिज़ल्ट</h3>
+<h4>कुल सवाल: <span class="total-questions"></span></h4>
+<h4>कितने किये: <span class="total-attempt"></span></h4>
+<h4>सही: <span class="total-correct"></span></h4>
+<h4>गलत: <span class="total-wrong"></span></h4>
+<h4>प्राप्तांक: <span class="your-score"></span></h4>
+<h4>प्रतिशत: <span class="percentage"></span></h4>
+<button class="start-again-quiz-btn btn" type="button">फिर से शुरू करें</button>
+<a href="test-167.html"><button class="go-home-btn btn" type="button">दूसरे प्रश्न देखें</button></a>
+
+</div>
+
+<script>
+
+
+const questionText=document.querySelector(".question-text");
+const optionBox=document.querySelector(".option-box");
+const currentQuestionNum=document.querySelector(".current-question-num");
+const answerDescription=document.querySelector(".answer-description");
+const nextQuestionBtn=document.querySelector(".next-question-btn");
+const correctAnswers=document.querySelector(".correct-answer");
+const seeResultBtn=document.querySelector(".see-result-btn");
+const remainingTime=document.querySelector(".remaining-time");
+const timeUpText=document.querySelector(".time-up-text");
+const quizHomeBox=document.querySelector(".quiz-home-box");
+const quizBox=document.querySelector(".quiz-box");
+const quizOverBox=document.querySelector(".quiz-over-box");
+const startAgainQuizBtn=document.querySelector(".start-again-quiz-btn");
+const goHomeBtn=document.querySelector(".go-home-btn");
+const startQuizBtn=document.querySelector(".start-quiz-btn");
+let attempt=0;
+let questionIndex=0;
+let score=0;
+let number=0;
+let myArray=[];
+let interval;
+    // You can put Questions Here
+    // answer id 1-0, 2-1, 3-2, 4-3, 
+myApp=[
+
+
+
+
+
+
+ 
+{question:'न&#2367;म&#2381;न हल क&#2368;ज&#2367;ए : <p>24 &#8722; [25 &#8722; {26 &#8722; (27 &#8722; 28 &#8722; 29)}] = ?',options:['-57','1','55','-2',],answer:2,
+description:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgklcOjJhWxtUdw03DbN1DBM2qWTKp1uZ96GysU7NJPZlbtqQJxjblXabjeq-EtHJmFCULHaBbq3Ehte8nwyMJ3C4K-_j9XZx0I1VQHKKuiPUkaBDt80Djwejke9p4muZDAP547zpgSdgVfsAJfdf_o54ln-tOcrsHcks8ldeSrfCyFpD6TkDQmA8Ieww/s332/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="320" data-original-height="332" data-original-width="321" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgklcOjJhWxtUdw03DbN1DBM2qWTKp1uZ96GysU7NJPZlbtqQJxjblXabjeq-EtHJmFCULHaBbq3Ehte8nwyMJ3C4K-_j9XZx0I1VQHKKuiPUkaBDt80Djwejke9p4muZDAP547zpgSdgVfsAJfdf_o54ln-tOcrsHcks8ldeSrfCyFpD6TkDQmA8Ieww/s320/Capture.JPG"/></a></div>'},
+{question:'सरल क&#2368;ज&#2367;ए:<p> 525 + 810 &#215;75 &#247; 15 - 65 + (13 &#215; 8 - 4)',options:['4510','4610','4500','4600',],answer:1,
+description:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHVb7TCuQjjpuICPQNZEiHEn7Yc6bdoBFIerEYzLlecJTFpWiwJ43niEBws7pW5tiZV1OpBdhdLcWxdG1oeGwKHwUhezuGtz62o3aICghl4_usPnHR37BynlXyh_UCafOZ__n0Tu5i0fMj7IjfwVeH1qsGKLgJQFHOBmPxwQ6upQXsAvjAMyiw356D5g/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="362" data-original-width="313" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHVb7TCuQjjpuICPQNZEiHEn7Yc6bdoBFIerEYzLlecJTFpWiwJ43niEBws7pW5tiZV1OpBdhdLcWxdG1oeGwKHwUhezuGtz62o3aICghl4_usPnHR37BynlXyh_UCafOZ__n0Tu5i0fMj7IjfwVeH1qsGKLgJQFHOBmPxwQ6upQXsAvjAMyiw356D5g/s1600/Capture.JPG"/></a></div>'},
+{question:'न&#2367;म&#2381;नल&#2367;ख&#2367;त क&#2379; हल क&#2368;ज&#2367;ए : <p>(&#8722;8)[36 &#247; {7 &#8722; (&#8722;2)}] &#247; (&#8722;4) {19 &#8722; (&#8722;3) &#215; (&#8722;5)} = ?',options:['4','-4','-2','2',],answer:3,
+description:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSaJ8_sMq3Nf9D69fRCGeXXUgK5ebGnxyTPL0G8hRGpDh7oTpfsun3RO4G2arwIeJLcz9pFjy09HGMNbpYtSfpBtrVg2wkh_SAoZsLS-OfG4WmtnVhw1YJyU6RPJorq-8EP656S0p1HKHB9-wEN-teSlF6zBePH9EY3JSqiv5ydO70s-1BQDPFEwHvHw/s314/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="313" data-original-width="314" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSaJ8_sMq3Nf9D69fRCGeXXUgK5ebGnxyTPL0G8hRGpDh7oTpfsun3RO4G2arwIeJLcz9pFjy09HGMNbpYtSfpBtrVg2wkh_SAoZsLS-OfG4WmtnVhw1YJyU6RPJorq-8EP656S0p1HKHB9-wEN-teSlF6zBePH9EY3JSqiv5ydO70s-1BQDPFEwHvHw/s320/Capture.JPG"/></a></div>'},
+{question:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsE0yn5GzM3lsomeMD6MSGGoEmcFGi4sJST8X9L5jO_YZ297kkeSXALPuUT-jGN43thpG6fzQh_OM3x6ky_1A5qIXiiRELJf8Wo0RspT0NMVKWmgrx4W8shnMRQ45SHAODKvIHlZFvTS-VSZ4XY4Rb6g1XbRuErXKd9imUlwDWRkJSda9KVd1qLQpJAw/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="49" data-original-width="240" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsE0yn5GzM3lsomeMD6MSGGoEmcFGi4sJST8X9L5jO_YZ297kkeSXALPuUT-jGN43thpG6fzQh_OM3x6ky_1A5qIXiiRELJf8Wo0RspT0NMVKWmgrx4W8shnMRQ45SHAODKvIHlZFvTS-VSZ4XY4Rb6g1XbRuErXKd9imUlwDWRkJSda9KVd1qLQpJAw/s1600/Capture.JPG"/></a></div>',options:['7','6.2','6.8','7.2',],answer:2,
+description:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgohu7cv8LwpOIB084nRyyEWLKUY6W1-IPETlnTiz2gG_-d2TiwnE6wyxDG6lK2dQr6YnJ8QaR501_anfkbcaBCLlzSHx0KwMWtsOu0N2gLCdmgh_gknf8YykikyNiEOOq6YsWLccCENw7fqQQJmsPAHdoC56omgHafsWTCJCMk_i2R_Tk0QfnjVAC1xQ/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="335" data-original-width="310" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgohu7cv8LwpOIB084nRyyEWLKUY6W1-IPETlnTiz2gG_-d2TiwnE6wyxDG6lK2dQr6YnJ8QaR501_anfkbcaBCLlzSHx0KwMWtsOu0N2gLCdmgh_gknf8YykikyNiEOOq6YsWLccCENw7fqQQJmsPAHdoC56omgHafsWTCJCMk_i2R_Tk0QfnjVAC1xQ/s1600/Capture.JPG"/></a></div>'},
+  {question:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVcbbO6F-NsCy6oel2wsToLlhKMQ8Dt1k2DAJvR9uig6atdP2oSpsNsJ1MgAqMV_6ecVqQGCZpZAdHgOoY8LVFCIdcBJk08dKIBjIZ8L_zSZVLMXckL8-LAZ9LEdRPYAcxyapRq_zG8_tRpY-DnkT2FUYlxIul21eRsNJTl1PYeq3Bv-ZB5PNbOA0mLQ/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="54" data-original-width="327" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVcbbO6F-NsCy6oel2wsToLlhKMQ8Dt1k2DAJvR9uig6atdP2oSpsNsJ1MgAqMV_6ecVqQGCZpZAdHgOoY8LVFCIdcBJk08dKIBjIZ8L_zSZVLMXckL8-LAZ9LEdRPYAcxyapRq_zG8_tRpY-DnkT2FUYlxIul21eRsNJTl1PYeq3Bv-ZB5PNbOA0mLQ/s1600/Capture.JPG"/></a></div>',options:['115/32','121/27','63/16','105/28',],answer:0,
+  description:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCsevVx1cKrBlpsM1_MrqkHjWcJSoOBP48fCzLsbSFK_4OngEjcbXMnnLgOK8nX_EctpnmowuWt83sbALuaSk7cMRT953-dtVDgN8GhD9xelkqUQGqXTnf9lqw2WSYJn7aVEuHSJ62m9kZ3JhTDP0W9JT0eW28gXMW00ujga6-NLAHb9bWYlzyudXiWA/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="359" data-original-width="367" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCsevVx1cKrBlpsM1_MrqkHjWcJSoOBP48fCzLsbSFK_4OngEjcbXMnnLgOK8nX_EctpnmowuWt83sbALuaSk7cMRT953-dtVDgN8GhD9xelkqUQGqXTnf9lqw2WSYJn7aVEuHSJ62m9kZ3JhTDP0W9JT0eW28gXMW00ujga6-NLAHb9bWYlzyudXiWA/s1600/Capture.JPG"/></a></div>'},
+  {question:'म&#2366;न क&#2381;य&#2366; ह&#2376;:<p> 5 क&#2366; 5 क&#2366; 5 &#247; 5 + 5 &#8211; 6 &#247; 3 &#215; 4 + 2 + (3 &#247; 6 &#215; 2)',options:['21','25','19','28',],answer:1,
+  description:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdOhlHpdzgM7vUm_B49aT2fO8olcAbmIUDU3t6xy3FGnQygqfTILFS_kdvXGtGNt11dj8j_zkOQsGiKJ7hMhEyQkECg-a7D_21I-iut6DwCn6J6xJ5wNcuMiPSGxB3yyEH-LK0sUuaimwvLpqPCkyUzahe6THd5n-EOwFF46uBlkC-P5A7FFvc02y1gw/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="314" data-original-width="311" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdOhlHpdzgM7vUm_B49aT2fO8olcAbmIUDU3t6xy3FGnQygqfTILFS_kdvXGtGNt11dj8j_zkOQsGiKJ7hMhEyQkECg-a7D_21I-iut6DwCn6J6xJ5wNcuMiPSGxB3yyEH-LK0sUuaimwvLpqPCkyUzahe6THd5n-EOwFF46uBlkC-P5A7FFvc02y1gw/s1600/Capture.JPG"/></a></div>'},
+{question:'न&#2367;म&#2381;नल&#2367;ख&#2367;त प&#2381;रश&#2381;न म&#2375;&#2306; प&#2381;रश&#2381;न च&#2367;न&#2381;ह (?) क&#2375; स&#2381;थ&#2366;न पर क&#2381;य&#2366; म&#2366;न आन&#2366; च&#2366;ह&#2367;ए? <p>53 &#215; 1372 &#247; (2&#8730;2401) = (?)3 + &#8730;169',options:['7','8','9','6',],answer:2,
+description:'सह&#2368; उत&#2381;तर व&#2367;कल&#2381;प 3 अर&#2381;थ&#2366;त 9 ह&#2376;|<p>53 &#215; 1372 &#247; (2&#8730;2401) = (?)3 + &#8730;169<p>&#8658; 53 &#215; 1372 &#247; (2 &#215; 49) = (?)3 + &#8730;169<p>BODMAS न&#2367;यम लग&#2366;न&#2375; पर;<p>&#8658; 53 &#215; 1372 &#247; 98 = (?)3 + 13<p>&#8658; 53 &#215; 14 &#8211; 13 = ?3<p>&#8658; ?3 = 729<p>&#8658; ? = 9'},
+  {question:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDtsT5-70XqELJUtXWSzQ5hMd_Bh1X889OeU8hYkTJCY36SY3PeHVHAG59cT7uCv6WXQr88HaxGVPcxSkVBLEutO7Bhc3MKJVJxkIUTg-5Zuy6VMUOdTew0LqG5VEw-HUd5fanMl1xTlY7twGL4rTOAwoJkHZ7NEKDzsiskEP_K9yrrvTeAs7EJN8V2A/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="61" data-original-width="293" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDtsT5-70XqELJUtXWSzQ5hMd_Bh1X889OeU8hYkTJCY36SY3PeHVHAG59cT7uCv6WXQr88HaxGVPcxSkVBLEutO7Bhc3MKJVJxkIUTg-5Zuy6VMUOdTew0LqG5VEw-HUd5fanMl1xTlY7twGL4rTOAwoJkHZ7NEKDzsiskEP_K9yrrvTeAs7EJN8V2A/s1600/Capture.JPG"/></a></div>',options:['375','224','233','277',],answer:3,
+  description:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguxZMiH3oSdZbV26kXJeRBRC-4v6GtZQSkkYwtX8roQU_YYenaYcNOFdWz3zxVtsgNb-nHH55mjBApd1kq88tUxSA2qJPOvRjbCDDdOpSjETGvoyXile5Rydm9GaPyyE5bYW1lxmwt2lT51u3g4rJeA63sJyjGtRE2X_eqCP0QpJksiX6IEv_OT5DgsA/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="463" data-original-width="279" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguxZMiH3oSdZbV26kXJeRBRC-4v6GtZQSkkYwtX8roQU_YYenaYcNOFdWz3zxVtsgNb-nHH55mjBApd1kq88tUxSA2qJPOvRjbCDDdOpSjETGvoyXile5Rydm9GaPyyE5bYW1lxmwt2lT51u3g4rJeA63sJyjGtRE2X_eqCP0QpJksiX6IEv_OT5DgsA/s1600/Capture.JPG"/></a></div>'},
+  {question:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzGQdSFKuJfqAwgj9vbBf9-vtG5LlyZJX10I5h2w2vZ_3qOdfkOV9lYaJtLSNP8p8UYjeUtS3ypsjDFV0qopweRg-qv0G-Og0ChcIqg3GPOwdFR4tWLdxS5DPMcJRQb73qrNViMBEG_-e8JE3723BCJUjlz1SgmEKEK4PaemYkU28O0OeXB5B_0I8gDQ/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="44" data-original-width="375" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzGQdSFKuJfqAwgj9vbBf9-vtG5LlyZJX10I5h2w2vZ_3qOdfkOV9lYaJtLSNP8p8UYjeUtS3ypsjDFV0qopweRg-qv0G-Og0ChcIqg3GPOwdFR4tWLdxS5DPMcJRQb73qrNViMBEG_-e8JE3723BCJUjlz1SgmEKEK4PaemYkU28O0OeXB5B_0I8gDQ/s1600/Capture.JPG"/></a></div>',options:['11/4','-19/4','0','15/4',],answer:1,
+  description:'<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPscWAzDl6xfrs_dxpSqEG7btXO1Bq9KP8hmO6xaBgaufP2rpuHhc69-LNPoDqmWr6shi4ytCRhEO0aogZ9vmG4QjTnQdq2kgsO-n9EgjrrwIiVZtcDVV61ATmDtQ9S7DoEYE1FBvgd-rKIHYTJ73OuOczY_Ug4xNJtJX-Ryn94l1UhzbsvIV0Y82WWA/s1600/Capture.JPG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="322" data-original-width="306" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPscWAzDl6xfrs_dxpSqEG7btXO1Bq9KP8hmO6xaBgaufP2rpuHhc69-LNPoDqmWr6shi4ytCRhEO0aogZ9vmG4QjTnQdq2kgsO-n9EgjrrwIiVZtcDVV61ATmDtQ9S7DoEYE1FBvgd-rKIHYTJ73OuOczY_Ug4xNJtJX-Ryn94l1UhzbsvIV0Y82WWA/s1600/Capture.JPG"/></a></div>'},
+  {question:'न&#2367;म&#2381;नल&#2367;ख&#2367;त प&#2381;रश&#2381;न म&#2375;&#2306; प&#2381;रश&#2381;न च&#2367;ह&#2381;न (?) क&#2375; स&#2381;थ&#2366;न पर क&#2381;य&#2366; आएग&#2366;? <p>7500 क&#2366; 95% &#8211; 1260 क&#2366; 3/7% + 1400 क&#2366; 1.5% = ?',options:['7208','7844','7142','7054',],answer:2,
+  description:'सह&#2368; उत&#2381;तर व&#2367;कल&#2381;प 3 अर&#2381;थ&#2366;त 7142 ह&#2376;|<p>7500 क&#2366; 95% &#8211; 1260 क&#2366; 3/7% + 1400 क&#2366; 1.5% = ?<p>&#8658; 95 &#215; 75 &#8211; 3/7 &#215; 12.6 + 1.6 &#215; 14 = ?<p>&#8658; 7125 &#8211; 5.4 + 22.4 = ?<p>&#8658; ? = 7142'},
+
+ 
+  
+  
+  
+  
+  
+ ];
+
+function load(){
+    number++;
+   questionText.innerHTML=myApp[questionIndex].question;
+    creatOptions();
+    scoreBoard();
+    currentQuestionNum.innerHTML=number + " / " +myApp.length;
+}
+function creatOptions(){
+    optionBox.innerHTML="";
+    let animationDelay=0.2;
+    for(let i=0; i<myApp[questionIndex].options.length; i++){
+        const option=document.createElement("div");
+              option.innerHTML=myApp[questionIndex].options[i];
+              option.classList.add("option");
+              option.id=i;
+              option.style.animationDelay=animationDelay + "s";
+              animationDelay=animationDelay+0.2;
+              option.setAttribute("onclick","check(this)");
+              optionBox.appendChild(option);
+        
+    }
+}
+
+function generateRandomQuestion(){
+    const randomNumber=Math.floor(Math.random() * myApp.length);
+   let hitDuplicate=0;
+   if(myArray.length == 0){
+        questionIndex=randomNumber;
+    }
+    else{
+        for(let i=0; i<myArray.length; i++){
+            if(randomNumber == myArray[i]){
+                //if duplicate found
+                hitDuplicate=1;
+                
+            }
+        }
+        if(hitDuplicate == 1){
+            generateRandomQuestion();
+            return;
+        }
+        else{
+            questionIndex=randomNumber;
+        }
+    }
+    
+    myArray.push(randomNumber);
+    console.log(myArray)
+    load();
+}
+
+function check(ele){
+    const id=ele.id;
+    if(id==myApp[questionIndex].answer){
+       ele.classList.add("correct");
+        score++;
+        scoreBoard();
+    }
+    else{
+        ele.classList.add("wrong");
+        //show correct option when clicked answer is wrong
+        for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+            }
+        }
+    }
+    attempt++;
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+    stopTimer();
+    
+    if(number == myApp.length){
+        quizOver();
+    }
+}
+function timeIsUp(){
+    showTimeUpText();
+    //when time is up Show Correct Answer
+    for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+    
+            }
+        }
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+ if(number == myApp.length){
+        quizOver();
+      }
+}
+
+function stopTimer(){
+    clearInterval(interval);
+}
+function disableOptions(){
+    for(let i=0; i<optionBox.children.length; i++){
+        optionBox.children[i].classList.add("already-answered")
+    }
+}
+function showAnswerDescription(){
+    if(typeof myApp[questionIndex].description !== 'undefined'){
+        answerDescription.classList.add("show");
+        answerDescription.innerHTML=myApp[questionIndex].description;
+    }
+    
+}
+function hideAnswerDescription(){
+    answerDescription.classList.remove("show");
+    answerDescription.innerHTML="";
+}
+
+function showNextQuestionBtn(){
+    nextQuestionBtn.classList.add("show");
+}
+function hideNextQuestionBtn(){
+    nextQuestionBtn.classList.remove("show");
+}
+function showTimeUpText(){
+    timeUpText.classList.add("show");
+}
+function hideTimeUpText(){
+    timeUpText.classList.remove("show");
+    
+}
+function scoreBoard(){
+    correctAnswers.innerHTML=score;
+}
+
+nextQuestionBtn.addEventListener("click",nextQuestion);
+
+function nextQuestion(){
+   generateRandomQuestion();
+    hideNextQuestionBtn();
+    hideAnswerDescription();
+    hideTimeUpText();
+    startTimer();
+}
+function quizResult(){
+    document.querySelector(".total-questions").innerHTML=myApp.length;
+    document.querySelector(".total-attempt").innerHTML=attempt;
+    document.querySelector(".total-correct").innerHTML=score;
+    document.querySelector(".your-score").innerHTML=score;
+    document.querySelector(".total-wrong").innerHTML=attempt-score;
+    const percentage=(score/myApp.length)*100;
+    document.querySelector(".percentage").innerHTML=percentage.toFixed(2) +"%";
+}
+function resetQuiz(){
+  attempt=0;
+  //questionIndex=0;
+  score=0;
+  number=0;
+  myArray=[];
+}
+
+function quizOver(){
+    nextQuestionBtn.classList.remove("show");
+    seeResultBtn.classList.add("show");
+}
+seeResultBtn.addEventListener("click", ()=>{
+    quizBox.classList.remove("show");
+    seeResultBtn.classList.remove("show");
+    quizOverBox.classList.add("show");
+    quizResult();
+     })
+
+startAgainQuizBtn.addEventListener("click", ()=>{
+    quizBox.classList.add("show");
+    quizOverBox.classList.remove("show");
+    resetQuiz();
+    nextQuestion();
+})
+
+goHomeBtn.addEventListener("click", ()=>{
+    quizOverBox.classList.remove("show");
+    quizHomeBox.classList.add("show")
+    resetQuiz();
+})
+  
+startQuizBtn.addEventListener("click", ()=>{
+    quizHomeBox.classList.remove("show");
+    quizBox.classList.add("show");
+    nextQuestion();
+})
+
+//window.onload=()=>{
+    
+//}
+</script>
+
+
+
+<br><br><br>
+
+
+
+
+<iframe src="../../SUGGESTED.html" width="100%" height="7000px" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143314085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143314085-1');
+</script>
+
+
+
+
+
+
+

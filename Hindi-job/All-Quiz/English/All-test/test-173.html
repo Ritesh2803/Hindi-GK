@@ -1,0 +1,361 @@
+
+ <link href="../../css/style.css" rel="stylesheet">
+<script async src="../timer.js"></script>
+
+  <br><br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <a href="../../../index.html"><img alt="" class="img-fluid" src="../../../Website-css-use-pic/logo-transparent.png"></a>
+   </div></div></center>
+
+<br><br>
+<div id='baca-juga'>
+
+
+</div>
+<div class='' id=''>
+<meta content='test' itemprop='description'/>
+<div id='body-post-it'>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
+<head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+
+
+</head> 
+ <div class="quiz-home-box custom-box show" sryle="">
+
+
+ <br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../test-number.png"><a style="font-size:40px; color:black;">173</a>
+   </div>  </div></center><br><br>
+
+
+ <center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../timer.png" width="100%">
+   </div>  </div></center>
+
+
+ <br><center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../note.png" width="100%">
+   </div>  </div></center><br><br>
+
+
+ <button class="start-quiz-btn btn" type="button"><strong>टेस्ट शुरु करें</strong></button>
+</div>
+<div class="quiz-box custom-box">
+<div class="stats">
+<div class="quiz-time">
+<div class="remaining-time"></div>
+<span class="time-up-text">उत्तर देने का समय ख़त्म हो चूका है</span>
+</div>
+<div class="score-board">
+<span class="score-text">सही जवाब:</span>
+<span class="correct-answer"></span>
+</div>
+</div>
+<div class="question-box">
+<div class="current-question-num">
+</div>
+<div class="question-text">
+    
+</div>
+</div>
+<div class="option-box">
+
+</div>
+<div class="next-question">
+<button class="next-question-btn btn" type="button">अगला सवाल</button>
+<button class="see-result-btn btn" type="button">अपना परिणाम देखें</button>
+</div>
+<div class="answer-description">
+    
+</div>
+
+</div>
+<div class="quiz-over-box custom-box">
+<h3>रिज़ल्ट</h3>
+<h4>कुल सवाल: <span class="total-questions"></span></h4>
+<h4>कितने किये: <span class="total-attempt"></span></h4>
+<h4>सही: <span class="total-correct"></span></h4>
+<h4>गलत: <span class="total-wrong"></span></h4>
+<h4>प्राप्तांक: <span class="your-score"></span></h4>
+<h4>प्रतिशत: <span class="percentage"></span></h4>
+<button class="start-again-quiz-btn btn" type="button">फिर से शुरू करें</button>
+<a href="test-174.html"><button class="go-home-btn btn" type="button">दूसरे प्रश्न देखें</button></a>
+
+</div>
+
+<script>
+
+
+const questionText=document.querySelector(".question-text");
+const optionBox=document.querySelector(".option-box");
+const currentQuestionNum=document.querySelector(".current-question-num");
+const answerDescription=document.querySelector(".answer-description");
+const nextQuestionBtn=document.querySelector(".next-question-btn");
+const correctAnswers=document.querySelector(".correct-answer");
+const seeResultBtn=document.querySelector(".see-result-btn");
+const remainingTime=document.querySelector(".remaining-time");
+const timeUpText=document.querySelector(".time-up-text");
+const quizHomeBox=document.querySelector(".quiz-home-box");
+const quizBox=document.querySelector(".quiz-box");
+const quizOverBox=document.querySelector(".quiz-over-box");
+const startAgainQuizBtn=document.querySelector(".start-again-quiz-btn");
+const goHomeBtn=document.querySelector(".go-home-btn");
+const startQuizBtn=document.querySelector(".start-quiz-btn");
+let attempt=0;
+let questionIndex=0;
+let score=0;
+let number=0;
+let myArray=[];
+let interval;
+    // You can put Questions Here
+    // answer id 1-0, 2-1, 3-2, 4-3, 
+myApp=[
+
+
+
+
+
+
+ 
+{question:'एक व&#2381;यक&#2381;त&#2367; श&#2366;&#2306;त जल म&#2375;&#2306; 5 क&#2367;म&#2368;. प&#2381;रत&#2367; घ&#2306;ट&#2366; क&#2368; दर स&#2375; त&#2375;र सकत&#2366; ह&#2376; एक न&#2367;श&#2381;च&#2367;त द&#2369;र&#2368; क&#2379; ध&#2366;र&#2366; क&#2368; द&#2367;श&#2366; म&#2375;&#2306; त&#2376;रकर प&#2366;र करन&#2375; म&#2375;&#2306; उस&#2375; ज&#2379; समय लगत&#2366; ह&#2376; उसस&#2375; त&#2367;ग&#2369;न&#2366; समय उस&#2375; इस द&#2369;र&#2368; क&#2379; ध&#2366;र&#2366; क&#2375; व&#2367;पर&#2368;त प&#2366;र करन&#2375; म&#2375;&#2306; लगत&#2366; ह&#2376; ध&#2366;र&#2366; क&#2366; व&#2375;ग ज&#2381;ञ&#2366;त क&#2368;ज&#2367;य&#2375;?',options:['2.5 क&#2367;म&#2368;./घ&#2306;ट&#2366;','3.5 क&#2367;म&#2368;./घ&#2306;ट&#2366;','5.5 क&#2367;म&#2368;./घ&#2306;ट&#2366;','इनम&#2375; स&#2375; क&#2379;ई नह&#2368;',],answer:0,},
+{question:'एक न&#2366;व&#2367;क नद&#2368; म&#2375;&#2306; बह&#2366;व क&#2368; और 3 घ&#2306;ट&#2375; 45 म&#2367;नट म&#2375;&#2306; 30 क&#2367;म&#2368;. न&#2366;व चल&#2366;त&#2366; ह&#2376; तथ&#2366; बह&#2366;व क&#2375; व&#2367;र&#2369;द&#2381;ध 2 घ&#2306;ट&#2375; 30 म&#2367;नट म&#2375;&#2306; 15 क&#2367;म&#2368;. न&#2366;व चल&#2366;त&#2366; ह&#2376; स&#2381;थ&#2367;र प&#2366;न&#2368; म&#2375;&#2306; न&#2366;व क&#2368; गत&#2367; तथ&#2366; प&#2381;रव&#2366;ह क&#2368; गत&#2367; ज&#2381;ञ&#2366;त क&#2368;ज&#2367;य&#2375;?',options:[' 7 क&#2367;म&#2368;./घ&#2306;ट&#2366;, 13 क&#2367;म&#2368;./घ&#2306;ट&#2366;','7 क&#2367;म&#2368;./घ&#2306;ट&#2366;, 1 क&#2367;म&#2368;./घ&#2306;ट&#2366;','9 क&#2367;म&#2368;./घ&#2306;ट&#2366;, 13 क&#2367;म&#2368;./घ&#2306;ट&#2366;',' 7 क&#2367;म&#2368;./घ&#2306;ट&#2366;, 3 क&#2367;म&#2368;./घ&#2306;ट&#2366;',],answer:1,},
+{question:'एक न&#2366;व&#2367;क नद&#2368; म&#2375;&#2306; ध&#2366;र&#2366; क&#2375; व&#2367;पर&#2368;त (3/4) क&#2367;म&#2368;. ज&#2366;न&#2375; म&#2375;&#2306; 11 म&#2367;नट 15 स&#2376;क&#2375;&#2306;ड ल&#2375;त&#2366; ह&#2376; त&#2379; तथ&#2366; व&#2366;प&#2367;स 7 म&#2367;नट 30 स&#2376;क&#2375;&#2306;ड म&#2375;&#2306; प&#2381;र&#2366;रम&#2381;भ&#2367;क ब&#2367;&#2306;द&#2369; पर पह&#2369;च ज&#2366;त&#2366; ह&#2376; श&#2366;&#2306;त जल म&#2375;&#2306; न&#2366;व&#2367;क क&#2368; च&#2366;ल तथ&#2366; ध&#2366;र&#2366; क&#2366; व&#2375;ग ज&#2381;ञ&#2366;त क&#2368;ज&#2367;य&#2375;?',options:['5 क&#2367;म&#2368;./घ&#2306;ट&#2366; , 13 क&#2367;म&#2368;./घ&#2306;ट&#2366;','5 क&#2367;म&#2368;./घ&#2306;ट&#2366; , 3 क&#2367;म&#2368;./घ&#2306;ट&#2366;','5 क&#2367;म&#2368;./घ&#2306;ट&#2366; , 1 क&#2367;म&#2368;./घ&#2306;ट&#2366;','9 क&#2367;म&#2368;./घ&#2306;ट&#2366; , 13 क&#2367;म&#2368;./घ&#2306;ट&#2366;',],answer:2,},
+{question:'श&#2366;&#2306;त जल म&#2375;&#2306; एक न&#2366;व क&#2368; च&#2366;ल 9 1/3 क&#2367;म&#2368;. प&#2381;रत&#2367; घ&#2306;ट&#2366; ह&#2376; ध&#2366;र&#2366; क&#2368; द&#2367;श&#2366; म&#2375;&#2306; एक व&#2367;श&#2375;ष द&#2369;र&#2368; तय करन&#2375; म&#2375;&#2306; वह ज&#2367;तन&#2366; समय ल&#2375;त&#2368; ह&#2376; ध&#2366;र&#2366; क&#2375; व&#2367;पर&#2368;त उतन&#2368; ह&#2368; द&#2369;र&#2368; तय करन&#2375; म&#2375;&#2306; वह इसस&#2375; त&#2367;ग&#2369;न&#2366; समय ल&#2375;त&#2368; ह&#2376; ध&#2366;र&#2366; क&#2375; व&#2375;ग क&#2367;तन&#2366; ह&#2376;?',options:['3 सह&#2368; 1/3 क&#2367;म&#2368;./घ&#2306;ट&#2366;','3 सह&#2368; 1/9 क&#2367;म&#2368;./घ&#2306;ट&#2366;','4 सह&#2368; 2/3 क&#2367;म&#2368;./घ&#2306;ट&#2366;','4 सह&#2368; 1/2 क&#2367;म&#2368;./घ&#2306;ट&#2366;',],answer:2,},
+{question:'एक नद&#2368; म&#2375;&#2306; ध&#2366;र&#2366; क&#2366; व&#2375;ग 1 क&#2367;म&#2368;./घ&#2306;ट&#2366; ह&#2376; एक म&#2379;टर ब&#2379;ट ध&#2366;र&#2366; क&#2375; व&#2367;पर&#2368;त 35 क&#2367;म&#2368;. ज&#2366;कर प&#2381;र&#2366;रम&#2381;भ&#2367;क ब&#2367;&#2306;द&#2369; पर व&#2366;प&#2367;स आन&#2375; म&#2375;&#2306; 12 घ&#2306;ट&#2375; ल&#2375;त&#2368; ह&#2376; श&#2366;न&#2381;त जल म&#2375;&#2306; म&#2379;टर ब&#2379;ट क&#2366; व&#2375;ग क&#2367;तन&#2366; ह&#2376;?',options:['6 क&#2367;म&#2368;./घ&#2306;ट&#2366;',' 7 क&#2367;म&#2368;./घ&#2306;ट&#2366;','8 क&#2367;म&#2368;./घ&#2306;ट&#2366;',' 5 क&#2367;म&#2368;./घ&#2306;ट&#2366;',],answer:0,},
+{question:'एक व&#2381;यक&#2381;त&#2367; 1 क&#2367;म&#2368;. क&#2368; द&#2369;र&#2368; क&#2379; ध&#2366;र&#2366; क&#2368; द&#2367;श&#2366; म&#2375;&#2306; 10 म&#2367;नट म&#2375;&#2306; तथ&#2366; ध&#2366;र&#2366; क&#2375; व&#2367;पर&#2368;त द&#2367;श&#2366; म&#2375;&#2306; 30 म&#2367;नट म&#2375;&#2306; तय करत&#2366; ह&#2376; ध&#2366;र&#2366; क&#2368; गत&#2367; क&#2367;तन&#2368; ह&#2376;?',options:[' 1 क&#2367;म&#2368;./घ&#2306;ट&#2366;','2 क&#2367;म&#2368;./घ&#2306;ट&#2366;','4 क&#2367;म&#2368;./घ&#2306;ट&#2366;','3 क&#2367;म&#2368;./घ&#2306;ट&#2366;',],answer:1,},
+{question:'यद&#2367; र&#2366;म 3 घ&#2306;ट&#2375; म&#2375;&#2306; 12 क&#2367;ल&#2379;म&#2368;टर क&#2368; द&#2369;र&#2368; तय करत&#2366; ह&#2376; त&#2379; 30 क&#2367;ल&#2379;म&#2368;टर चलन&#2375; म&#2375;&#2306; उस&#2375; क&#2367;तन&#2375; घ&#2306;ट&#2375; लग&#2375;ग&#2375;?',options:['7 सह&#2368; 1/2','6','8 सह&#2368; 1/2','9',],answer:0,},
+{question:'अन&#2367;ल न&#2375; 15 मई 1988 क&#2379; द&#2379;पहर 12.55 बज&#2375; र&#2375;लग&#2366;ड़&#2368; स&#2375; य&#2366;त&#2381;र&#2366; आरम&#2381;भ क&#2368; और वह क&#2379;यम&#2381;बट&#2370;र 17 मई 1988 क&#2379; प&#2381;र&#2366;त&#2307; 10.30 बज&#2375; पह&#2369;च&#2366; त&#2379; उसक&#2368; य&#2366;त&#2381;र&#2366; क&#2368; अवध&#2367; क&#2367;तन&#2368; थ&#2368;?',options:[' 9 घ&#2306;ट&#2375; 35 म&#2367;नट','21 घ&#2306;ट&#2375; 35 म&#2367;नट','33 घ&#2306;ट&#2375; 35 म&#2367;नट','45 घ&#2306;ट&#2375; 35 म&#2367;नट',],answer:3,},
+{question:'एक र&#2375;लग&#2366;ड़&#2368; X स&#2381;थ&#2366;न स&#2375; स&#2366;&#2306;य 6.15 बज&#2375; चलत&#2368; ह&#2376; तथ&#2366; B स&#2381;थ&#2366;न पर अलग&#2375; द&#2367;न स&#2369;बह 11.40 पर पह&#2369;चत&#2368; ह&#2376; र&#2375;लग&#2366;ड़&#2368; द&#2381;व&#2366;र&#2366; य&#2366;त&#2381;र&#2366; म&#2375;&#2306; ल&#2367;य&#2366; गय&#2366; क&#2369;ल समय ह&#2376;?',options:['5 घ&#2306;ट&#2375; 25 म&#2367;नट','15 घ&#2306;ट&#2375; 55 म&#2367;नट','17 घ&#2306;ट&#2375; 25 म&#2367;नट','22 घ&#2306;ट&#2375; 40 म&#2367;नट',],answer:2,},
+{question:'72 क&#2367;म&#2368;./घ&#2306;ट&#2366; क&#2368; च&#2366;ल म&#2368;टर/स&#2375;क&#2375;ण&#2381;ड म&#2375;&#2306; ह&#2379;ग&#2368;?',options:['9 म&#2368;टर/स&#2375;.','15 म&#2368;टर/स&#2375;.','20 म&#2368;टर/स&#2375;.','22 म&#2368;टर/स&#2375;.',],answer:2,},
+
+  
+  
+  
+  
+  
+  ];
+
+function load(){
+    number++;
+   questionText.innerHTML=myApp[questionIndex].question;
+    creatOptions();
+    scoreBoard();
+    currentQuestionNum.innerHTML=number + " / " +myApp.length;
+}
+function creatOptions(){
+    optionBox.innerHTML="";
+    let animationDelay=0.2;
+    for(let i=0; i<myApp[questionIndex].options.length; i++){
+        const option=document.createElement("div");
+              option.innerHTML=myApp[questionIndex].options[i];
+              option.classList.add("option");
+              option.id=i;
+              option.style.animationDelay=animationDelay + "s";
+              animationDelay=animationDelay+0.2;
+              option.setAttribute("onclick","check(this)");
+              optionBox.appendChild(option);
+        
+    }
+}
+
+function generateRandomQuestion(){
+    const randomNumber=Math.floor(Math.random() * myApp.length);
+   let hitDuplicate=0;
+   if(myArray.length == 0){
+        questionIndex=randomNumber;
+    }
+    else{
+        for(let i=0; i<myArray.length; i++){
+            if(randomNumber == myArray[i]){
+                //if duplicate found
+                hitDuplicate=1;
+                
+            }
+        }
+        if(hitDuplicate == 1){
+            generateRandomQuestion();
+            return;
+        }
+        else{
+            questionIndex=randomNumber;
+        }
+    }
+    
+    myArray.push(randomNumber);
+    console.log(myArray)
+    load();
+}
+
+function check(ele){
+    const id=ele.id;
+    if(id==myApp[questionIndex].answer){
+       ele.classList.add("correct");
+        score++;
+        scoreBoard();
+    }
+    else{
+        ele.classList.add("wrong");
+        //show correct option when clicked answer is wrong
+        for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+            }
+        }
+    }
+    attempt++;
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+    stopTimer();
+    
+    if(number == myApp.length){
+        quizOver();
+    }
+}
+function timeIsUp(){
+    showTimeUpText();
+    //when time is up Show Correct Answer
+    for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+    
+            }
+        }
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+ if(number == myApp.length){
+        quizOver();
+      }
+}
+
+function stopTimer(){
+    clearInterval(interval);
+}
+function disableOptions(){
+    for(let i=0; i<optionBox.children.length; i++){
+        optionBox.children[i].classList.add("already-answered")
+    }
+}
+function showAnswerDescription(){
+    if(typeof myApp[questionIndex].description !== 'undefined'){
+        answerDescription.classList.add("show");
+        answerDescription.innerHTML=myApp[questionIndex].description;
+    }
+    
+}
+function hideAnswerDescription(){
+    answerDescription.classList.remove("show");
+    answerDescription.innerHTML="";
+}
+
+function showNextQuestionBtn(){
+    nextQuestionBtn.classList.add("show");
+}
+function hideNextQuestionBtn(){
+    nextQuestionBtn.classList.remove("show");
+}
+function showTimeUpText(){
+    timeUpText.classList.add("show");
+}
+function hideTimeUpText(){
+    timeUpText.classList.remove("show");
+    
+}
+function scoreBoard(){
+    correctAnswers.innerHTML=score;
+}
+
+nextQuestionBtn.addEventListener("click",nextQuestion);
+
+function nextQuestion(){
+   generateRandomQuestion();
+    hideNextQuestionBtn();
+    hideAnswerDescription();
+    hideTimeUpText();
+    startTimer();
+}
+function quizResult(){
+    document.querySelector(".total-questions").innerHTML=myApp.length;
+    document.querySelector(".total-attempt").innerHTML=attempt;
+    document.querySelector(".total-correct").innerHTML=score;
+    document.querySelector(".your-score").innerHTML=score;
+    document.querySelector(".total-wrong").innerHTML=attempt-score;
+    const percentage=(score/myApp.length)*100;
+    document.querySelector(".percentage").innerHTML=percentage.toFixed(2) +"%";
+}
+function resetQuiz(){
+  attempt=0;
+  //questionIndex=0;
+  score=0;
+  number=0;
+  myArray=[];
+}
+
+function quizOver(){
+    nextQuestionBtn.classList.remove("show");
+    seeResultBtn.classList.add("show");
+}
+seeResultBtn.addEventListener("click", ()=>{
+    quizBox.classList.remove("show");
+    seeResultBtn.classList.remove("show");
+    quizOverBox.classList.add("show");
+    quizResult();
+     })
+
+startAgainQuizBtn.addEventListener("click", ()=>{
+    quizBox.classList.add("show");
+    quizOverBox.classList.remove("show");
+    resetQuiz();
+    nextQuestion();
+})
+
+goHomeBtn.addEventListener("click", ()=>{
+    quizOverBox.classList.remove("show");
+    quizHomeBox.classList.add("show")
+    resetQuiz();
+})
+  
+startQuizBtn.addEventListener("click", ()=>{
+    quizHomeBox.classList.remove("show");
+    quizBox.classList.add("show");
+    nextQuestion();
+})
+
+//window.onload=()=>{
+    
+//}
+</script>
+
+
+
+<br><br><br>
+
+
+
+
+<iframe src="../../SUGGESTED.html" width="100%" height="7000px" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143314085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143314085-1');
+</script>
+
+
+
+
+
+
+

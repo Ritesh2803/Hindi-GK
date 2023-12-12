@@ -459,12 +459,14 @@ section#demo {
 
 
 
+<!-- samsya page start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
 <select name="समस्या" data-callback="storeState" data-conv-question="क्या आपको इस वेबसाइट में कुछ प्रॉब्लम आ रही है?">
   <option value="हाँ">हाँ</option>
   <option value="नहीं">नहीं</option>
 
 </select>
-
 
 <div data-conv-fork="समस्या">
   <div data-conv-case="हाँ">
@@ -485,6 +487,39 @@ section#demo {
   </div>
 </div>
 
+<!-- samsya page end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+
+
+<!--(samsy nhi hai me 1st stage) telegram me agar yas ya no karten hai to start@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div data-conv-fork="telegram">
+<div data-conv-case="हाँ">
+<input type="text" data-conv-question="आपका धन्यवाद हमारे टेलीग्राम से जुड़ने के लिए" data-no-answer="true">    
+<select name="टेलीग्राम से जुड़ा है" data-conv-question="क्या आप हमारे एडमिन से बात करना चाहतें है?">
+<option value="Adminsupport" data-callback="Adminsupport">एडमिन को मैसेज भेजें</option>
+<option value="होम पेज पर जाएँ" data-callback="homepage">होम पेज पर जाएँ</option>
+</select>
+</div>
+
+
+<div data-conv-case="नहीं">
+<input type="text" data-conv-question="आप जल्दी से हमारे टेलीग्राम से जुड़ें" data-no-answer="true">
+<input type="text" data-conv-question="क्यूंकि मै टेलीग्राम में आपको 24 घंटे अपडेट दूंगी" data-no-answer="true">
+<input type="text" data-conv-question="टेलीग्राम ऐप में जॉब नोटिफिकेशन भी मिलेगा." data-no-answer="true">
+
+ <select name="टेलीग्राम से नहीं जुड़ा है" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
+  <option value="अभी जुड़ें" data-callback="telegram">अभी जुड़ें</option>
+  <option value="अभी नहीं">अभी नहीं</option>
+  </select>
+  </div>
+</div>
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
 
 
@@ -492,14 +527,34 @@ section#demo {
 
 
 
-<input type="text" data-conv-question="हमें लगता है की आपके समस्या का समाधान हो गया होगा" data-no-answer="true">
-<input type="text" data-conv-question="यदि आप इससे संतुष्ट नहीं हैं तो आप हमें संदेश भेज सकते हैं।" data-no-answer="true">
+
+
+
+
+
+
+
+
+
+
+
+
+<!--(samsy nhi hai me 1st stage) telegram me agar yas ya no karten hai to end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+
+
+
+
+
+
 
 
 
 <select data-conv-question="मुझसे बात करने के लिए आपका धन्यवाद" id="">
-<option value="google" data-callback="google">एडमिन को मैसेज भेजें</option>
+<option value="Adminsupport" data-callback="Adminsupport">एडमिन को मैसेज भेजें</option>
 <option value="refresh" data-callback="refresh">पेज को रेफ्रेस करें</option>
+<option value="होम पेज पर जाएँ" data-callback="homepage">होम पेज पर जाएँ</option>
 </select>
                                 </form>
                             </div>
@@ -1064,12 +1119,16 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
   </script>
 
     <script>
-        function google(stateWrapper, ready) {
+        function Adminsupport(stateWrapper, ready) {
             window.open("Contact-us-&-user-massege-show/contact-us-form/index.html");
             ready();
         }
-        function astoecompany(stateWrapper, ready) {
-            window.open("Contact-us-&-user-massege-show/contact-us-form/index.html");
+        function telegram(stateWrapper, ready) {
+            window.open("telegram&whatsapp/telegram.html");
+            ready();
+        }
+          function homepage(stateWrapper, ready) {
+            window.open("index.html");
             ready();
         }
         function refresh(stateWrapper, ready) {

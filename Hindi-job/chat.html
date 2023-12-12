@@ -509,7 +509,7 @@ section#demo {
 
 <div data-conv-case="नहीं">
 <input type="text" data-conv-question="आप जल्दी से हमारे टेलीग्राम से जुड़ें" data-no-answer="true">
-<input type="text" data-conv-question="क्यूंकि मै टेलीग्राम में आपको 24 घंटे अपडेट दूंगी" data-no-answer="true">
+<input type="text" data-conv-question="क्यूंकि टेलीग्राम में आपको 24 घंटे अपडेट मिलेगी" data-no-answer="true">
 <input type="text" data-conv-question="टेलीग्राम ऐप में जॉब नोटिफिकेशन भी मिलेगा." data-no-answer="true">
 
  <select name="टेलीग्राम से नहीं जुड़ा है" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
@@ -523,11 +523,59 @@ section#demo {
 
 
 
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div data-conv-fork="टेलीग्राम से नहीं जुड़ा है">
+<div data-conv-case="अभी जुड़ें">
+<input type="text" data-conv-question="आपका धन्यवाद हमारे टेलीग्राम से जुड़ने के लिए" data-no-answer="true">    
+<select name="टेलीग्राम से जुड़ा है" data-conv-question="क्या आप हमारे एडमिन से बात करना चाहतें है?">
+<option value="Adminsupport" data-callback="Adminsupport">एडमिन को मैसेज भेजें</option>
+<option value="होम पेज पर जाएँ" data-callback="homepage">होम पेज पर जाएँ</option>
+</select>
+</div>
+
+
+<div data-conv-case="अभी नहीं">
+
+<select name="आप मेरे टेलिग्राम से क्यों नहीं जुड़ना चाहते है ??" data-conv-question="आप मेरे टेलिग्राम से क्यों नहीं जुड़ना चाहते है ??">
+
+  <option value="बहुत सारे मैसेज से परेशान हो जातें है?">बहुत सारे मैसेज से परेशान हो जातें है?</option>
+  <option value="टेलीग्राम इस्तेमाल नहीं करते है ??">टेलीग्राम इस्तेमाल नहीं करते है ??</option>
+  </select>
+  </div>
+</div>
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
 
 
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div data-conv-fork="आप मेरे टेलिग्राम से क्यों नहीं जुड़ना चाहते है ??">
+<div data-conv-case="बहुत सारे मैसेज से परेशान हो जातें है?">
+<input type="text" data-conv-question="हमारी टीम टेलीग्राम पर सिर्फ स्टडी के लिए ही कुछ भी भेजती है," data-no-answer="true">  
+<input type="text" data-conv-question="जैसे ही कोई जॉब निकलती है हम उसे तुरंत अपडेट कर देते है," data-no-answer="true">
+<input type="text" data-conv-question="{name}:0 मै आपके मैसेज को एडमिन तक पहुंचा दूंगा," data-no-answer="true">
+<input type="text" data-conv-question="{name}:0 अब आपको बहुत सारे मैसेज से परेशान होने की जरूरत नहीं है," data-no-answer="true">
+
+<select name="क्या आप टेलीग्राम से जुड़ना चाहते हैं?" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
+<option value="अभी जुड़ें" data-callback="telegram">अभी जुड़ें</option>
+<option value="Adminsupport" data-callback="Adminsupport">एडमिन को मैसेज भेजें</option>
+<option value="होम पेज पर जाएँ" data-callback="homepage">होम पेज पर जाएँ</option>
+</select>
+</div>
 
 
+<div data-conv-case="टेलीग्राम इस्तेमाल नहीं करते है ??">
+<input type="text" data-conv-question="हमारी टीम टेलीग्राम पर सिर्फ स्टडी के लिए ही कुछ भी भेजती है," data-no-answer="true">  
+<input type="text" data-conv-question="जैसे ही कोई जॉब निकलती है हम उसे तुरंत अपडेट कर देते है," data-no-answer="true">
+<input type="text" data-conv-question="{name}:0 आप टेलीग्राम इनस्टॉल करके हमारे चैनल से जुड़ सकतें है," data-no-answer="true">  
+
+ <select name="टेलीग्राम से नहीं जुड़ा है" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
+  <option value="अभी जुड़ें" data-callback="telegram">अभी जुड़ें</option>
+  </select>
+  </div>
+</div>
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
 
 

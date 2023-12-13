@@ -107,7 +107,7 @@ setInterval(function() {
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटों के भीतर इस पर काम करेगी | (धन्यवाद) "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

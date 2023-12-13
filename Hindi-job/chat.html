@@ -481,7 +481,6 @@ section#demo {
 <div data-conv-fork="समस्या">
   <div data-conv-case="हाँ">
  <select name="समस्या है" data-conv-question="इस वेबसाइट को चलने में क्या समस्या हो रही है जैसे?">
-  <option value="जॉब से जुड़ी समस्या?">जॉब से जुड़ी समस्या?</option>
     <option value="मॉक टेस्ट से जुड़ी समस्या?">मॉक टेस्ट से जुड़ी समस्या?</option>   
     <option value="ऑनलाइन परीक्षा से जुड़ी समस्या?">ऑनलाइन परीक्षा से जुड़ी समस्या?</option>
      <option value="पीडीऍफ़ नही खुल रहा है?">पीडीऍफ़ नही खुल रहा है?</option>
@@ -603,60 +602,46 @@ section#demo {
 <div data-conv-fork="समस्या है">
 
 
-<div data-conv-case="जॉब से जुड़ी समस्या?">
-<input type="text" data-conv-question="आप जल्दी से हमारे टेलीग्राम से जुड़ें" data-no-answer="true">
-<input type="text" data-conv-question="क्यूंकि टेलीग्राम में आपको 24 घंटे अपडेट मिलेगी" data-no-answer="true">
-<input type="text" data-conv-question="टेलीग्राम ऐप में जॉब नोटिफिकेशन भी मिलेगा." data-no-answer="true">
- <select name="टेलीग्राम से नहीं जुड़ा है" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
-  <option value="अभी जुड़ें" data-callback="telegram">अभी जुड़ें</option>
-  <option value="अभी नहीं">अभी नहीं</option>
-  </select>
-  </div>
-
-
-<div data-conv-case="मॉक टेस्ट से जुड़ी समस्या?">
-<input type="text" data-conv-question="आप जल्दी से हमारे टेलीग्राम से जुड़ें" data-no-answer="true">
-<input type="text" data-conv-question="क्यूंकि टेलीग्राम में आपको 24 घंटे अपडेट मिलेगी" data-no-answer="true">
-<input type="text" data-conv-question="टेलीग्राम ऐप में जॉब नोटिफिकेशन भी मिलेगा." data-no-answer="true">
- <select name="टेलीग्राम से नहीं जुड़ा है" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
-  <option value="अभी जुड़ें" data-callback="telegram">अभी जुड़ें</option>
-  <option value="अभी नहीं">अभी नहीं</option>
-  </select>
-  </div>
 
 
 
 <div data-conv-case="मॉक टेस्ट से जुड़ी समस्या?">
-<input type="text" data-conv-question="आप जल्दी से हमारे टेलीग्राम से जुड़ें" data-no-answer="true">
-<input type="text" data-conv-question="क्यूंकि टेलीग्राम में आपको 24 घंटे अपडेट मिलेगी" data-no-answer="true">
-<input type="text" data-conv-question="टेलीग्राम ऐप में जॉब नोटिफिकेशन भी मिलेगा." data-no-answer="true">
- <select name="टेलीग्राम से नहीं जुड़ा है" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
-  <option value="अभी जुड़ें" data-callback="telegram">अभी जुड़ें</option>
-  <option value="अभी नहीं">अभी नहीं</option>
+<input type="text" data-conv-question="आप कोई मॉक टेस्ट नहीं दे पा रहे हैं??" data-no-answer="true">
+<input type="text" data-conv-question="या क्वेश्चन का आंसर गलत लग रहा है??" data-no-answer="true">
+<input type="text" data-conv-question="या कोई और समस्या है तो उसे रिपोर्ट करें " data-no-answer="true">
+
+ <select name="नीचे रिपोर्ट के बटन पर क्लिक करें" data-conv-question="नीचे रिपोर्ट के बटन पर क्लिक करें">
+<option value="mockhelp" data-callback="mockhelp">रिपोर्ट करें</option>
+<option value="Adminsupport" data-callback="Adminsupport">एडमिन को मैसेज भेजें</option>
+<option value="होम पेज पर जाएँ" data-callback="homepage">होम पेज पर जाएँ</option>
   </select>
   </div>
 
 
 
 <div data-conv-case="ऑनलाइन परीक्षा से जुड़ी समस्या?">
-<input type="text" data-conv-question="आप जल्दी से हमारे टेलीग्राम से जुड़ें" data-no-answer="true">
-<input type="text" data-conv-question="क्यूंकि टेलीग्राम में आपको 24 घंटे अपडेट मिलेगी" data-no-answer="true">
-<input type="text" data-conv-question="टेलीग्राम ऐप में जॉब नोटिफिकेशन भी मिलेगा." data-no-answer="true">
- <select name="टेलीग्राम से नहीं जुड़ा है" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
-  <option value="अभी जुड़ें" data-callback="telegram">अभी जुड़ें</option>
-  <option value="अभी नहीं">अभी नहीं</option>
+<input type="text" data-conv-question="आप कोई ऑनलाइन परीक्षा नहीं दे पा रहे हैं??" data-no-answer="true">
+<input type="text" data-conv-question="या क्वेश्चन का आंसर गलत लग रहा है??" data-no-answer="true">
+<input type="text" data-conv-question="या कोई और समस्या है तो उसे रिपोर्ट करें " data-no-answer="true">
+
+ <select name="नीचे रिपोर्ट के बटन पर क्लिक करें" data-conv-question="नीचे रिपोर्ट के बटन पर क्लिक करें">
+<option value="Adminsupport" data-callback="Adminsupport">रिपोर्ट करें</option>
+<option value="Adminsupport" data-callback="Adminsupport">एडमिन को मैसेज भेजें</option>
+<option value="होम पेज पर जाएँ" data-callback="homepage">होम पेज पर जाएँ</option>
   </select>
   </div>
 
 
 
 <div data-conv-case="पीडीऍफ़ नही खुल रहा है?">
-<input type="text" data-conv-question="आप जल्दी से हमारे टेलीग्राम से जुड़ें" data-no-answer="true">
-<input type="text" data-conv-question="क्यूंकि टेलीग्राम में आपको 24 घंटे अपडेट मिलेगी" data-no-answer="true">
-<input type="text" data-conv-question="टेलीग्राम ऐप में जॉब नोटिफिकेशन भी मिलेगा." data-no-answer="true">
- <select name="टेलीग्राम से नहीं जुड़ा है" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
-  <option value="अभी जुड़ें" data-callback="telegram">अभी जुड़ें</option>
-  <option value="अभी नहीं">अभी नहीं</option>
+<input type="text" data-conv-question="क्या आप कोई पीडीएफ नहीं खोल पा रहे हैं??" data-no-answer="true">
+<input type="text" data-conv-question="तो जाँच लें कि आपकी इंटरनेट की स्पीड सही होनी चाहिए" data-no-answer="true">
+<input type="text" data-conv-question="हमारे वेबसाइट में कई पीडीऍफ़ बड़े साइज की है , उसे लोड लेने में समय लगता है " data-no-answer="true">
+
+ <select name="अगर आपकी समस्या कुछ और है तो आप एडमिन को मैसेज कर सकतें है" data-conv-question="अगर आपकी समस्या कुछ और है तो आप एडमिन को मैसेज कर सकतें है ">
+<option value="refresh" data-callback="refresh">पेज को रेफ्रेस करें</option>
+<option value="Adminsupport" data-callback="Adminsupport">एडमिन को मैसेज भेजें</option>
+<option value="होम पेज पर जाएँ" data-callback="homepage">होम पेज पर जाएँ</option>
   </select>
   </div>
 
@@ -665,12 +650,17 @@ section#demo {
 
 
 <div data-conv-case="वेबसाइट धीरे चल रहा है?">
-<input type="text" data-conv-question="आप जल्दी से हमारे टेलीग्राम से जुड़ें" data-no-answer="true">
-<input type="text" data-conv-question="क्यूंकि टेलीग्राम में आपको 24 घंटे अपडेट मिलेगी" data-no-answer="true">
-<input type="text" data-conv-question="टेलीग्राम ऐप में जॉब नोटिफिकेशन भी मिलेगा." data-no-answer="true">
- <select name="टेलीग्राम से नहीं जुड़ा है" data-conv-question="क्या आप टेलीग्राम से जुड़ना चाहते हैं?">
-  <option value="अभी जुड़ें" data-callback="telegram">अभी जुड़ें</option>
-  <option value="अभी नहीं">अभी नहीं</option>
+<input type="text" data-conv-question="क्या वेबसाइट धीरे चल रहा है ??" data-no-answer="true">
+<input type="text" data-conv-question="तो जाँच लें कि आपकी इंटरनेट की स्पीड सही होनी चाहिए" data-no-answer="true">
+<input type="text" data-conv-question="हमारे वेबसाइट में कई पीडीऍफ़ बड़े साइज की है" data-no-answer="true">
+<input type="text" data-conv-question="और हमारे इमेज भी हाई क्वालिटी के हैं" data-no-answer="true">
+<input type="text" data-conv-question="शायद इसी कारण वेबसाइट धीरे चल रहा होगा" data-no-answer="true">
+<input type="text" data-conv-question="हम इस समस्या पर जरूर काम करेंगे " data-no-answer="true">
+
+ <select name="अगर आपकी समस्या कुछ और है तो आप एडमिन को मैसेज कर सकतें है" data-conv-question="अगर आपकी समस्या कुछ और है तो आप एडमिन को मैसेज कर सकतें है ">
+<option value="refresh" data-callback="refresh">पेज को रेफ्रेस करें</option>
+<option value="Adminsupport" data-callback="Adminsupport">एडमिन को मैसेज भेजें</option>
+<option value="होम पेज पर जाएँ" data-callback="homepage">होम पेज पर जाएँ</option>
   </select>
   </div>
 
@@ -1271,6 +1261,10 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
             window.open("index.html");
             ready();
         }
+        function mockhelp(stateWrapper, ready) {
+            window.open("All-Quiz/SUGGESTED.html");
+            ready();
+        }   
         function refresh(stateWrapper, ready) {
             location.reload();
         }

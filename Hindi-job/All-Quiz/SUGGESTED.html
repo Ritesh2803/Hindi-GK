@@ -58,9 +58,26 @@
                     <div class="row register-form">
                         <div class="col-md-12">
                       <form method="post" name="google-sheet" >
-                                        <div class="form-group">
-                                            <input type="text" name="नाम" class="form-control" placeholder="किस विषय के मॉक टेस्ट में प्रॉब्लम है ?? *" value="" required=""/>
-                                        </div>
+                                  <div class="form-group">
+                                    
+                                    <select class="form-control" name="नाम" aria-label="Default select example" id="select-plan">
+                                <option value="किस विषय के मॉक टेस्ट में प्रॉब्लम है ?? *">किस विषय के मॉक टेस्ट में प्रॉब्लम है ?? *</option>
+                                        <option value="गणित का मॉक टेस्ट">गणित का मॉक टेस्ट</option>
+                                        <option value="अंग्रेज़ी का मॉक टेस्ट">अंग्रेज़ी का मॉक टेस्ट</option>
+                                        <option value="रीजनिंग का मॉक टेस्ट">रीजनिंग का मॉक टेस्ट</option>
+                                        <option value="कंप्यूटर का मॉक टेस्ट">कंप्यूटर का मॉक टेस्ट</option>
+                                        <option value="अर्थशास्त्र का मॉक टेस्ट">अर्थशास्त्र का मॉक टेस्ट</option>
+                                        <option value="भूगोल का मॉक टेस्ट">भूगोल का मॉक टेस्ट</option>
+                                        <option value="हिंदी का मॉक टेस्ट">हिंदी का मॉक टेस्ट</option>
+                                        <option value="इतिहास का मॉक टेस्ट">इतिहास का मॉक टेस्ट</option>
+                                        <option value="विज्ञान का मॉक टेस्ट">विज्ञान का मॉक टेस्ट</option>
+                                        <option value="संविधान एवं राजव्यवस्था">संविधान एवं राजव्यवस्था</option>
+                                        <option value="मनोविज्ञान का मॉक टेस्ट">मनोविज्ञान का मॉक टेस्ट</option>
+                                        <option value="संस्कृत का मॉक टेस्ट">संस्कृत का मॉक टेस्ट</option>
+                                    </select>
+                                </div>
+
+
                                         <div class="form-group">
 
                                         <input type="number" placeholder="टेस्ट नंबर ?? *" name="मोबाइल नंबर" class="form-control" id="मोबाइल नंबर" required=""/>
@@ -91,7 +108,7 @@ setInterval(function() {
 
   original = document.getElementById("मोबाइल नंबर").value;
 
-  if (original.length > 10) {
+  if (original.length > 3) {
     lastCharRemove =
       original.slice(0, original.length - 1);
     document.getElementById('मोबाइल नंबर').value = lastCharRemove;
@@ -107,7 +124,7 @@ setInterval(function() {
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटों के भीतर इस पर काम करेगी | (धन्यवाद) "))
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, हमें इस गलती के बारे में बताने के लिए आपका धन्यवाद । हमारी टीम 24 से 48 घंटों के भीतर इस मॉक टेस्ट पर काम करेगी | "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

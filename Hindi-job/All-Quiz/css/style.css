@@ -16,7 +16,7 @@
 }
 .custom-box{
  max-width: 100%;
- background-color: #eff !important;
+ background-color: ghostwhite; !important;
  margin:10px ;
  padding: 50px 40px;
  border-radius: 5px;

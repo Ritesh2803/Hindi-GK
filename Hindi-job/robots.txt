@@ -1,0 +1,483 @@
+# If you run a search engine and would like to index Academia.edu, please email support@academia.edu.
+
+User-agent: Googlebot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: Mediapartners-Google
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: msnbot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: bingbot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: Slurp
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: DuckDuckbot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: baiduspider
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: seznambot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: naverbot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: teoma
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: Yandex
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: ScoutJet
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: GurujiBot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: Exabot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: Solbot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: FAST
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: VoilaBot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: daumoa
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: ArchitextSpider
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: Twitterbot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: SocSciBot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: ia_archiver
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: coccoc
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: Browsershots
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: SiteArc
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: Cliqzbot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: proximic
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: OnCrawlBot
+Disallow: /attachments/*/download_file
+Disallow: /Jobs/Search
+Disallow: /people/search
+Disallow: /ac_search
+Disallow: /users/search
+Disallow: /ac_universities
+Disallow: /ac_university_departments
+
+Disallow: /v0/arbitrary_event
+Disallow: /v0/server_notifications
+Disallow: /v0/impressions
+Disallow: /v0/ab_test
+Disallow: /v0/onsite_pings
+
+Allow: /
+
+User-agent: *
+Disallow: /
+
+
+

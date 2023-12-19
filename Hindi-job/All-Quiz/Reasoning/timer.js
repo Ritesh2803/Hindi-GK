@@ -1,5 +1,5 @@
 function startTimer(){
-    let timeLimit=60;
+    let timeLimit=90;
     remainingTime.innerHTML=timeLimit;
     remainingTime.classList.remove("less-time");
     interval=setInterval(()=>{

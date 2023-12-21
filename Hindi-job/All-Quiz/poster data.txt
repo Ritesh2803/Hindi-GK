@@ -1,0 +1,3 @@
+note :-   vaxzsth ds bl VsLV dks rS;kj djus esa iw.kZ lko/kkuh cjrh xbZ gS] fQj Hkh vxj dksbZ xyrh gksrh gS] rks gesa eSlst djds crk,aA
+timer :-  vkids ikl çR;sd ç'u dk mÙkj nsus ds fy, 40 lSdsaM dk le; gksxk A
+test no. :- vaxzsth VsLV uacj

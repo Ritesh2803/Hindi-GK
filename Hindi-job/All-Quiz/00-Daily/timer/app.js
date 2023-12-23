@@ -1,3 +1,10 @@
+
+// replace date (2024, 3, 01, 18, 0, 0)
+
+
+
+
+
 const days = [
   "Sunday",
   "Monday",
@@ -8,18 +15,18 @@ const days = [
   "Saturday",
 ];
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "Auguest",
-  "September",
-  "October",
-  "November",
-  "December",
+  "जनवरी",
+  "फ़रवरी",
+  "मार्च",
+  "अप्रैल",
+  "मई",
+  "जून",
+  "जुलाई",
+  "अगस्त",
+  "सितम्बर",
+  "अक्टूबर",
+  "नवंबर",
+  "दिसंबर",
 ];
 
 const eventText = document.querySelector(".event_text");
@@ -28,7 +35,7 @@ const countDownBox = document.querySelector(".countdown_box");
 const buttons = document.querySelectorAll(".btn");
 
 // event date
-const eventDateObj = new Date(2023, 11, 25, 1, 20, 0);
+const eventDateObj = new Date(2024, 3, 01, 18, 0, 0);
 
 
 const eventDay = eventDateObj.getDay();
@@ -38,7 +45,7 @@ const eventYear = eventDateObj.getFullYear();
 const eventHours = eventDateObj.getHours();
 const eventMins = eventDateObj.getMinutes();
 
-eventText.textContent = `This Product will be available on ${days[eventDay]}, ${eventDate} ${months[eventMonth]} ${eventYear} at ${eventHours}:${eventMins}`;
+eventText.textContent = `( ये टेस्ट ${eventDate} ${months[eventMonth]} शाम के 6 बजे अपलोड होगा )`;
 
 // number format function
 const numFormat = (num) => (num < 10 ? `0${num}` : num);
@@ -74,7 +81,7 @@ function getCountDown() {
   if (timeDiff < 0) {
     clearInterval(countdown);
     countDownBox.style.display = "none";
-    eventText.textContent = `Sale is live now.`;
+    eventText.textContent = ``;
     buttons.forEach((btn) => {
       btn.classList.remove("btn_disabled");
     });

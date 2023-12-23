@@ -59,11 +59,11 @@ body {
   background-color: #f79a06;
 }
 .btn_disabled {
-  background-color: #ccc !important;
+  background-color: #202020 !important;
   pointer-events: none;
 }
 .countdown_box {
-  display: block;
+  display: none;
   margin: auto;
 }
 .countdown_box .number_box {

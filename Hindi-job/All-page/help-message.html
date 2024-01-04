@@ -139,7 +139,7 @@ setInterval(function() {
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, हमें इस गलती के बारे में बताने के लिए आपका धन्यवाद । हमारी टीम 24 से 48 घंटों के भीतर इस पर काम करेगी | (धन्यवाद) "))
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, हमें इस गलती के बारे में बताने के लिए आपका धन्यवाद । हमारी टीम 24 से 48 घंटों के भीतर इस पर काम करेगी | "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

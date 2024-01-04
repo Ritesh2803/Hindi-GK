@@ -47,10 +47,7 @@
 <body>
 
    
-        <!-- Start Sub Header Section -->
-        <div class="sub-header">
-            <div class="container-fluid">
-                <div class="row align-items-center">
+
 
                             
                             
@@ -64,21 +61,46 @@
             <div class="col-md-12">
                 <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
                     aria-labelledby="home-tab">
-                     
+                    <center> अगर आपको इस पीडीएफ में कोई समस्या आ रही है तो हमें बताएं हम उसे ठीक कर देंगे।</center><br>
                     <div class="row register-form">
                         <div class="col-md-12">
                       <form method="post" name="google-sheet" >
-                                        <div class="form-group">
-                                            <input type="text" name="नाम" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
-                                        </div>
-                                        <div class="form-group">
+                                   
 
-                                        <input type="phone" placeholder="आपका मोबाइल नंबर *" name="मोबाइल नंबर" class="form-control" id="मोबाइल नंबर" required=""/>
 
-                                          
+<div class="form-group">
+                                    
+                                    <select class="form-control" name="नाम" aria-label="Default select example" id="select-plan">
+                                <option value="किस विषय के मॉक टेस्ट में प्रॉब्लम है ?? *">किस विषय के नोट्स में प्रॉब्लम है ?? *</option>
+
+<option value="हिंदी के नोट्स">हिंदी के नोट्स</option>
+<option value="अंग्रेज़ी के नोट्स">अंग्रेज़ी के नोट्स</option>
+<option value="कंप्यूटर के नोट्स">कंप्यूटर के नोट्स</option>
+<option value="बाल विकास के नोट्स">बाल विकास के नोट्स</option>
+<option value="रीजनिंग के नोट्स">(तर्कशक्ति) रीजनिंग के नोट्स</option>
+<option value="अर्थशास्त्र के नोट्स">अर्थशास्त्र के नोट्स</option>
+<option value="छत्तीसगढ़ी के नोट्स">छत्तीसगढ़ी के नोट्स</option>
+<option value="भूगोल के नोट्स">भूगोल के नोट्स</option>
+<option value="पर्यावरण के नोट्स">पर्यावरण के नोट्स</option>
+<option value="इतिहास के नोट्स">इतिहास के नोट्स</option>
+<option value="गणित के नोट्स">गणित के नोट्स</option>
+<option value="विज्ञान के नोट्स">विज्ञान के नोट्स</option>
+<option value="संस्कृत के नोट्स">संस्कृत के नोट्स</option>
+<option value="राजनीति के नोट्स">राजनीति के नोट्स</option>
+
+                                        
+                                    </select>
+                                </div>
+
+
+
+                                          <div class="form-group">
+                                            <input type="text" name="समस्या" class="form-control" placeholder="किस पीडीएफ में समस्या है*" value="" required=""/>
                                         </div>
+
+
                                         <div class="form-group">
-                                            <input type="text" name="समस्या" class="form-control" placeholder="अपनी समस्या यहाँ लिखें *" value="" required=""/>
+                                            <input type="text" name="समस्या" class="form-control" placeholder="क्या समस्या है यहां लिखें*" value="" required=""/>
                                         </div>
                                                                         
                                         <div class="form-group">
@@ -117,7 +139,7 @@ setInterval(function() {
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, हमें इस गलती के बारे में बताने के लिए आपका धन्यवाद । हमारी टीम 24 से 48 घंटों के भीतर इस पर काम करेगी | (धन्यवाद) "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

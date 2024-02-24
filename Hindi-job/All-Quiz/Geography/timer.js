@@ -43,7 +43,7 @@ return false;
 var isNS = (navigator.appName == "Netscape") ? 1 : 0;
 if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
 function mischandler(){
-    alert('हमारे इस डेटा को सुरक्षित रखने के लिए हमने इस बटन को बंद करके रखा है (आप इस वेबसाइट से कोई भी टेस्ट को कॉपी नहीं कर सकते)');
+    alert('हमारे इस डेटा को सुरक्षित रखने के लिए हमने इस सर्विस को बंद करके रखा है (आप इस वेबसाइट से कोई भी टेक्स्ट को कॉपी नहीं कर सकते)');
 return false;
 }
 function mousehandler(e){
@@ -75,7 +75,7 @@ document.onclick=reEnable
     }*/
     document.onkeydown = function(e) {
             if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
-                alert('हमारे इस डेटा को सुरक्षित रखने के लिए हमने इस बटन को बंद करके रखा है (आप इस वेबसाइट से कोई भी टेस्ट को कॉपी नहीं कर सकते)');
+                alert('हमारे इस डेटा को सुरक्षित रखने के लिए हमने इस सर्विस को बंद करके रखा है (आप इस वेबसाइट से कोई भी टेक्स्ट को कॉपी नहीं कर सकते)');
             }
             return false;
     };

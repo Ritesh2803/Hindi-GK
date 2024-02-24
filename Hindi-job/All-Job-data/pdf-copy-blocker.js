@@ -1,25 +1,3 @@
-function startTimer(){
-    let timeLimit=40;
-    remainingTime.innerHTML=timeLimit;
-    remainingTime.classList.remove("less-time");
-    interval=setInterval(()=>{
-      timeLimit--;
-        if(timeLimit < 10){
-            timeLimit="0"+timeLimit;
-            
-            }
-            if(timeLimit < 6){
-                remainingTime.classList.add("less-time");  
-            }
-            remainingTime.innerHTML=timeLimit;
-            if(timeLimit == 0){
-            clearInterval(interval);
-            timeIsUp();
-    }
-    },1000)
-}
-
-
 
 
 var isCtrl = false;
@@ -74,7 +52,7 @@ document.onclick=reEnable
     }*/
     document.onkeydown = function(e) {
             if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
-                alert('हमारे इस डेटा को सुरक्षित रखने के लिए हमने इस सर्विस को बंद करके रखा है (आप इस वेबसाइट से कोई भी टेक्स्ट को कॉपी नहीं कर सकते)');
+                alert('हमारे इस डेटा को सुरक्षित रखने के लिए हमने इस बटन को बंद करके रखा है (आप इस वेबसाइट से कोई भी टेक्स्ट को कॉपी नहीं कर सकते)');
             }
             return false;
     };

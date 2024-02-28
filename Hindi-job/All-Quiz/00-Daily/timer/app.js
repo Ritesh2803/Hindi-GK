@@ -35,7 +35,7 @@ const countDownBox = document.querySelector(".countdown_box");
 const buttons = document.querySelectorAll(".btn");
 
 // event date
-const eventDateObj = new Date(2024, 1, 25, 18, 0, 0);
+const eventDateObj = new Date(2024, 4, 28, 18, 0, 0);
 
 
 const eventDay = eventDateObj.getDay();

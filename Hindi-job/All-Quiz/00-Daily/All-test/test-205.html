@@ -116,24 +116,15 @@ let interval;
 myApp=[
 
 
+{question:'पर&#2367;वहन म&#2306;त&#2381;र&#2368; ब&#2368;. श&#2381;र&#2368;र&#2366;म&#2369;ल&#2369; क&#2375; म&#2369;त&#2366;ब&#2367;क, क&#2367;स र&#2366;ज&#2381;य म&#2375;&#2306; &#8220;Skill and Entrepreneurship Development University &#8221; बन&#2366;न&#2375; क&#2368; य&#2379;जन&#2366; बन&#2366;ई गय&#2368; ह&#2376;?',options:['क&#2375;रल','मह&#2366;र&#2366;ष&#2381;ट&#2381;र','मह&#2366;र&#2366;ष&#2381;ट&#2381;र','कर&#2381;न&#2366;टक',],answer:3,},
+{question:'न&#2366;स&#2366; क&#2375; प&#2366;र&#2381;कर स&#2379;लर प&#2381;र&#2379;ब न&#2375; ह&#2366;ल ह&#2368; म&#2375;&#2306; अ&#2306;तर&#2367;क&#2381;ष स&#2375; क&#2367;स ग&#2381;रह क&#2375; सतह क&#2375; च&#2367;त&#2381;र ल&#2367;ए ह&#2376;?',options:['शन&#2367;','श&#2369;क&#2381;र','म&#2306;गल','ब&#2369;ध',],answer:1,},
+{question:'न&#2367;म&#2381;न म&#2375;&#2306; स&#2375; क&#2367;स ऑट&#2379;म&#2379;ब&#2366;इल क&#2306;पन&#2368; क&#2375; प&#2370;र&#2381;व च&#2375;यरम&#2376;न र&#2366;ह&#2369;ल बज&#2366;ज क&#2366; ह&#2366;ल ह&#2368; म&#2375;&#2306; न&#2367;धन ह&#2379; गय&#2366; ह&#2376;?',options:['म&#2366;र&#2369;त&#2368; स&#2369;ज&#2369;क&#2368;','बज&#2366;ज','ह&#2380;&#2306;ड&#2366;','ह&#2368;र&#2379;',],answer:1,},
+{question:'न&#2367;म&#2381;न म&#2375;&#2306; स&#2375; क&#2367;स क&#2306;पन&#2368; क&#2375; ब&#2379;र&#2381;ड न&#2375; द&#2370;सर&#2375; प&#2366;&#2306;च वर&#2381;ष क&#2375; क&#2366;र&#2381;यक&#2366;ल क&#2375; ल&#2367;ए एन च&#2306;द&#2381;रश&#2375;खरन क&#2379; अध&#2381;यक&#2381;ष न&#2367;य&#2369;क&#2381;त करन&#2375; क&#2368; म&#2306;ज&#2370;र&#2368; द&#2375; द&#2368; ह&#2376;?',options:['र&#2367;ल&#2366;य&#2306;स प&#2381;र&#2366;इव&#2375;ट ल&#2367;म&#2367;ट&#2375;ड','अड&#2366;ण&#2368; प&#2381;र&#2366;इव&#2375;ट ल&#2367;म&#2367;ट&#2375;ड','ट&#2366;ट&#2366; स&#2306;स प&#2381;र&#2366;इव&#2375;ट ल&#2367;म&#2367;ट&#2375;ड','एचड&#2368;एफस&#2368; ग&#2381;र&#2369;प',],answer:2,},
+{question:'इनम&#2375; स&#2375; क&#2367;स र&#2366;ज&#2381;य सरक&#2366;र न&#2375; ह&#2366;ल ह&#2368; म&#2375;&#2306; उच&#2381;च श&#2367;क&#2381;ष&#2366; क&#2366; व&#2367;स&#2381;त&#2366;र करन&#2375; क&#2375; ल&#2367;ए ब&#2381;र&#2367;ट&#2367;श क&#2366;उ&#2306;स&#2367;ल क&#2375; स&#2366;थ समझ&#2380;त&#2366; क&#2367;य&#2366; ह&#2376;?',options:['क&#2375;रल सरक&#2366;र','मह&#2366;र&#2366;ष&#2381;ट&#2381;र सरक&#2366;र','प&#2306;ज&#2366;ब सरक&#2366;र','त&#2375;ल&#2306;ग&#2366;न&#2366; सरक&#2366;र',],answer:3,},
+{question:'ह&#2366;ल ह&#2368; म&#2375;&#2306; क&#2367;सन&#2375; प&#2381;र&#2366;क&#2371;त&#2367;क ख&#2375;त&#2368; क&#2379; बढ&#2364;&#2366;व&#2366; द&#2375;न&#2375; क&#2375; ल&#2367;ए &#8220;ज&#2368;व&#2366; क&#2366;र&#2381;यक&#2381;रम&#8221; श&#2369;र&#2370; क&#2367;य&#2366; ह&#2376;?',options:['क&#2375;नर&#2366; ब&#2376;&#2306;क','भ&#2366;रत&#2368;य स&#2381;ट&#2375;ट ब&#2376;&#2306;क','व&#2367;श&#2381;व ब&#2376;&#2306;क','र&#2366;ष&#2381;ट&#2381;र&#2368;य क&#2371;ष&#2367; और ग&#2381;र&#2366;म&#2368;ण व&#2367;क&#2366;स ब&#2376;&#2306;क',],answer:3,},
+{question:'न&#2367;म&#2381;न म&#2375;&#2306; स&#2375; क&#2367;स म&#2306;त&#2381;र&#2366;लय न&#2375; ह&#2366;ल ह&#2368; म&#2375;&#2306; न&#2367;व&#2375;शक स&#2306;रक&#2381;षण और श&#2367;क&#2381;ष&#2366; क&#2379;ष पर सल&#2366;हक&#2366;र सम&#2367;त&#2367; क&#2366; प&#2369;नर&#2381;गठन क&#2367;य&#2366; ह&#2376;?',options:['श&#2367;क&#2381;ष&#2366; म&#2306;त&#2381;र&#2366;लय','व&#2367;ज&#2381;ञ&#2366;न म&#2306;त&#2381;र&#2366;लय','मह&#2367;ल&#2366; म&#2306;त&#2381;र&#2366;लय','स&#2375;ब&#2368;',],answer:3,},
+{question:'इनम&#2375; स&#2375; क&#2367;स र&#2379;ग क&#2366; क&#2366;रण बनन&#2375; व&#2366;ल&#2375; व&#2366;यरस क&#2368; ख&#2379;ज क&#2375; ल&#2367;ए न&#2379;ब&#2375;ल प&#2369;रस&#2381;क&#2366;र स&#2375; सम&#2381;म&#2366;न&#2367;त &#8220;ल&#2381;य&#2370;क म&#2377;न&#2381;ट&#2376;ग&#2381;न&#2367;यर&#8221; क&#2366; ह&#2366;ल ह&#2368; म&#2375;&#2306; न&#2367;धन ह&#2379; गय&#2366; ह&#2376;?',options:['ट&#2368;ब&#2368;','एड&#2381;स','ट&#2366;इफ&#2376;ड','क&#2379;र&#2379;न&#2366;',],answer:1,},
 
-
-
-
-{question:'she said to me,&#8221; what can I do for you ?',options:['she asked me what she could do for me','she asked me what can she do for me','she asked me what she can do for me','she asked me whether she can do anything for me',],answer:0,},
-{question:'he said,&#8221; Alas ! I am undone !',options:[' he said that it was his undoing','he exclaimed pathetically that he was undone ','he stated that he was undone','he cried that he was being undone',],answer:1,},
-{question:'&#8221; I shall unlock the secrets of the their success,&#8221; he said.',options:['he said that he shall unlock the secrets of their success','he said that he should unlock the secrets of their success','he said that he would unlock the secrets of their success','he said that he will unlock the secrets of their success',],answer:2,},
-{question:'&#8220;I wonder what he wants of us,&#8221; said Raja',options:['Raja said that he was wondering what he wanted of them','Raja said that he wondered what he wanted of us','Raja said he wondered what he wants of them','Raja said that he wondered what he wanted of them ',],answer:3,},
-
-{question:'Hans and Klaus are from Germany, and _______ them are from the city of Frankfurt.',options:['both of','all','none of','neither',],answer:0,},
-{question:'A: _______ the pancakes are burnt. <div>B: Still, Hillary has eaten five of them.',options:['Both of','None of','All of','Neither of',],answer:2,},
-{question:'Nancy and Jenny are 27 years old and they are _______ bankers.',options:['neither of','both','none','all of',],answer:1,},
-{question:'_______ the eleven footballers in the team were happy about the final score _______ of them were sad.',options:['None of / All','Both / None','Neither of / Both','All / Neither',],answer:0,},
-{question:'Ryan bought two blankets yesterday and he has already washed _______ them.',options:['both of','none of','neither','all',],answer:0,},
-{question:'Linda will invite _______ her neighbours over for dinner. She thinks there will be more than fifteen people.',options:['all of','neither of','both of','none of',],answer:0,},
-{question:'He gave me two music CDs, but I liked _______ them.',options:['all','neither of','both','none of',],answer:1,},
-
-  
   
   
   

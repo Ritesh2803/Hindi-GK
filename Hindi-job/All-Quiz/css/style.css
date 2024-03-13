@@ -16,7 +16,7 @@
 }
 .custom-box{
  max-width: 100%;
- background-color: ghostwhite; !important;
+ background-color: #202020; !important;
  margin:10px ;
  padding: 50px 40px;
  border-radius: 5px;
@@ -34,7 +34,7 @@
 .quiz-home-box h4{
  font-size: 24px;
     font-weight: 500;
-    color:#444444;
+    color:#202020;
     margin: 0 0 30px;
     border-style: ridge;
 }
@@ -54,7 +54,7 @@
     outline:none;
 }
 .quiz-box{
-    background-color: #bad3df;
+    background-color: white;
     display: none;
 }
 .quiz-box.show{
@@ -220,7 +220,7 @@ text-align: right;
  width: 30px;
  right:12px;
  top:5px;
- background-image: url("../css/Right-2-TestUp.png");
+ background-image: url("../css/Right-2.png");
  background-size: 33px;
  background-position: center;
  background-repeat: no-repeat;
@@ -240,7 +240,7 @@ text-align: right;
  width: 30px;
  right: 6px;
  top:5px;
- background-image: url("../css/Wrong-2-testup.png");
+ background-image: url("../css/Wrong-2.png");
  background-size: 30px;
  background-position: center;
  background-repeat: no-repeat;
@@ -253,7 +253,7 @@ height: 30px;
 width: 30px;
 right:8px;
 top:5px;
-background-image: url(../css/Right-1-TestUp.png);
+background-image: url(../css/Right-1.png);
 background-size:33px;
 background-position:center;
 background-repeat: no-repeat;
@@ -265,7 +265,7 @@ background-repeat: no-repeat;
  width: 30px;
  right: 6px;
  top:4px;
- background-image: url("../css/Wrong-1-testup.png");
+ background-image: url("../css/Wrong-1.png");
  background-size: 30px;
  background-position: center;
  background-repeat: no-repeat;
@@ -362,7 +362,7 @@ background-repeat: no-repeat;
 /*responsive*/
 @media (max-width: 767px){
 .custom-box{
-background-color: #cbe1e0;
+background-color: red;
 }
 .quiz-home-box h4{
     font-size: 16px;
@@ -381,7 +381,7 @@ background-color: #cbe1e0;
     }
     .custom-box{
         padding: 30px 10px 50px 10px;
-        background-color: #d5deee;
+        background-color: white;
     }
     .quiz-box .stat{
         font-size:20px;

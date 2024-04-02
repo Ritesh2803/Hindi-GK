@@ -1,7 +1,4 @@
 
-// replace date (2024, 3, 01, 18, 0, 0)
-
-
 
 const days = [
   "Sunday",
@@ -32,7 +29,7 @@ const countDownNums = document.querySelectorAll(".countdown_box h4");
 const countDownBox = document.querySelector(".countdown_box");
 const buttons = document.querySelectorAll(".btn");
 
-// event date
+// jis din test ko dikhana hai us tarikh ko likhna hai (isme january ko 0 se ginti karna hai jaise march month ko dusra mhina bolenge) @@@@@@@@@@@@@@@@@@@@@@@@@
 const eventDateObj = new Date(2024, 4, 27, 18, 0, 0);
 
 

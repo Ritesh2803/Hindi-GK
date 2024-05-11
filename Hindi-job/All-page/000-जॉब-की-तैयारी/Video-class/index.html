@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+  </head>
+  <body>
+    <video id="video-id">
+      <source
+        src="https://ia904605.us.archive.org/35/items/videoplayback_20240511/videoplayback.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <script>
+      let myFP = fluidPlayer("video-id");
+      let isLandscape = false;
+
+      document
+        .querySelectorAll(
+          "#video-id_fluid_control_fullscreen, #video-idcontext_option_fullscreen"
+        )
+        .forEach((fullScreenButton) => {
+          fullScreenButton.addEventListener("click", () => {
+            if (isLandscape) {
+              screen.orientation.unlock();
+              isLandscape = false;
+            }
+
+            screen.orientation
+              .lock("landscape")
+              .then((res) => {
+                isLandscape = true;
+              })
+              .catch((err) => console.log(err));
+          });
+        });
+    </script>
+  </body>
+</html>

@@ -1,40 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
-  </head>
-  <body>
-    <video id="video-id">
-      <source
-        src="https://ia904605.us.archive.org/35/items/videoplayback_20240511/videoplayback.mp4"
-        type="video/mp4"
-      />
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta charset="utf-8">
+<title>Transforming video</title>
+<link rel="stylesheet" href="mainstyles.css" type="text/css">
+<style type="text/css" media="screen">
+  video{
+    display:block;
+    width:100%;
+    height:100%px;
+  }
+  video.scale2{
+    transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+    margin:100px 100px;
+  }
+  video.rotate20{
+    transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    margin:90px 25px;
+  }
+  video.both{
+    transform:scale(1.5) rotate(20deg);
+    -moz-transform:scale(1.5) rotate(20deg);
+    -webkit-transform:scale(1.5) rotate(20deg);
+    -o-transform:scale(1.5) rotate(20deg);
+    -ms-transform:scale(1.5) rotate(20deg);
+    margin:170px 130px;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+    <video controls class="rotate20">
+      <source src="http://www.archive.org/download/AnimatedMechanicalArtPiecesAtMit/P1120973_512kb.mp4" type="video/mp4">         
+      <source src="http://www.archive.org/download/AnimatedMechanicalArtPiecesAtMit/P1120973.ogv" type="video/ogg">         
+
     </video>
-    <script>
-      let myFP = fluidPlayer("video-id");
-      let isLandscape = false;
 
-      document
-        .querySelectorAll(
-          "#video-id_fluid_control_fullscreen, #video-idcontext_option_fullscreen"
-        )
-        .forEach((fullScreenButton) => {
-          fullScreenButton.addEventListener("click", () => {
-            if (isLandscape) {
-              screen.orientation.unlock();
-              isLandscape = false;
-            }
+ 
 
-            screen.orientation
-              .lock("landscape")
-              .then((res) => {
-                isLandscape = true;
-              })
-              .catch((err) => console.log(err));
-          });
-        });
-    </script>
-  </body>
+
+</body>
 </html>

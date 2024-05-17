@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>O que é HTML?</title>
+    <script type="text/javascript" src="./O que é HTML.js"></script>
+  </head>
+  <body>
+    <div id="titulo">
+      <h1>PDF sem opção de download - HTML</h1>
+    </div>
+    <div id="pdfViewer">
+      <iframe
+        src="pdf.pdf#toolbar=0&navpanes=0&statusbar=0&messages=0"
+        width="100%"
+        height="400px"
+      >
+      </iframe>
+    </div>
+    <div id="zoom">
+      <button type="button" onclick="maisZoom()">zoom in</button>
+      <button type="button" onclick="menosZoom()">zoom out</button>
+    </div>
+  </body>
+</html>
+
+
+<script type="text/javascript">
+
+function maisZoom() {
+    var myPDF = document.getElementById("pdfViewer");
+    var zoomAtual = myPDF.clientWidth;
+    if (zoomAtual == 2500) return false;
+    else {
+        myPDF.style.width = (zoomAtual + 100) + "px";
+    }
+  }
+  
+  function menosZoom() {
+    var myPDF = document.getElementById("pdfViewer");
+    var zoomAtual = myPDF.clientWidth;
+    if (zoomAtual == 100) return false;
+    else {
+        myPDF.style.width = (zoomAtual - 100) + "px";
+    }
+  }
+
+</script>

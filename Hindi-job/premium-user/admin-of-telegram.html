@@ -83,16 +83,16 @@
                         <div class="col-md-12">
                       <form method="post" name="google-sheet" >
                                         <div class="form-group">
-                                            <input type="number" name="Movie code" class="form-control" placeholder="मूवी कोड लिखें  *" value="" required=""/>
+                                            <input type="number" name="Movie code" class="form-control" id="मोबाइल नंबर" placeholder="कोड लिखें  *" value="" required=""/>
                                         </div>
                                         <div class="form-group">
 
-                                        <input type="Text" placeholder="वीडियो का नाम लिखें  *" name="movie name" class="form-control" id="मोबाइल नंबर" required=""/>
+                                        <input type="Text" placeholder="फाइल का नाम लिखें  *" name="movie name" class="form-control" required=""/>
 
                                           
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="movie link" class="form-control" placeholder="वीडियो का लिंक यंहा डालें *" value="" required=""/>
+                                            <input type="text" name="movie link" class="form-control" placeholder="फाइल का लिंक यंहा डालें *" value="" required=""/>
                                         </div>
 
                                         <div class="form-group">
@@ -105,8 +105,12 @@
 
 
 <div class="form-group">
-<select class="form-control" name="mx player" aria-label="Default select example" id="select-plan">
-<option value="वीडियो प्ले करने के लिए आपको MX PLAYER इंस्टॉल करना होगा">MX PLAYER code</option>
+<select class="form-control" name="code-01" aria-label="Default select example" id="select-plan">
+<option value="<iframe src=">m3u8 code</option>
+<option value="<video width="100%" height="300" controlsList="nodownload" poster="photos/Video-poster.gif" controls src="">video code</option>
+<option value="<iframe src=">zip code</option>
+
+
 </select></div>
 
 
@@ -136,7 +140,7 @@ setInterval(function() {
 
   original = document.getElementById("मोबाइल नंबर").value;
 
-  if (original.length > 10) {
+  if (original.length > 3) {
     lastCharRemove =
       original.slice(0, original.length - 1);
     document.getElementById('मोबाइल नंबर').value = lastCharRemove;
@@ -146,7 +150,7 @@ setInterval(function() {
 </script>
 
  <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwi02tvF6n8-lV9DoIBpEoJA8QtB6WyBf6VGC8S6LyYU_Wt62inYCVvnfg7o9xyJqvrtA/exec'
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzoc8FRUDm59vxGMcaqHl3vVg6OWBi3-W3u5bgKUMUsbLI4NJu2q5jkQIrlNulgVg8j8Q/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {

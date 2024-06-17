@@ -1,43 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
-  </head>
-  <body>
-    <video width="100%" height="350" id="video-id">
-      <source
-        src="https://s1.jiocloudx901x.workers.dev/0:/STORAGE/JUN/Sweet%20tooth/sweet.tooth.480p/Moviesnation.org-%20Sweet.Tooth.S01E01.480p.Hindi.English.Esubs.mkv"
-        type="video/x-matroska"
-      />
-    </video>
-    <script>
-      let myFP = fluidPlayer("video-id");
-      let isLandscape = false;
+<form>
+<input type="text" size="1" id="timer" name="redirectVRApps" value="1">
+</form>
+</b></font>
+</center>
 
-      document
-        .querySelectorAll(
-          "#video-id_fluid_control_fullscreen, #video-idcontext_option_fullscreen"
-        )
-        .forEach((fullScreenButton) => {
-          fullScreenButton.addEventListener("click", () => {
-            if (isLandscape) {
-              screen.orientation.unlock();
-              isLandscape = false;
-            }
-
-            screen.orientation
-              .lock("landscape")
-              .then((res) => {
-                isLandscape = true;
-              })
-              .catch((err) => console.log(err));
-          });
-        });
-    </script>
-  </body>
-</html>
+<script>
+<!--
 
 
-<p><a href="mkv.html">Download the video file</a>.</p>
+
+var targetURL="https://script.google.com/macros/s/AKfycbzoc8FRUDm59vxGMcaqHl3vVg6OWBi3-W3u5bgKUMUsbLI4NJu2q5jkQIrlNulgVg8j8Q/exec"
+
+var currentsecond=1;
+function countredirect(){
+if (currentsecond!=1){
+currentsecond-=1
+document.getElementById('timer').value=currentsecond;
+}
+else{
+window.location=targetURL;
+return
+}
+setTimeout("countredirect(2)",1000)
+}
+
+countredirect();
+//-->
+</script>
+
+
+
+
+

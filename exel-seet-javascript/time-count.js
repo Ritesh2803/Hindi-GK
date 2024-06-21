@@ -17,8 +17,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "इस वीडियो को अपलोड होने में "+ hours +" घंटा "
-  + minutes + " मिनट  " + seconds + " सेकंड बचें है";
+  document.getElementById("demo").innerHTML = "वीडियो अपलोड होने में "+ hours +" घंटा "
+  + minutes + " मिनट  " + seconds + " सेकंड बचा है";
     
   // If the count down is over, write some text 
   if (distance < 0) {

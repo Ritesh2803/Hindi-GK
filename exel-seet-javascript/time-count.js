@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("august 24, 2024 14:59:59").getTime();
+var countDownDate = new Date("june 21, 2024 23:59:59").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -17,12 +17,12 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "इस फॉर्म को भरने के लिए "+ days +" दिन " + hours + " घंटा "
+  document.getElementById("demo").innerHTML = "इस वीडियो को अपलोड होने में "+ days +" दिन " + hours + " घंटा "
   + minutes + " मिनट  " + seconds + " सेकंड बचें है";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "इस फॉर्म को भरने की तारीख निकल चुकी है";
+    document.getElementById("demo").innerHTML = "(पेज को रिफ्रेश करें)  अगर अभी भी वीडियो नहीं दिख रहा है तो वीडियो अपलोड होने में कोई समस्या आ गई है. (कुछ समय और दीजिये वीडियो अपलोड हो जाएगा)";
   }
 }, 1000);

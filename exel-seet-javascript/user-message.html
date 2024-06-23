@@ -76,7 +76,7 @@
 
                                         <div class="form-group">
 
-                                        <input type="phone" placeholder="वीडियो कोड यहाँ लिखें (जिस वीडियो में समस्या है )*" name="वीडियो कोड यहाँ लिखें" class="form-control" id="मोबाइल नंबर" required=""/>
+                                        <input type="number" placeholder="वीडियो कोड यहाँ लिखें (जिस वीडियो में समस्या है )*" name="वीडियो कोड यहाँ लिखें" class="form-control" id="मोबाइल नंबर" required=""/>
 
                                                       
                                         <br><div class="form-group">
@@ -99,7 +99,7 @@ setInterval(function() {
 
   original = document.getElementById("मोबाइल नंबर").value;
 
-  if (original.length > 10) {
+  if (original.length > 5) {
     lastCharRemove =
       original.slice(0, original.length - 1);
     document.getElementById('मोबाइल नंबर').value = lastCharRemove;

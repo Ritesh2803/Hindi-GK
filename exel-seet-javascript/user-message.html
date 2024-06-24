@@ -61,7 +61,7 @@
             <div class="col-md-12">
                 <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
                     aria-labelledby="home-tab">
-                     <center><p class="mb-4">अगर आपके पास इस वेबसाइट से सम्बन्धी कोई शिकायत या सुझाव है या आपको किसी प्रकार की सहायता की जरुरत है तो आप हमें मैसेज कर सकतें है, हमारी टीम 24 से 48 घंटों के भीतर जवाब देगी </p></center>
+                     <center><p class="mb-4">अगर आपके पास इस वेबसाइट से सम्बन्धी कोई शिकायत या सुझाव है. तो आप हमें मैसेज कर सकतें है, हमारी टीम 48 घंटों के भीतर जवाब देगी </p></center>
                     <div class="row register-form">
                         <div class="col-md-12">
                       <form method="post" name="google-sheet" >
@@ -76,10 +76,15 @@
 
                                         <div class="form-group">
 
-                                        <input type="number" placeholder="वीडियो कोड यहाँ लिखें (जिस वीडियो में समस्या है )*" name="वीडियो कोड यहाँ लिखें" class="form-control" id="मोबाइल नंबर" required=""/>
+                                        <input type="number" placeholder="वीडियो कोड यहाँ लिखें (जिस वीडियो में समस्या है )*" name="वीडियो कोड यहाँ लिखें" class="form-control" id="मोबाइल नंबर" required=""/></div>
+
+
+                                        <div class="form-group">
+
+                                        <input type="number" placeholder="मोबाइल नंबर (ताकि मैं आपसे संपर्क कर सकूँ)*" name="मोबाइल नंबर" class="form-control" id="मोबाइल नंबर" required=""/></div>
 
                                                       
-                                        <br><div class="form-group">
+                                        <div class="form-group">
                                             <input type="submit" name="submit" class="btn hvr-sweep-to-right"  value="संदेश भेजें >>" /></a>
                                         
                                         </div>
@@ -99,7 +104,7 @@ setInterval(function() {
 
   original = document.getElementById("मोबाइल नंबर").value;
 
-  if (original.length > 5) {
+  if (original.length > 10) {
     lastCharRemove =
       original.slice(0, original.length - 1);
     document.getElementById('मोबाइल नंबर').value = lastCharRemove;

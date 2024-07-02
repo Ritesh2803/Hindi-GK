@@ -17,7 +17,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "इस फॉर्म को भरने के लिए "+ days +" दिन " + hours + " घंटा "
+  document.getElementById("demo").innerHTML = "अंतिम तिथि के लिए "+ days +" दिन " + hours + " घंटा "
   + minutes + " मिनट  " + seconds + " सेकंड बचें है";
     
   // If the count down is over, write some text 

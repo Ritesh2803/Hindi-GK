@@ -2,7 +2,7 @@
 
 <!--Replace contant 
 
-1.    छत्तीसगढ़ व्यापम अपेक्स बैंक
+1.    SSC CGL Tier -I ( Test Series - 1 )
 
 2.    60 मिनट       
              var MAX_TIME = 60 * 60;
@@ -19,6 +19,77 @@
 
 
 -->
+
+
+
+
+<script type="text/javascript">
+
+
+var isCtrl = false;
+document.onkeyup=function(e)
+{
+if(e.which == 17)
+isCtrl=false;
+}
+document.onkeydown=function(e)
+{
+if(e.which == 123)
+isCtrl=true;
+if (((e.which == 85) || (e.which == 65) || (e.which == 88) || (e.which == 67) || (e.which == 86) || (e.which == 2) || (e.which == 3) || (e.which == 123) || (e.which == 83)) && isCtrl == true)
+{
+alert('This is Function Disabled');
+return false;
+}
+}
+// right click code
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+    alert('हमारे इस डेटा को सुरक्षित रखने के लिए हमने माउस के राइट साइड वाले बटन को बंद करके रखा है (आप इस वेबसाइट से किसी भी टेस्ट को कॉपी नहीं कर सकते)');
+return false;
+}
+function mousehandler(e){
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+//select content code disable  alok goyal
+function killCopy(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=killCopy
+document.onclick=reEnable
+}
+
+
+
+/*function check(e)
+    {
+    alert(e.keyCode);
+    }*/
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
+                alert('हमारे इस डेटा को सुरक्षित रखने के लिए हमने इस सर्विस को बंद करके रखा है (आप इस वेबसाइट से किसी भी टेस्ट को कॉपी नहीं कर सकते)');
+            }
+            return false;
+    };
+
+
+
+</script>
+
+
+
+
 
 
 
@@ -52,29 +123,10 @@
 <div align="center" id="login-real-test" style="display:block;" >
 
 
-
-
-
-
-
-<p style="display:none;margin:5px;" align="left">इस ऑनलाइन परीक्षा की तैयारी में हमारी टीम द्वारा पूरी सावधानी बरती गई है। लेकिन फिर भी अगर कोई त्रुटि हो तो हमें बताएं.</p>
-<figure id="test-details-data-entry">    
-
-<img align="center" src="../../Ad-publish/online-exam-pe-ads/ads-01.png" style="justify-content:center;align-content:center;" width="100%" />
-
-<img align="center" src="../../Ad-publish/online-exam-pe-ads/ads-02.jpeg" style="justify-content:center;align-content:center;" width="100%" />
-
   
-</figure>
-
-
 
 </div>
-<div align="center"  id="ins-start-btn">
-<button style="background:#ff5500;color:#fff;" class="test-btn btn-secondary" onclick="startinstab()" id="stbtn" style="display:;">कृपया प्रतीक्षा करें...</button>
-<p style="display:block;" id="note_user" align="center"><b style="color:red;">Hindi-job-com</b></p>
 
-</div>
 <!--Please wait loding-->
 
 <!--Authorisation message-->
@@ -87,18 +139,20 @@
 
 
 <!--instruction 1st page start-->
-<div align="center" id="instruction-wrapper" style="display:none;">
+<div align="center" id="instruction-wrapper" style="display:block;">
 <div id="instruction-rule-part-1st-page">
-<div id="instruction-main-heading">
-
-<img alt="lOGO" class="img-fluid" src="../../Website-css-use-pic/logo-transparent.png"><br><br>
-  
 
 </div>
+<!--instruction 1st page start-->
 
 
 
-<div  class="test-rgl-padding">
+<!--instruction 2nd page start-->
+<div  class="test-rgl-padding" id="instruction-rule-part-2nd-page" style="display:block;">
+<div id="instruction-heading-and-body">
+<div id="instruction-main-heading">
+<img alt="lOGO" class="img-fluid" src="../../Website-css-use-pic/logo-transparent.png">
+<br><br><br>
 
 
 <p align="center" style="margin:5px;padding:5px;" >उम्मीदवारों को अपनी परीक्षा की बेहतर तरीके से तैयारी करने के लिए इस परीक्षा का अभ्यास करना चाहिए।</p>
@@ -117,7 +171,7 @@
 <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
                                           <tr><td align="center" align="center" >परीक्षा का नाम : </td><td align="center"><span>
-छत्तीसगढ़ व्यापम अपेक्स बैंक                  </td></tr>
+SSC CGL Tier -I ( Test Series - 1 )                  </td></tr>
 
 
 <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
@@ -138,159 +192,16 @@
 
 
 
-
-
-
-
-
-
-</div>
-<div align="center" id="instruction-go-p2-button"><br><br>
-<button style="background:#ff5500;color:#fff;" type="button" class="test-btn" onclick="gonext()" >आगे बढ़ें &#187;&#187; </button>
-</div>
-</div>
-<!--instruction 1st page start-->
-
-
-
-<!--instruction 2nd page start-->
-<div  class="test-rgl-padding" id="instruction-rule-part-2nd-page" style="display:none;">
-<div id="instruction-heading-and-body">
-<div id="instruction-main-heading">
-<img alt="lOGO" class="img-fluid" src="../../Website-css-use-pic/logo-transparent.png">
-<br>
-
-
-
-
-
-
-
-
-
-
-<style>
-.accordion {
-  background-color: lightpink;
-  color: red;
-  cursor: pointer;
-  padding: 8px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 20px;
-  transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color: dimgrey; 
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: antiquewhite;
-  overflow: hidden;
-}
-</style>
-</head>
-<body>
-<br><br>
-<button class="accordion"><strong></strong>सामान्य निर्देश:</strong></button>
-<div align="left"  class="panel">
-  1. परीक्षा की कुल अवधि 60 मिनट है।<br><br>
-
-  2. घड़ी 60 मिनट पर सेट की जाएगी. काउंटडाउन टाइमर आपके परीक्षा पूरी करने के लिए उपलब्ध शेष समय प्रदर्शित करेगा। जब टाइमर शून्य पर पहुंच जाएगा, तो परीक्षा अपने आप समाप्त हो जाएगी। आपको अपनी परीक्षा समाप्त करने या जमा करने की आवश्यकता नहीं होगी।<br><br>
-
-
-  3. आपको "एग्जाम का स्टेटस देखे" वाले बटन पर क्लिक करना है, आप जो एग्जाम दे रहें है उसका स्टेटस देख सकतें है, निम्नलिखित प्रतीकों में से किसी एक का उपयोग करके प्रत्येक प्रश्न की स्थिति दिखाएगा की आपने कौन से प्रश्न कर लिए हैं और कौन से प्रश्न नही किये है:<br><br>
-
-
-<center><img align="center" src="../photo/test_instructions.jpg" style="justify-content:center;align-content:center;" width="100%" /></center>
 </div>
 
 
-
-
-
-
-<button class="accordion"><strong></strong>निर्देश:</strong></button>
-<div align="left"  class="panel">
-
-    किसी प्रश्न का उत्तर देने के लिए, निम्नलिखित कार्य करें: <br><br>
-
-  1. सीधे उस क्रमांकित प्रश्न पर जाने के लिए आपको "स्टेटस देखे" वाले बटन पर क्लिक करना है, फिर प्रश्न संख्या पर क्लिक करें। ध्यान दें कि इस विकल्प का उपयोग करने से वर्तमान प्रश्न का आपका उत्तर सहेजा नहीं जाता है।<br><br>
-
-  2. वर्तमान प्रश्न उत्तर सहेजने के लिए "सेव करें" वाले बटन पर क्लिक करें और फिर अगले प्रश्न पर जाएँ।<br><br>
-
-
-  3. अगर जिस प्रश्न पर आप हैं और प्रश्न को बाद में करना है तो, "बाद में करेंगे" वाले बटन पर क्लिक करें, और जब आप छोड़े हुए प्रश्न को करना चाहते हैं तब "स्टेटस देखे" वाले बटन पर क्लिक करें, फिर आपको दिख जायेगा कि आपने कौन से प्रश्न छोड़े है, फिर उसे पूरा करें।<br><br>
-
-
-<center><img align="center" src="../photo/test_instructions.jpg" style="justify-content:center;align-content:center;" width="100%" /></center>
-</div>
-
-
-
-
-
-
-
-<button class="accordion"><strong></strong>प्रश्न का उत्तर देना:</strong></button>
-<div align="left"  class="panel">
-
-    किसी प्रश्न का उत्तर देने के लिए, निम्नलिखित कार्य करें: <br><br>
-
-  1. अपना उत्तर चुनने के लिए किसी एक विकल्प के बटन पर क्लिक करें<br><br>
-
-  2. अपने चुने गए उत्तर को अचयनित करने के लिए, "कलियर करें" वाले बटन पर क्लिक करें<br><br>
-
-  3. अपने चुने हुए उत्तर को बदलने के लिए दूसरे विकल्प के बटन पर क्लिक करें<br><br>
-
-  4. अपना उत्तर सहेजने के लिए आपको "सेव करें" वाले बटन पर क्लिक करना होगा<br><br>
-
-  5. प्रश्न को बाद में करने के लिए, "बाद में करेंगे" वाले बटन पर क्लिक करें।<br><br>
-
-  6. किसी ऐसे प्रश्न का उत्तर बदलने के लिए जिसका उत्तर पहले ही दिया जा चुका है, "स्टेटस देखे" वाले बटन पर क्लिक करें फिर उत्तर देने के लिए उस प्रश्न संख्या का चयन करें और फिर प्रश्न का उत्तर देने के लिए प्रक्रिया का पालन करें।<br><br>
-
-
-<center><img align="center" src="../photo/test_instructions.jpg" style="justify-content:center;align-content:center;" width="100%" /></center>
-</div>
-
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
-
-
-
-
-
-
-</div>
-
-
-</div>
+</div><br>
 <div  id="instruction-accept-checkbox">
-<input class="w3-check" type="checkbox" id="myCheck"  >
-<label for="myCheck">मैंने अनुदेशों को अच्छे से पढ़ और समझ लिया है। </label><br>
+<input class="onoffswitch-checkbox" checked id="myCheck" type="checkbox" >
+<label for="none">मैंने अनुदेशों को अच्छे से पढ़ और समझ लिया है। </label><br>
 </div><br><br>
 <div align="center"  id="instruction-previous-start-btn">
-<button style="background:#ffeada;color:#111;"type="button" class="test-btn btn-secondary" onclick="goprevious()">पीछे जाएँ</button>
+
 <button style="background:#ff6600;color:#fff;" type="button" class="test-btn" onclick="start(this,'ritesh7587shah');">मैं परीक्षा शुरू करने के लिए तैयार हूँ</button>
 </div>
 </div>
@@ -314,7 +225,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-<strong><center><h3>छत्तीसगढ़ व्यापम अपेक्स बैंक</h3></center></strong>
+<strong><center><h3>SSC CGL Tier -I ( Test Series - 1 )</h3></center></strong>
   <div style="width:100%;" align="center" id="test-top-head" >
   <button style="overflow-x:scroll;width:20% !important" class="test-section1  enabled" id="test-section3"><b style="overflow:scroll;white-space: nowrap;" id="exam_test_subject"></b><strong>समय :</strong></button>
 
@@ -371,10 +282,10 @@ for (i = 0; i < acc.length; i++) {
 <div id="user-result-after-submit"style="align-content:center;align-items:center;" align="center">
 <table align="center" id="final-tabled-result" style="width:100%">
 <tr><td><b>परीक्षा का नाम</b></td><td><b>कितने प्रश्न किये</b></td><td><b>प्रश्न देखा लेकिन उत्तर नहीं दिया गया</b></td><td><b>प्रश्न नही देखा गया</b></td></tr>
-<tr><td id="section_name">छत्तीसगढ़ व्यापम अपेक्स बैंक</td><td id="answered2">Answered</td><td id="visited2">Not Answered</td><td id="notvisited2">Not Visited</td></tr>
+<tr><td id="section_name">SSC CGL Tier -I ( Test Series - 1 )</td><td id="answered2">Answered</td><td id="visited2">Not Answered</td><td id="notvisited2">Not Visited</td></tr>
 <tr style="background:#ff6600;color:#fff;"><td><b>Total</b></td><td id="answered7">Answered</td><td id="visited7">Not Answered</td><td id="notvisited7">Not Visited</td></tr>
 </table>
-<div id="test-dis" style="display:none;">आपका स्कोर "<span id="sb_mark_time">छत्तीसगढ़ व्यापम अपेक्स बैंक</span>" में  <label id="score">Score</label>/<label id="tscore">Total</label> रहा</div>
+<div id="test-dis" style="display:none;">आपका स्कोर "<span id="sb_mark_time">SSC CGL Tier -I ( Test Series - 1 )</span>" में  <label id="score">Score</label>/<label id="tscore">Total</label> रहा</div>
 <span id="charactor_status"></span>
 <div id="according_status_button"><button id="practice-button"style="background:#ff6600;color:#fff;cursor:pointer;"><a style="color:#fff !important;text-decoration:none;display:block;" id="practice-button-link" href="../example/index.html" >और अभ्यास करें</a></button>
 <button id="preparation-button"style="background:#efc;cursor:pointer;"><a style="color:blue;text-decoration:none;display:block;" id="preparation-button-link" href="../example/index.html" >दूसरी परीक्षा देखें</a></button>
@@ -2475,7 +2386,7 @@ var Positive_number = 1; //Set mark per QN
 var deductive_number = 0.50; //"null" if you want keep no negative mark.
 var test_numbering = 1;
 var Subject_cum_exam = "दूसरा एग्जाम देखें"; //"Exam and subject" value specify here.
-var subject_name= "छत्तीसगढ़ व्यापम अपेक्स बैंक"; //Subject name
+var subject_name= "SSC CGL Tier -I ( Test Series - 1 )"; //Subject name
 var exam_name = "Online exam"; //Exam name
 var test_lang_avl = "Hindi";
 var attemp_limitations = "Unlimited"; //Attempt limit
@@ -2487,6 +2398,7 @@ var lbl2 = 3; //set mark level for appreciation
 var lbl3 = 2; //set mark level for appreciation
 var lbl4 = 1; //set mark level for appreciation
 </script>
+
 
 <script type="text/javascript" charset="utf-8">
 const questions = [
@@ -3465,6 +3377,35 @@ var questions_list = JSON.stringify(questions);
 const question_fetch = JSON.parse(questions_list);
 
 </script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/javascript" charset="utf-8">
 document.addEventListener("DOMContentLoaded", function() {
 setTimeout(function(){
@@ -4509,7 +4450,7 @@ ConfirmBox.prototype = {
       if( document.querySelector( "#test-confirm-wrapp" ) === null ) {
       var wrapper = document.createElement( "div" );
         wrapper.id = "test-confirm-wrapp";
-      var html = "<div align='center' id='test-confirm-box'><img style='border:none;' src='../photo/confuse-icon.jpg' valign='middle' id='submit-time-logo' align='center'><h2  id='confirm-header'></h2><br><div class='uvp-list'><ul><li><span class='test-data-title'>शेष समय : </span><span id='test-time-left' class='test-data-get'>---</span></li><li><span class='test-data-title'>प्रयास किया गया : </span><span  id='test-qn-attempted' class='test-data-get'>---</span></li><li><span class='test-data-title'>प्रयास नहीं किया गया : </span><span  id='test-qn-unattempted' class='test-data-get'>---</span></li><li><span class='test-data-title'>बाद में करने के लिए छोड़ा है : </span><span id='test-qn-review'  class='test-data-get'>---</span></li><li><span class='test-data-title'>बाद में फिर चेक करना चाहता है : </span><span id='test-qn-markreview' class='test-data-get'>---</span></li></ul></div>";
+      var html = "<div align='center' id='test-confirm-box'><img style='border:none;' src='../photo/confuse-icon.jpg' valign='middle' id='submit-time-logo' align='center'><h2  id='confirm-header'></h2><br><div class='uvp-list'><ul><li><span class='test-data-title'>शेष समय : </span><span id='test-time-left' class='test-data-get'>---</span></li><li><span class='test-data-title'>प्रयास किया गया : </span><span  id='test-qn-attempted' class='test-data-get'>---</span></li><li><span class='test-data-title'>प्रयास नहीं किया गया : </span><span  id='test-qn-unattempted' class='test-data-get'>---</span></li><li><span class='test-data-title'>बाद में करने के लिए छोड़ा है आपने : </span><span id='test-qn-review'  class='test-data-get'>---</span></li><li><span class='test-data-title'>बाद में फिर चेक करना चाहतें हैं : </span><span id='test-qn-markreview' class='test-data-get'>---</span></li></ul></div>";
         html += "<div id='test-confirm-buttons'><div id='test-confirm-output'></div><br><button class='test-btn btn-success' style='background:red;' onclick='submit()' id='confirm-ok'>समाप्त करें</button><button class='test-btn btn-danger' style='background:green;' type='button' id='confirm-cancel'>अभी नहीं</button></div>";
         html += "</div>";
         

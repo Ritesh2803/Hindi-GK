@@ -28,7 +28,59 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <br><center><a href="../../../index.html"><img alt="lOGO" width="60%" height="" class="img-fluid" src="../../../Website-css-use-pic/logo-transparent.png"></a></center><br><br>
+
+
+
+
+  <center><p><button><img alt="lOGO" width="40%" height="" class="img-fluid" src="../../../Website-css-use-pic/Share-button.png"></button></p></center>
+<p class="result"></p>
+
+
+
+<script type="text/javascript">
+const shareData = {
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: 'current link shaer try.html',
+};
+
+const btn = document.querySelector("button");
+const resultPara = document.querySelector(".result");
+
+// Share must be triggered by "user activation"
+btn.addEventListener("click", async () => {
+  try {
+    await navigator.share(shareData);
+    resultPara.textContent = "shared successfully";
+  } catch (err) {
+    resultPara.textContent = `Error: ${err}`;
+  }
+});
+</script>
+
 
 <!-- topic start @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 

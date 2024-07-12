@@ -29,13 +29,7 @@
 
 
 
-<meta property="og:title" content="Pet exam क्या है? | What is upsssc pet in hindi" />
 
-<meta property="og:description" content="Pet exam क्या है? | What is upsssc pet in hindi" />
-
-<meta property="og:url" content="poster.png" />
-
-<meta property="og:image" content="poster.png" />
 
 
 
@@ -43,11 +37,19 @@
   <br><center><a href="../../../index.html"><img alt="lOGO" width="60%" height="" class="img-fluid" src="../../../Website-css-use-pic/logo-transparent.png"></a></center><br><br>
 
 
+<center><h9> इस पेज को अपने दोस्तों के साथ शेयर करें <br>👇👇👇👇👇</h9></center>
+
+  <center><button class="btn success">🔗 Share Now</button></center><br><br>
 
 
-  <center><p><button class="btn success">🔗 Share Now</button></p></center>
-<p class="result"></p>
 
+<meta property="og:title" content="Pet exam क्या है? | What is upsssc pet in hindi" />
+
+<meta property="og:description" content="Pet exam क्या है? | What is upsssc pet in hindi" />
+
+<meta property="og:url" content="poster.png" />
+
+<meta property="og:image" content="poster.png" />
 
 
 <script type="text/javascript">
@@ -64,7 +66,7 @@ const resultPara = document.querySelector(".result");
 btn.addEventListener("click", async () => {
   try {
     await navigator.share(shareData);
-    resultPara.textContent = "shared successfully";
+    resultPara.textContent = "";
   } catch (err) {
     resultPara.textContent = `Error: ${err}`;
   }
@@ -92,44 +94,7 @@ btn.addEventListener("click", async () => {
   color: white;
 }
 
-/* Blue */
-.info {
-  border-color: #2196F3;
-  color: dodgerblue;
-}
 
-.info:hover {
-  background: #2196F3;
-  color: white;
-}
-
-/* Orange */
-.warning {
-  border-color: #ff9800;
-  color: orange;
-}
-
-.warning:hover {
-  background: #ff9800;
-  color: white;
-}
-
-/* Red */
-.danger {
-  border-color: #f44336;
-  color: red;
-}
-
-.danger:hover {
-  background: #f44336;
-  color: white;
-}
-
-/* Gray */
-.default {
-  border-color: #e7e7e7;
-  color: black;
-}
 
 .default:hover {
   background: #e7e7e7;

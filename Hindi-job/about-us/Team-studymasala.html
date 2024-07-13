@@ -126,10 +126,83 @@
                             </div>
                             <!-- Team Box End -->
                         </div>
-                        <!-- Col End --><center>अगर आप किसी कोचिंग से ऑनलाइन कोर्स खरीद के पढ़ रहें है, और उसे लास्ट डेट आने पर दोबारा खरीदने वाले हैं, तो आप उस कोर्स के Expire होने से पहले हमसे कांटेक्ट करें, हम उस कोर्स के सारे कंटेंट का लाइफटाइम एक्सेस फ्री में आपको दे देंगे (आपको उस कोर्स के लिए दोबारा कभी पेमेंट नहीं करना पड़ेगा)</center>
+                        <!-- Col End --><center><p>अगर आप किसी कोचिंग से ऑनलाइन कोर्स खरीद के पढ़ रहें है, और उसे लास्ट डेट आने पर दोबारा खरीदने वाले हैं, तो आप उस कोर्स के Expire होने से पहले हमसे कांटेक्ट करें, हम उस कोर्स के सारे कंटेंट का लाइफटाइम एक्सेस फ्री में आपको दे देंगे (आपको उस कोर्स के लिए दोबारा कभी पेमेंट नहीं करना पड़ेगा)</p></center>
                         
-                        <!-- Col End -->
-                       
+                        
+                               
+
+
+<!-- Start  googel sheet MESSAGE Section -->
+<br><br>
+       <div class="container register">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
+                    aria-labelledby="home-tab">
+                     
+                    <div class="row register-form">
+                        <div class="col-md-12">
+                      <form method="post" name="google-sheet" >
+                                        <div class="form-group">
+                                            <input type="text" name="नाम" class="form-control" placeholder="आपका पूरा नाम *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group">
+
+                                        <input type="phone" placeholder="आपका WhatsApp मोबाइल नंबर *" name="मोबाइल नंबर" class="form-control" id="मोबाइल नंबर" required=""/>
+
+                                          
+                                        </div>
+
+                                                                        
+                                        <div class="form-group">
+                                            <input type="submit" name="submit" class="btn hvr-sweep-to-right"  value="मैसेज भेजें >>" /></a>
+                                        
+                                        </div>
+
+                 
+
+                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+setInterval(function() {
+
+  original = document.getElementById("मोबाइल नंबर").value;
+
+  if (original.length > 10) {
+    lastCharRemove =
+      original.slice(0, original.length - 1);
+    document.getElementById('मोबाइल नंबर').value = lastCharRemove;
+
+  }
+}, 100);
+</script>
+
+ <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwZeBwEWojFOba6p8MuD-tiNCz0XiHGBpZJ6BzbKVvR4nhdsSqcEcuD2rf2vhOK2iTR/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    <!-- end googel sheet MESSAGE Section -->
+
+
+
+
                     </div>
                     <!-- Row end -->
                 </div>
@@ -138,11 +211,9 @@
             <!-- Our Team Section End -->
 </div>
 
+contact button
 
-
-
-
-
+website bnwane ka ad
 
 
 
@@ -287,9 +358,7 @@
             <section class="statistics">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <h2 class="block-title">हमारे आंकड़े</h2>
-                        </div>
+                        
                         <!-- Col End -->
                     </div>
                     <!-- Row End -->

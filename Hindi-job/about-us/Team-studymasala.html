@@ -91,13 +91,7 @@
  <!-- Start Our Team Section -->
             <section class="our-team">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2 class="block-title">हमारी टीम</h2>
-                        </div>
-                        <!-- Col End -->
-                    </div>
-                    <!-- Row end -->
+
                     <div class="row">
                         <div class="col-6 col-xl mb-5 mb-xl-0">
                             <div class="card team-box">
@@ -155,7 +149,7 @@
 
                                                                         
                                         <div class="form-group">
-                                            <input type="submit" name="submit" class="btn hvr-sweep-to-right"  value="मैसेज भेजें >>" /></a>
+                                            <input type="submit" name="submit" class="btn hvr-sweep-to-right"  value="मैसेज भेजें >>" /></a> 
                                         
                                         </div>
 
@@ -190,7 +184,7 @@ setInterval(function() {
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("आपकी जानकारी हमें मिल गई है, अपनी समस्या हमारे साथ साझा करने के लिए धन्यवाद । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर एक टोकन नंबर देगी जिससे आप मैसेज का लाइव स्टेटस देख पाएंगे , कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
+                .then(response => alert("आपका मैसेज हमें मिल गई है, आपने जो नंबर दिया है हम उस नंबर पे आपको  मैसेज करेंगे । हमारी टीम 24 से 48 घंटे के अंदर आपको व्हाट्सएप पर मैसेज करेगी, कृपया हमारा मैसेज आने का इंतज़ार करें | (धन्यवाद) "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
@@ -211,7 +205,8 @@ setInterval(function() {
             <!-- Our Team Section End -->
 </div>
 
-contact button
+
+
 
 website bnwane ka ad
 

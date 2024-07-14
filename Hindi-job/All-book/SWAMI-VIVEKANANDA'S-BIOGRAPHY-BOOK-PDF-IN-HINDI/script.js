@@ -1,4 +1,4 @@
-var url = 'pdf.pdf';
+var url = 'https://ia601402.us.archive.org/18/items/in.ernet.dli.2015.307362/2015.307362.Vivekanand.pdf';
 
 var pdfjsLib = window['pdfjs-dist/build/pdf'];
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.2/pdf.worker.js';

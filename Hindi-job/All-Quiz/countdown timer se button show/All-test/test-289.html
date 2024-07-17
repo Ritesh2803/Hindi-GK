@@ -1,0 +1,373 @@
+
+ <link href="../../css/style.css" rel="stylesheet">
+<script async src="../timer.js"></script>
+
+  <br><br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <a href="../../../index.html"><img alt="" class="img-fluid" src="../../../Website-css-use-pic/logo-transparent.png"></a>
+   </div></div></center>
+
+<br><br>
+<div id='baca-juga'>
+
+
+</div>
+<div class='' id=''>
+<meta content='test' itemprop='description'/>
+<div id='body-post-it'>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
+<head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+
+
+</head> 
+ <div class="quiz-home-box custom-box show" sryle="">
+
+
+ <br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../test-number.png"><a style="font-size:40px; color:black;">289</a>
+   </div>  </div></center><br><br>
+
+
+ <center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../timer.png" width="100%">
+   </div>  </div></center>
+
+
+ <br><center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../note.png" width="100%">
+   </div>  </div></center><br><br>
+
+
+ <button class="start-quiz-btn btn" type="button"><strong>टेस्ट शुरु करें</strong></button>
+</div>
+<div class="quiz-box custom-box">
+<div class="stats">
+<div class="quiz-time">
+<div class="remaining-time"></div>
+<span class="time-up-text">उत्तर देने का समय ख़त्म हो चूका है</span>
+</div>
+<div class="score-board">
+<span class="score-text">सही जवाब:</span>
+<span class="correct-answer"></span>
+</div>
+</div>
+<div class="question-box">
+<div class="current-question-num">
+</div>
+<div class="question-text">
+    
+</div>
+</div>
+<div class="option-box">
+
+</div>
+<div class="next-question">
+<button class="next-question-btn btn" type="button">अगला सवाल</button>
+<button class="see-result-btn btn" type="button">अपना परिणाम देखें</button>
+</div>
+<div class="answer-description">
+    
+</div>
+
+</div>
+<div class="quiz-over-box custom-box">
+<h3>रिज़ल्ट</h3>
+<h4>कुल सवाल: <span class="total-questions"></span></h4>
+<h4>कितने किये: <span class="total-attempt"></span></h4>
+<h4>सही: <span class="total-correct"></span></h4>
+<h4>गलत: <span class="total-wrong"></span></h4>
+<h4>प्राप्तांक: <span class="your-score"></span></h4>
+<h4>प्रतिशत: <span class="percentage"></span></h4>
+<button class="start-again-quiz-btn btn" type="button">फिर से शुरू करें</button>
+<a href="test-290.html"><button class="go-home-btn btn" type="button">दूसरे प्रश्न देखें</button></a>
+
+</div>
+
+<script>
+
+
+const questionText=document.querySelector(".question-text");
+const optionBox=document.querySelector(".option-box");
+const currentQuestionNum=document.querySelector(".current-question-num");
+const answerDescription=document.querySelector(".answer-description");
+const nextQuestionBtn=document.querySelector(".next-question-btn");
+const correctAnswers=document.querySelector(".correct-answer");
+const seeResultBtn=document.querySelector(".see-result-btn");
+const remainingTime=document.querySelector(".remaining-time");
+const timeUpText=document.querySelector(".time-up-text");
+const quizHomeBox=document.querySelector(".quiz-home-box");
+const quizBox=document.querySelector(".quiz-box");
+const quizOverBox=document.querySelector(".quiz-over-box");
+const startAgainQuizBtn=document.querySelector(".start-again-quiz-btn");
+const goHomeBtn=document.querySelector(".go-home-btn");
+const startQuizBtn=document.querySelector(".start-quiz-btn");
+let attempt=0;
+let questionIndex=0;
+let score=0;
+let number=0;
+let myArray=[];
+let interval;
+    // You can put Questions Here
+    // answer id 1-0, 2-1, 3-2, 4-3, 
+myApp=[
+
+
+
+
+
+{question:'फ&#2381;ल&#2367;पक&#2366;र&#2381;ट न&#2375; स&#2381;थ&#2366;न&#2368;य क&#2366;र&#2368;गर&#2379;&#2306;, ब&#2369;नकर&#2379;&#2306; और हस&#2381;तश&#2367;ल&#2381;प न&#2367;र&#2381;म&#2366;त&#2366;ओ&#2306; क&#2379; प&#2381;रश&#2367;क&#2381;ष&#2367;त करन&#2375; और उनक&#2366; समर&#2381;थन करन&#2375; क&#2375; ल&#2367;ए क&#2367;स र&#2366;ज&#2381;य सरक&#2366;र क&#2375; स&#2366;थ एक समझ&#2380;त&#2366; ज&#2381;ञ&#2366;पन पर हस&#2381;त&#2366;क&#2381;षर क&#2367;ए ह&#2376;&#2306;?',options:['पश&#2381;च&#2367;म ब&#2306;ग&#2366;ल','कर&#2381;न&#2366;टक','र&#2366;जस&#2381;थ&#2366;न','मध&#2381;य प&#2381;रद&#2375;श',],answer:0,},
+{question:"स&#2381;ट&#2377;कह&#2379;म इ&#2306;टरन&#2375;शनल प&#2368;स र&#2367;सर&#2381;च इ&#2306;स&#2381;ट&#2368;ट&#2381;य&#2370;ट (SIPRI) क&#2368; र&#2367;प&#2379;र&#2381;ट क&#2375; अन&#2369;स&#2366;र, 'ट&#2381;र&#2375;&#2306;ड&#2381;स इन वर&#2381;ल&#2381;ड म&#2367;ल&#2367;ट&#2381;र&#2368; एक&#2381;सप&#2375;&#2306;ड&#2367;चर, 2021' श&#2368;र&#2381;षक स&#2375;, भ&#2366;रत क&#2375; स&#2376;न&#2381;य व&#2381;यय क&#2368; र&#2376;&#2306;क क&#2381;य&#2366; ह&#2376;?",options:['द&#2370;सर&#2368;','त&#2368;सर&#2368;','च&#2380;थ&#2368;','प&#2366;&#2306;चव&#2368;&#2306;',],answer:1,},
+{question:'व&#2367;श&#2381;व ब&#2376;&#2306;क न&#2375; आवश&#2381;यक आय&#2366;त क&#2375; भ&#2369;गत&#2366;न क&#2375; ल&#2367;ए श&#2381;र&#2368;ल&#2306;क&#2366; क&#2379; क&#2367;तन&#2368; व&#2367;त&#2381;त&#2368;य सह&#2366;यत&#2366; प&#2381;रद&#2366;न क&#2368; ह&#2376;?',options:['600 म&#2367;ल&#2367;यन अमर&#2368;क&#2368; ड&#2366;लर','700 म&#2367;ल&#2367;यन अमर&#2368;क&#2368; ड&#2366;लर','800 म&#2367;ल&#2367;यन अमर&#2368;क&#2368; ड&#2366;लर','900 म&#2367;ल&#2367;यन अमर&#2368;क&#2368; ड&#2366;लर',],answer:0,},
+{question:'एसब&#2368;आई क&#2366;र&#2381;ड क&#2375; ड&#2367;ज&#2367;टल पर&#2367;वर&#2381;तन क&#2379; सशक&#2381;त बन&#2366;न&#2375; क&#2375; ल&#2367;ए क&#2367;स क&#2306;पन&#2368; न&#2375; एसब&#2368;आई क&#2366;र&#2381;ड&#2381;स ए&#2306;ड प&#2375;म&#2375;&#2306;ट&#2381;स सर&#2381;व&#2367;स&#2375;ज ल&#2367;म&#2367;ट&#2375;ड क&#2375; स&#2366;थ अपन&#2368; रणन&#2368;त&#2367;क स&#2366;झ&#2375;द&#2366;र&#2368; क&#2366; व&#2367;स&#2381;त&#2366;र क&#2367;य&#2366; ह&#2376;?',options:['म&#2366;इक&#2381;र&#2379;स&#2377;फ&#2364;&#2381;ट क&#2377;र&#2381;प&#2379;र&#2375;शन','ट&#2366;ट&#2366; क&#2306;सल&#2381;ट&#2375;&#2306;स&#2368; सर&#2381;व&#2367;स&#2375;ज','ट&#2375;क मह&#2367;&#2306;द&#2381;र&#2366;','इ&#2306;फ&#2379;स&#2367;स',],answer:1,},
+{question:'क&#2367;स लघ&#2369; व&#2367;त&#2381;त ब&#2376;&#2306;क न&#2375; ड&#2367;ज&#2367;टल और आईट&#2368; पर&#2367;वर&#2381;तन क&#2375; ल&#2367;ए 5 वर&#2381;ष&#2379;&#2306; क&#2368; अवध&#2367; क&#2375; ल&#2367;ए आईट&#2368; अवस&#2306;रचन&#2366; स&#2375;व&#2366; प&#2381;रद&#2366;त&#2366;, क&#2367;&#2306;ड&#2381;र&#2368;ल क&#2375; स&#2366;थ भ&#2366;ग&#2368;द&#2366;र&#2368; क&#2368; ह&#2376;?',options:['जन लघ&#2369; व&#2367;त&#2381;त ब&#2376;&#2306;क','उत&#2381;कर&#2381;ष स&#2381;म&#2377;ल फ&#2366;इन&#2375;&#2306;स ब&#2376;&#2306;क','इक&#2381;व&#2367;ट&#2366;स स&#2381;म&#2377;ल फ&#2366;इन&#2375;&#2306;स ब&#2376;&#2306;क','स&#2370;र&#2381;य&#2379;दय लघ&#2369; व&#2367;त&#2381;त ब&#2376;&#2306;क',],answer:3,},
+{question:'र&#2366;ष&#2381;ट&#2381;रपत&#2367; द&#2381;व&#2366;र&#2366; र&#2366;ष&#2381;ट&#2381;र&#2368;य अन&#2369;स&#2370;च&#2367;त ज&#2366;त&#2367; आय&#2379;ग क&#2375; अध&#2381;यक&#2381;ष क&#2368; न&#2367;य&#2369;क&#2381;त&#2367; क&#2367;सन&#2375; क&#2368; ह&#2376;?',options:['व&#2367;जय स&#2366;&#2306;पल&#2366;','अर&#2381;ज&#2369;न म&#2369;&#2306;ड&#2366;','थ&#2366;वर च&#2306;द गहल&#2379;त','ह&#2375;म&#2306;त स&#2379;र&#2375;न',],answer:0,},
+{question:'र&#2366;ष&#2381;ट&#2381;र&#2368;य स&#2381;वच&#2366;ल&#2367;त फ&#2367;&#2306;गरप&#2381;र&#2367;&#2306;ट पहच&#2366;न प&#2381;रण&#2366;ल&#2368; क&#2375; म&#2366;ध&#2381;यम स&#2375; म&#2371;त व&#2381;यक&#2381;त&#2367; क&#2368; पहच&#2366;न करन&#2375; व&#2366;ल&#2366; द&#2375;श क&#2366; पहल&#2366; र&#2366;ज&#2381;य क&#2380;न स&#2366; र&#2366;ज&#2381;य बन गय&#2366; ह&#2376;?',options:['क&#2375;रल','तम&#2367;लन&#2366;ड&#2369;','मध&#2381;य प&#2381;रद&#2375;श','उड&#2364;&#2368;स&#2366;',],answer:2,},
+{question:'प&#2381;रध&#2366;न म&#2306;त&#2381;र&#2368; नर&#2375;&#2306;द&#2381;र म&#2379;द&#2368; न&#2375; क&#2367;स र&#2366;ज&#2381;य क&#2368; अपन&#2368; य&#2366;त&#2381;र&#2366; क&#2375; द&#2380;र&#2366;न "द&#2370;ध व&#2366;ण&#2368;" न&#2366;मक एक स&#2366;म&#2369;द&#2366;य&#2367;क र&#2375;ड&#2367;य&#2379; स&#2381;ट&#2375;शन क&#2366; उद&#2381;घ&#2366;टन क&#2367;य&#2366; ह&#2376;?',options:['ग&#2369;जर&#2366;त','तम&#2367;लन&#2366;ड&#2369;','उड&#2364;&#2368;स&#2366;','प&#2306;ज&#2366;ब',],answer:0,},
+{question:'प&#2381;रध&#2366;न म&#2306;त&#2381;र&#2368; म&#2379;द&#2368; न&#2375; क&#2367;स र&#2366;ज&#2381;य म&#2375;&#2306; पश&#2369; च&#2367;क&#2367;त&#2381;स&#2366; व&#2367;ज&#2381;ञ&#2366;न, क&#2371;ष&#2367;, म&#2377;डल सरक&#2366;र&#2368; क&#2377;ल&#2375;ज&#2379;&#2306; क&#2368; आध&#2366;रश&#2367;ल&#2366; रख&#2368; ह&#2376;?',options:['प&#2306;ज&#2366;ब','ग&#2379;व&#2366;','असम','ब&#2367;ह&#2366;र',],answer:2,},
+{question:'"आज&#2364;&#2366;द&#2368; स&#2375; अ&#2306;त&#2381;य&#2379;दय तक" 90-द&#2367;वस&#2368;य अ&#2306;तर-म&#2306;त&#2381;र&#2366;लय&#2368; अभ&#2367;य&#2366;न क&#2367;सन&#2375; श&#2369;र&#2370; क&#2367;य&#2366; ह&#2376;?',options:['धर&#2381;म&#2375;&#2306;द&#2381;र प&#2381;रध&#2366;न','ग&#2367;र&#2367;र&#2366;ज स&#2367;&#2306;ह','नर&#2375;&#2306;द&#2381;र म&#2379;द&#2368;','अम&#2367;त श&#2366;ह',],answer:1,},
+{question:"न&#2367;म&#2381;नल&#2367;ख&#2367;त म&#2375;&#2306; स&#2375; क&#2380;न स&#2381;वद&#2375;श&#2368; न&#2375;व&#2367;ग&#2375;शन प&#2381;रण&#2366;ल&#2368; 'गगन' क&#2366; उपय&#2379;ग करन&#2375; व&#2366;ल&#2368; पहल&#2368; एयरल&#2366;इन बन गई ह&#2376;?",options:['एयरएश&#2367;य&#2366; इ&#2306;ड&#2367;य&#2366;','एयर इ&#2306;ड&#2367;य&#2366; एक&#2381;सप&#2381;र&#2375;स','ज&#2375;ट एयरव&#2375;ज','इ&#2306;ड&#2367;ग&#2379;',],answer:3,},
+{question:'ह&#2366;ल ह&#2368; म&#2375;&#2306; क&#2367;स क&#2306;पन&#2368; न&#2375; ग&#2381;र&#2368;न ह&#2366;इड&#2381;र&#2379;जन प&#2381;र&#2380;द&#2381;य&#2379;ग&#2367;क&#2368; व&#2367;कस&#2367;त करन&#2375; क&#2375; ल&#2367;ए आईआईट&#2368; ब&#2377;म&#2381;ब&#2375; क&#2375; स&#2366;थ सहय&#2379;ग क&#2367;य&#2366; ह&#2376;?',options:['ल&#2366;र&#2381;सन ए&#2306;ड ट&#2369;ब&#2381;र&#2379; (एल ए&#2306;ड ट&#2368;)','र&#2367;ल&#2366;य&#2306;स इ&#2306;फ&#2381;र&#2366;स&#2381;ट&#2381;रक&#2381;चर ल&#2367;म&#2367;ट&#2375;ड','जयप&#2381;रक&#2366;श एस&#2379;स&#2367;एट&#2381;स ल&#2367;म&#2367;ट&#2375;ड','प&#2369;&#2306;ज ल&#2377;यड ग&#2381;र&#2369;प',],answer:0,},
+{question:'भ&#2366;रत क&#2366; पहल&#2366; क&#2375;बल ब&#2381;र&#2367;ज- अ&#2306;ज&#2368; खड&#2381;ड ब&#2381;र&#2367;ज क&#2367;स र&#2366;ज&#2381;य/क&#2375;&#2306;द&#2381;र श&#2366;स&#2367;त प&#2381;रद&#2375;श म&#2375;&#2306; बन&#2366;य&#2366; ज&#2366; रह&#2366; ह&#2376;?',options:['ह&#2367;म&#2366;चल प&#2381;रद&#2375;श','जम&#2381;म&#2370; और कश&#2381;म&#2368;र','स&#2367;क&#2381;क&#2367;म','मण&#2367;प&#2369;र',],answer:1,},
+{question:'न&#2367;म&#2381;नल&#2367;ख&#2367;त म&#2375;&#2306; स&#2375; क&#2380;न 2022 क&#2366;न फ&#2367;ल&#2381;म सम&#2366;र&#2379;ह क&#2368; ज&#2370;र&#2368; क&#2366; ह&#2367;स&#2381;स&#2366; ह&#2379;ग&#2366;?',options:['आम&#2367;र ख&#2366;न','प&#2381;र&#2367;य&#2306;क&#2366; च&#2379;पड&#2364;&#2366;','मन&#2379;ज ब&#2366;जप&#2375;य&#2368;','द&#2368;प&#2367;क&#2366; प&#2366;द&#2369;क&#2379;न',],answer:3,},
+{question:'न&#2367;म&#2381;नल&#2367;ख&#2367;त म&#2375;&#2306; स&#2375; क&#2380;न 01 मई 2022 क&#2379; उप स&#2375;न&#2366;ध&#2381;यक&#2381;ष क&#2375; र&#2370;प म&#2375;&#2306; क&#2366;र&#2381;यभ&#2366;र ग&#2381;रहण कर&#2375;ग&#2366;?',options:['ब&#2366;ग&#2381;ग&#2366;वल&#2381;ल&#2368; स&#2379;म&#2366;श&#2375;कर र&#2366;ज&#2370;','मन&#2379;ज प&#2366;&#2306;ड&#2375;','नज&#2364;&#2368;र अहमद व&#2366;न&#2368;','द&#2368;पक र&#2366;मप&#2366;ल',],answer:0,},
+{question:'म&#2306;त&#2381;र&#2368;, भगव&#2306;त ख&#2369;ब&#2366; न&#2375; फ&#2366;र&#2381;म&#2366; और म&#2375;ड&#2367;कल ड&#2367;व&#2366;इस&#2375;स स&#2375;क&#2381;टर 2022 पर अ&#2306;तर&#2381;र&#2366;ष&#2381;ट&#2381;र&#2368;य सम&#2381;म&#2375;लन क&#2375; क&#2367;स स&#2306;स&#2381;करण क&#2375; द&#2380;र&#2366;न इ&#2306;ड&#2367;य&#2366; फ&#2366;र&#2381;म&#2366; ए&#2306;ड इ&#2306;ड&#2367;य&#2366; म&#2375;ड&#2367;कल ड&#2367;व&#2366;इस&#2375;स अव&#2366;र&#2381;ड&#2381;स 2022 प&#2381;रद&#2366;न क&#2367;ए?',options:['छठव&#2375;&#2306; ','स&#2366;तव&#2375;&#2306;','आठव&#2375;&#2306;','न&#2380;व&#2375;&#2306;',],answer:3,},
+{question:"क&#2367;स द&#2375;श क&#2375; र&#2366;ष&#2381;ट&#2381;रपत&#2367; न&#2375; य&#2370;एस इ&#2306;ड&#2379;-प&#2376;स&#2367;फ&#2367;क रणन&#2368;त&#2367; और क&#2381;व&#2366;ड ग&#2381;र&#2369;प&#2367;&#2306;ग क&#2366; म&#2369;क&#2366;बल&#2366; करन&#2375; क&#2375; ल&#2367;ए 'व&#2376;श&#2381;व&#2367;क स&#2369;रक&#2381;ष&#2366; पहल' क&#2366; प&#2381;रस&#2381;त&#2366;व द&#2367;य&#2366; ह&#2376;?",options:['उत&#2381;तर क&#2379;र&#2367;य&#2366;','च&#2368;न','र&#2370;स','ब&#2375;ल&#2379;र&#2370;स',],answer:1,},
+{question:'ह&#2366;ल ह&#2368; म&#2375;&#2306;, सरक&#2366;र न&#2375; क&#2367;स क&#2306;पन&#2368; म&#2375;&#2306; 51 प&#2381;रत&#2367;शत इक&#2381;व&#2367;ट&#2368; क&#2368; ब&#2367;क&#2381;र&#2368; क&#2379; म&#2306;ज&#2370;र&#2368; द&#2368; ह&#2376;?',options:['पवन ह&#2306;स ल&#2367;म&#2367;ट&#2375;ड','इ&#2306;ड&#2367;यन ऑयल क&#2377;र&#2381;प&#2379;र&#2375;शन ल&#2367;म&#2367;ट&#2375;ड','भ&#2366;रत भ&#2366;र&#2368; उद&#2381;य&#2379;ग न&#2367;गम','भ&#2366;रत&#2368;य क&#2371;त&#2381;र&#2367;म अ&#2306;ग न&#2367;र&#2381;म&#2366;ण न&#2367;गम',],answer:0,},
+{question:'क&#2375;न&#2375;थ त&#2381;स&#2366;&#2306;ग क&#2366; 86 वर&#2381;ष क&#2368; आय&#2369; म&#2375;&#2306; न&#2367;धन ह&#2379; गय&#2366;&#2404; वह एक प&#2381;रस&#2367;द&#2381;ध __________ थ&#2375;&#2404;',options:['ल&#2375;खक','व&#2376;ज&#2381;ञ&#2366;न&#2367;क','च&#2367;त&#2381;रक&#2366;र','अभ&#2367;न&#2375;त&#2366;',],answer:3,},
+{question:"'अम&#2367;त श&#2366;ह अन&#2368; भज&#2366;पच&#2368; वत&#2381;चल' न&#2366;मक प&#2369;स&#2381;तक क&#2375; ल&#2375;खक क&#2380;न ह&#2376;&#2306;?",options:['ड&#2377; अन&#2367;र&#2381;ब&#2366;न ग&#2366;&#2306;ग&#2369;ल&#2368;','श&#2367;व&#2366;न&#2306;द द&#2381;व&#2367;व&#2375;द&#2368;','(A) और (B) द&#2379;न&#2379;&#2306;','क&#2366;र&#2381;त&#2367;क द&#2381;व&#2367;व&#2375;द&#2368;',],answer:2,},
+{question:'सरक&#2366;र भ&#2366;रत क&#2375; क&#2367;तन&#2375; शहर&#2379;&#2306; म&#2375;&#2306; स&#2381;वद&#2375;श&#2368; र&#2370;प स&#2375; व&#2367;कस&#2367;त ऑनल&#2366;इन ई-क&#2377;मर&#2381;स न&#2375;टवर&#2381;क श&#2369;र&#2370; करन&#2375; क&#2368; य&#2379;जन&#2366; बन&#2366; रह&#2368; ह&#2376;?',options:['50 शहर&#2379;&#2306;','75 शहर&#2379;&#2306;','80 शहर&#2379;&#2306;','100 शहर&#2379;&#2306;',],answer:3,},
+{question:'क&#2367;स स&#2306;गठन क&#2368; आर&#2306;भ&#2367;क स&#2366;र&#2381;वजन&#2367;क प&#2375;शकश (IPO) अगल&#2375; मह&#2368;न&#2375; क&#2368; 4 त&#2366;र&#2368;ख क&#2379; स&#2366;र&#2381;वजन&#2367;क सदस&#2381;यत&#2366; (पब&#2381;ल&#2367;क सब&#2381;सक&#2381;र&#2367;प&#2381;शन) क&#2375; ल&#2367;ए ख&#2369;ल&#2375;ग&#2368; और 9 मई क&#2379; ब&#2306;द ह&#2379;ग&#2368;?',options:['भ&#2366;रत&#2368;य स&#2381;ट&#2375;ट ब&#2376;&#2306;क','ज&#2368;वन ब&#2368;म&#2366; न&#2367;गम','भ&#2366;रत स&#2306;च&#2366;र न&#2367;गम ल&#2367;म&#2367;ट&#2375;ड','आईड&#2368;ब&#2368;आई ब&#2376;&#2306;क',],answer:1,},
+{question:'क&#2367;स र&#2366;ज&#2381;य सरक&#2366;र न&#2375; र&#2366;ज&#2381;य म&#2375;&#2306; आन&#2369;व&#2306;श&#2367;क स&#2306;स&#2366;धन&#2379;&#2306; क&#2375; स&#2306;रक&#2381;षण क&#2375; उद&#2381;द&#2375;श&#2381;य स&#2375; एक ज&#2368;न ब&#2376;&#2306;क पहल क&#2379; म&#2306;ज&#2370;र&#2368; द&#2368; ह&#2376;?',options:['ग&#2369;जर&#2366;त','मह&#2366;र&#2366;ष&#2381;ट&#2381;र','र&#2366;जस&#2381;थ&#2366;न','मध&#2381;य प&#2381;रद&#2375;श',],answer:1,},
+{question:'स&#2306;ग&#2368;त क&#2368; एक&#2368;क&#2371;त शक&#2381;त&#2367; क&#2366; सम&#2381;म&#2366;न करन&#2375; क&#2375; ल&#2367;ए प&#2381;रत&#2381;य&#2375;क वर&#2381;ष क&#2367;स त&#2366;र&#2368;ख क&#2379; अ&#2306;तर&#2381;र&#2366;ष&#2381;ट&#2381;र&#2368;य ज&#2376;ज&#2364; द&#2367;वस मन&#2366;य&#2366; ज&#2366;त&#2366; ह&#2376;?',options:['28 अप&#2381;र&#2376;ल','29 अप&#2381;र&#2376;ल','30 अप&#2381;र&#2376;ल','1 मई',],answer:2,},
+
+  
+  
+  
+  
+  
+ ];
+
+function load(){
+    number++;
+   questionText.innerHTML=myApp[questionIndex].question;
+    creatOptions();
+    scoreBoard();
+    currentQuestionNum.innerHTML=number + " / " +myApp.length;
+}
+function creatOptions(){
+    optionBox.innerHTML="";
+    let animationDelay=0.2;
+    for(let i=0; i<myApp[questionIndex].options.length; i++){
+        const option=document.createElement("div");
+              option.innerHTML=myApp[questionIndex].options[i];
+              option.classList.add("option");
+              option.id=i;
+              option.style.animationDelay=animationDelay + "s";
+              animationDelay=animationDelay+0.2;
+              option.setAttribute("onclick","check(this)");
+              optionBox.appendChild(option);
+        
+    }
+}
+
+function generateRandomQuestion(){
+    const randomNumber=Math.floor(Math.random() * myApp.length);
+   let hitDuplicate=0;
+   if(myArray.length == 0){
+        questionIndex=randomNumber;
+    }
+    else{
+        for(let i=0; i<myArray.length; i++){
+            if(randomNumber == myArray[i]){
+                //if duplicate found
+                hitDuplicate=1;
+                
+            }
+        }
+        if(hitDuplicate == 1){
+            generateRandomQuestion();
+            return;
+        }
+        else{
+            questionIndex=randomNumber;
+        }
+    }
+    
+    myArray.push(randomNumber);
+    console.log(myArray)
+    load();
+}
+
+function check(ele){
+    const id=ele.id;
+    if(id==myApp[questionIndex].answer){
+       ele.classList.add("correct");
+        score++;
+        scoreBoard();
+    }
+    else{
+        ele.classList.add("wrong");
+        //show correct option when clicked answer is wrong
+        for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+            }
+        }
+    }
+    attempt++;
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+    stopTimer();
+    
+    if(number == myApp.length){
+        quizOver();
+    }
+}
+function timeIsUp(){
+    showTimeUpText();
+    //when time is up Show Correct Answer
+    for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+    
+            }
+        }
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+ if(number == myApp.length){
+        quizOver();
+      }
+}
+
+function stopTimer(){
+    clearInterval(interval);
+}
+function disableOptions(){
+    for(let i=0; i<optionBox.children.length; i++){
+        optionBox.children[i].classList.add("already-answered")
+    }
+}
+function showAnswerDescription(){
+    if(typeof myApp[questionIndex].description !== 'undefined'){
+        answerDescription.classList.add("show");
+        answerDescription.innerHTML=myApp[questionIndex].description;
+    }
+    
+}
+function hideAnswerDescription(){
+    answerDescription.classList.remove("show");
+    answerDescription.innerHTML="";
+}
+
+function showNextQuestionBtn(){
+    nextQuestionBtn.classList.add("show");
+}
+function hideNextQuestionBtn(){
+    nextQuestionBtn.classList.remove("show");
+}
+function showTimeUpText(){
+    timeUpText.classList.add("show");
+}
+function hideTimeUpText(){
+    timeUpText.classList.remove("show");
+    
+}
+function scoreBoard(){
+    correctAnswers.innerHTML=score;
+}
+
+nextQuestionBtn.addEventListener("click",nextQuestion);
+
+function nextQuestion(){
+   generateRandomQuestion();
+    hideNextQuestionBtn();
+    hideAnswerDescription();
+    hideTimeUpText();
+    startTimer();
+}
+function quizResult(){
+    document.querySelector(".total-questions").innerHTML=myApp.length;
+    document.querySelector(".total-attempt").innerHTML=attempt;
+    document.querySelector(".total-correct").innerHTML=score;
+    document.querySelector(".your-score").innerHTML=score;
+    document.querySelector(".total-wrong").innerHTML=attempt-score;
+    const percentage=(score/myApp.length)*100;
+    document.querySelector(".percentage").innerHTML=percentage.toFixed(2) +"%";
+}
+function resetQuiz(){
+  attempt=0;
+  //questionIndex=0;
+  score=0;
+  number=0;
+  myArray=[];
+}
+
+function quizOver(){
+    nextQuestionBtn.classList.remove("show");
+    seeResultBtn.classList.add("show");
+}
+seeResultBtn.addEventListener("click", ()=>{
+    quizBox.classList.remove("show");
+    seeResultBtn.classList.remove("show");
+    quizOverBox.classList.add("show");
+    quizResult();
+     })
+
+startAgainQuizBtn.addEventListener("click", ()=>{
+    quizBox.classList.add("show");
+    quizOverBox.classList.remove("show");
+    resetQuiz();
+    nextQuestion();
+})
+
+goHomeBtn.addEventListener("click", ()=>{
+    quizOverBox.classList.remove("show");
+    quizHomeBox.classList.add("show")
+    resetQuiz();
+})
+  
+startQuizBtn.addEventListener("click", ()=>{
+    quizHomeBox.classList.remove("show");
+    quizBox.classList.add("show");
+    nextQuestion();
+})
+
+//window.onload=()=>{
+    
+//}
+</script>
+
+
+
+<br><br><br>
+
+
+
+
+<iframe src="../../SUGGESTED.html" width="100%" height="7000px" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143314085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143314085-1');
+</script>
+
+
+
+
+
+
+

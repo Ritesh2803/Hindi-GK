@@ -1,0 +1,365 @@
+
+ <link href="../../css/style.css" rel="stylesheet">
+<script async src="../timer.js"></script>
+
+  <br><br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <a href="../../../index.html"><img alt="" class="img-fluid" src="../../../Website-css-use-pic/logo-transparent.png"></a>
+   </div></div></center>
+
+<br><br>
+<div id='baca-juga'>
+
+
+</div>
+<div class='' id=''>
+<meta content='test' itemprop='description'/>
+<div id='body-post-it'>
+<div class="separator" style="clear: both; text-align: center;"><br /></div>
+<head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+
+
+</head> 
+ <div class="quiz-home-box custom-box show" sryle="">
+
+
+ <br><center><div class="col-md-12">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../test-number.png"><a style="font-size:40px; color:black;">560</a>
+   </div>  </div></center><br><br>
+
+
+ <center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../timer.png" width="100%">
+   </div>  </div></center>
+
+
+ <br><center><div class="col-md-6">
+    <div class="mobile-logo text-center">
+     <img alt="" class="img-fluid" src="../note.png" width="100%">
+   </div>  </div></center><br><br>
+
+
+ <button class="start-quiz-btn btn" type="button"><strong>टेस्ट शुरु करें</strong></button>
+</div>
+<div class="quiz-box custom-box">
+<div class="stats">
+<div class="quiz-time">
+<div class="remaining-time"></div>
+<span class="time-up-text">उत्तर देने का समय ख़त्म हो चूका है</span>
+</div>
+<div class="score-board">
+<span class="score-text">सही जवाब:</span>
+<span class="correct-answer"></span>
+</div>
+</div>
+<div class="question-box">
+<div class="current-question-num">
+</div>
+<div class="question-text">
+    
+</div>
+</div>
+<div class="option-box">
+
+</div>
+<div class="next-question">
+<button class="next-question-btn btn" type="button">अगला सवाल</button>
+<button class="see-result-btn btn" type="button">अपना परिणाम देखें</button>
+</div>
+<div class="answer-description">
+    
+</div>
+
+</div>
+<div class="quiz-over-box custom-box">
+<h3>रिज़ल्ट</h3>
+<h4>कुल सवाल: <span class="total-questions"></span></h4>
+<h4>कितने किये: <span class="total-attempt"></span></h4>
+<h4>सही: <span class="total-correct"></span></h4>
+<h4>गलत: <span class="total-wrong"></span></h4>
+<h4>प्राप्तांक: <span class="your-score"></span></h4>
+<h4>प्रतिशत: <span class="percentage"></span></h4>
+<button class="start-again-quiz-btn btn" type="button">फिर से शुरू करें</button>
+<a href="test-561.html"><button class="go-home-btn btn" type="button">दूसरे प्रश्न देखें</button></a>
+
+</div>
+
+<script>
+
+
+const questionText=document.querySelector(".question-text");
+const optionBox=document.querySelector(".option-box");
+const currentQuestionNum=document.querySelector(".current-question-num");
+const answerDescription=document.querySelector(".answer-description");
+const nextQuestionBtn=document.querySelector(".next-question-btn");
+const correctAnswers=document.querySelector(".correct-answer");
+const seeResultBtn=document.querySelector(".see-result-btn");
+const remainingTime=document.querySelector(".remaining-time");
+const timeUpText=document.querySelector(".time-up-text");
+const quizHomeBox=document.querySelector(".quiz-home-box");
+const quizBox=document.querySelector(".quiz-box");
+const quizOverBox=document.querySelector(".quiz-over-box");
+const startAgainQuizBtn=document.querySelector(".start-again-quiz-btn");
+const goHomeBtn=document.querySelector(".go-home-btn");
+const startQuizBtn=document.querySelector(".start-quiz-btn");
+let attempt=0;
+let questionIndex=0;
+let score=0;
+let number=0;
+let myArray=[];
+let interval;
+    // You can put Questions Here
+    // answer id 1-0, 2-1, 3-2, 4-3, 
+myApp=[
+
+
+
+
+
+
+ 
+{question:'क&#2367;स भ&#2366;रत&#2368;य-अम&#2375;र&#2367;क&#2368; क&#2379; अम&#2375;र&#2367;क&#2368; व&#2366;य&#2369;स&#2375;न&#2366; म&#2375;&#2306; ब&#2381;र&#2367;ग&#2375;ड&#2367;यर जनरल ग&#2381;र&#2375;ड पर न&#2367;य&#2369;क&#2381;त&#2367; क&#2375; ल&#2367;ए न&#2366;म&#2367;त क&#2367;य&#2366; गय&#2366; ह&#2376;?',options:['दर&#2381;शन श&#2366;ह ',' भगवत&#2368; ब&#2379;स','उदय स&#2367;&#2306;ह त&#2380;&#2306;क&#2375;','र&#2366;ज&#2366; ज&#2375; च&#2366;र&#2368;',],answer:3,
+description:'भ&#2366;रत&#2368;य म&#2370;ल क&#2375; अम&#2375;र&#2367;क&#2368; अ&#2306;तर&#2367;क&#2381;ष य&#2366;त&#2381;र&#2368; र&#2366;ज&#2366; ज&#2375; च&#2366;र&#2368; क&#2379; अम&#2375;र&#2367;क&#2368; एयर फ़&#2379;र&#2381;स म&#2375;&#2306; स&#2375;न&#2366; ब&#2381;र&#2367;ग&#2375;ड&#2367;यर जनरल क&#2375; ग&#2381;र&#2375;ड पर न&#2367;य&#2369;क&#2381;त&#2367; क&#2375; ल&#2367;ए न&#2366;म&#2367;त क&#2367;य&#2366; गय&#2366; ह&#2376;. वह वर&#2381;तन&#2366;म म&#2375;&#2306; न&#2375;शनल एर&#2379;न&#2377;ट&#2367;क&#2381;स ए&#2306;ड स&#2381;प&#2375;स एडम&#2367;न&#2367;स&#2381;ट&#2381;र&#2375;शन, ज&#2377;नसन स&#2381;प&#2375;स स&#2375;&#2306;टर, ट&#2375;क&#2381;स&#2366;स म&#2375;&#2306; क&#2381;र&#2370; -3 कम&#2366;&#2306;डर क&#2375; र&#2370;प म&#2375;&#2306; क&#2366;र&#2381;यरत ह&#2376;. वर&#2381;ष 2020 म&#2375;&#2306; न&#2366;स&#2366; और य&#2370;र&#2379;प&#2368;य अ&#2306;तर&#2367;क&#2381;ष एज&#2375;&#2306;स&#2368; न&#2375; इ&#2306;टरन&#2375;शनल स&#2381;प&#2375;स स&#2381;ट&#2375;शन (ISS) क&#2375; ल&#2367;ए स&#2381;प&#2375;सएक&#2381;स क&#2381;र&#2370;-3 म&#2367;शन क&#2375; कम&#2366;&#2306;डर क&#2375; र&#2370;प म&#2375;&#2306; च&#2369;न&#2366; थ&#2366;. वह वर&#2381;ष 2017 म&#2375;&#2306; न&#2366;स&#2366; म&#2375;&#2306; श&#2366;म&#2367;ल ह&#2369;ए थ&#2375;. उनक&#2375; प&#2366;स 2,500 घ&#2306;ट&#2375; स&#2375; अध&#2367;क क&#2366; उड&#2364;&#2366;न अन&#2369;भव ह&#2366;स&#2367;ल ह&#2376;.  '},
+{question:'ह&#2366;ल ह&#2368; म&#2375;&#2306; ल&#2366;&#2306;च ह&#2369;ई भ&#2366;रत क&#2368; पहल&#2368; इ&#2306;ट&#2381;र&#2366;न&#2375;जल क&#2379;व&#2367;ड-19 व&#2376;क&#2381;स&#2368;न क&#2366; न&#2366;म क&#2381;य&#2366; ह&#2376;?',options:['इनक&#2379;व&#2376;क','क&#2379;व&#2376;क&#2381;स&#2367;न','ह&#2376;नव&#2376;क','क&#2377;मव&#2376;क 5',],answer:0,
+description:'क&#2375;&#2306;द&#2381;र&#2368;य स&#2381;व&#2366;स&#2381;थ&#2381;य म&#2306;त&#2381;र&#2368; मनस&#2369;ख म&#2366;&#2306;डव&#2367;य&#2366; और व&#2367;ज&#2381;ञ&#2366;न और प&#2381;र&#2380;द&#2381;य&#2379;ग&#2367;क&#2368; म&#2306;त&#2381;र&#2368; ज&#2367;त&#2375;न&#2381;द&#2381;र स&#2367;&#2306;ह न&#2375; भ&#2366;रत क&#2368; पहल&#2368; न&#2375;जल क&#2379;व&#2367;ड-19 व&#2376;क&#2381;स&#2368;न इनक&#2379;व&#2376;क (iNCOVACC) क&#2379; ल&#2366;&#2306;च क&#2367;य&#2366;. यह द&#2375;श क&#2368; पहल&#2368; न&#2375;ज&#2364;ल क&#2379;व&#2367;ड-19 व&#2376;क&#2381;स&#2368;न ह&#2376; इसक&#2366; न&#2367;र&#2381;म&#2366;ण भ&#2366;रत ब&#2366;य&#2379;ट&#2375;क (Bharat Biotech) न&#2375; क&#2367;य&#2366; ह&#2376;. इस न&#2375;जल व&#2376;क&#2381;स&#2368;न क&#2368; क&#2368;मत प&#2381;र&#2366;इव&#2375;ट ह&#2377;स&#2381;प&#2367;टल म&#2375;&#2306; &#8377;800+ट&#2376;क&#2381;स जबक&#2367; क&#2375;&#2306;द&#2381;र व र&#2366;ज&#2381;य सरक&#2366;र&#2379;&#2306; क&#2375; ल&#2367;ए इसक&#2368; क&#2368;मत &#8377;325 रख&#2368; गय&#2368; ह&#2376;. यह क&#2379;व&#2367;ड-19 क&#2375; ल&#2367;ए द&#2369;न&#2367;य&#2366; क&#2366; पहल&#2366; इ&#2306;ट&#2381;र&#2366;न&#2375;जल व&#2376;क&#2381;स&#2368;न ह&#2376; ज&#2367;सक&#2379; द&#2379; प&#2381;र&#2366;इमर&#2368; ड&#2379;ज क&#2375; स&#2366;थ अन&#2369;म&#2379;दन प&#2381;र&#2366;प&#2381;त ह&#2369;आ ह&#2376;. यह एक व&#2367;षम ब&#2370;स&#2381;टर ख&#2369;र&#2366;क (Heterologous booster dose) न&#2375;जल व&#2376;क&#2381;स&#2368;न ह&#2376;. '},
+{question:'वर&#2381;ष 2023 क&#2375; पद&#2381;म प&#2369;रस&#2381;क&#2366;र&#2379;&#2306; क&#2375; तहत इस ब&#2366;र क&#2367;तन&#2375; ल&#2379;ग&#2379;&#2306; क&#2379; पद&#2381;म व&#2367;भ&#2370;षण स&#2375; सम&#2381;म&#2366;न&#2367;त क&#2367;य&#2366; गय&#2366; ह&#2376;?',options:['06','07','10','19',],answer:0,
+description:'वर&#2381;ष 2023 क&#2375; पद&#2381;म प&#2369;रस&#2381;क&#2366;र&#2379;&#2306; क&#2368; घ&#2379;षण&#2366; कर द&#2368; गय&#2368; ह&#2376;. इस ब&#2366;र य&#2375; अव&#2366;र&#2381;ड&#2381;स 106 ल&#2379;ग&#2379;&#2306; क&#2379; द&#2367;ए ज&#2366; रह&#2375; ह&#2376;. ज&#2367;सम&#2375;&#2306; 6 पद&#2381;म व&#2367;भ&#2370;षण (Padma Vibhushan), 9 पद&#2381;म भ&#2370;षण (Padma Bhushan) और 91 पद&#2381;म श&#2381;र&#2368; (Padma Shri) प&#2369;रस&#2381;क&#2366;र श&#2366;म&#2367;ल ह&#2376;. इस ब&#2366;र इस अव&#2366;र&#2381;ड ल&#2367;स&#2381;ट म&#2375;&#2306; 19 मह&#2367;ल&#2366;ए&#2306; भ&#2368; श&#2366;म&#2367;ल ह&#2376;. स&#2366;थ ह&#2368; ल&#2367;स&#2381;ट म&#2375;&#2306; व&#2367;द&#2375;श&#2367;य&#2379;&#2306;/NRI/PIO/OCI क&#2368; क&#2376;ट&#2375;गर&#2368; क&#2375; 2 व&#2381;यक&#2381;त&#2367; और 7 मरण&#2379;पर&#2366;&#2306;त प&#2369;रस&#2381;क&#2366;र प&#2366;न&#2375; व&#2366;ल&#2375; श&#2366;म&#2367;ल ह&#2376;. उत&#2381;तर प&#2381;रद&#2375;श क&#2375; प&#2370;र&#2381;व म&#2369;ख&#2381;यम&#2306;त&#2381;र&#2368; म&#2369;ल&#2366;यम स&#2367;&#2306;ह य&#2366;दव, प&#2370;र&#2381;व व&#2367;द&#2375;श म&#2306;त&#2381;र&#2368; एस एम क&#2371;ष&#2381;ण&#2366; और तबल&#2366; व&#2366;दक ज&#2366;क&#2367;र ह&#2369;स&#2376;न सह&#2367;त क&#2369;ल छह ल&#2379;ग&#2379;&#2306; क&#2379; द&#2375;श क&#2375; द&#2370;सर&#2375; सर&#2381;व&#2379;च&#2381;च न&#2366;गर&#2367;क सम&#2381;म&#2366;न पद&#2381;म व&#2367;भ&#2370;षण स&#2375; सम&#2381;म&#2366;न&#2367;त क&#2367;य&#2366; गय&#2366; ह&#2376;.  '},
+{question:'वर&#2381;ष 2022 क&#2375; ल&#2367;ए आईस&#2368;स&#2368; म&#2375;न&#2381;स क&#2381;र&#2367;क&#2375;टर ऑफ द ईयर क&#2375; र&#2370;प म&#2375;&#2306; क&#2367;स&#2375; च&#2369;न&#2366; गय&#2366; ह&#2376;?',options:['स&#2370;र&#2381;यक&#2369;म&#2366;र य&#2366;दव','ब&#2366;बर आजम ','व&#2367;र&#2366;ट क&#2379;हल&#2368;','ब&#2375;न स&#2381;ट&#2381;र&#2379;क ',],answer:1,
+description:'आईस&#2368;स&#2368; न&#2375; वर&#2381;ष 2022 क&#2375; सभ&#2368; अव&#2366;र&#2381;ड&#2381;स व&#2367;ज&#2375;त&#2366;ओ&#2306; क&#2368; घ&#2379;षण&#2366; कर द&#2368; ह&#2376;. प&#2366;क&#2367;स&#2381;त&#2366;न क&#2375; स&#2381;ट&#2366;र क&#2381;र&#2367;क&#2375;टर ब&#2366;बर आज़म न&#2375; म&#2375;न&#2381;स क&#2381;र&#2367;क&#2375;टर ऑफ द ईयर और म&#2375;न&#2381;स वनड&#2375; क&#2381;र&#2367;क&#2375;टर ऑफ द ईयर क&#2366; अव&#2366;र&#2381;ड ज&#2368;त&#2366;. इ&#2306;ग&#2381;ल&#2376;&#2306;ड क&#2368; मह&#2367;ल&#2366; क&#2381;र&#2367;क&#2375;टर न&#2376;ट स&#2366;इवर  (Nat Sciver) क&#2379; मह&#2367;ल&#2366; क&#2381;र&#2367;क&#2375;टर ऑफ द ईयर और मह&#2367;ल&#2366; वनड&#2375; क&#2381;र&#2367;क&#2375;टर ऑफ द ईयर च&#2369;न&#2366; गय&#2366; ह&#2376;. भ&#2366;रत क&#2368; र&#2375;ण&#2369;क&#2366; स&#2367;&#2306;ह क&#2379; आईस&#2368;स&#2368; इमर&#2381;ज&#2367;&#2306;ग व&#2369;मन क&#2381;र&#2367;क&#2375;टर ऑफ द ईयर और स&#2370;र&#2381;यक&#2369;म&#2366;र य&#2366;दव क&#2379; आईस&#2368;स&#2368; म&#2375;न&#2381;स T20I क&#2381;र&#2367;क&#2375;टर ऑफ द ईयर च&#2369;न&#2366; गय&#2366; ह&#2376;.     '},
+{question:'क&#2367;स भ&#2366;रत&#2368;य कव&#2367;-र&#2366;जनय&#2367;क क&#2379; &#8216;ब&#2381;र&#2366;ज&#2368;ल क&#2375; स&#2366;ह&#2367;त&#2381;य अक&#2366;दम&#2368;&#8217; क&#2375; स&#2306;ब&#2306;ध&#2367;त सदस&#2381;य क&#2375; र&#2370;प म&#2375;&#2306; च&#2369;न&#2366; गय&#2366; ह&#2376;?',options:['एक&#2375; म&#2375;हर&#2379;त&#2381;र&#2366;','द&#2367;ल&#2368;प च&#2367;त&#2381;र&#2375;','श&#2367;व क&#2375; क&#2369;म&#2366;र','अभय क&#2369;म&#2366;र ',],answer:3,
+description:'ह&#2366;ल ह&#2368; म&#2375;&#2306; अपन&#2375; एक प&#2370;र&#2381;ण सत&#2381;र क&#2375; द&#2380;र&#2366;न अक&#2366;दम&#2368; ऑफ&#2364; ल&#2375;टर&#2381;स ऑफ&#2364; ब&#2381;र&#2366;ज&#2364;&#2368;ल (ALB) न&#2375; कव&#2367;-र&#2366;जनय&#2367;क "अभय क&#2369;म&#2366;र" क&#2379; ब&#2381;र&#2366;ज&#2368;ल क&#2375; स&#2366;ह&#2367;त&#2381;य अक&#2366;दम&#2368; (Academy of Letters of Brazil) क&#2375; स&#2306;ब&#2306;ध&#2367;त सदस&#2381;य क&#2375; र&#2370;प म&#2375;&#2306; च&#2369;न&#2366; ह&#2376;. अभय क&#2369;म&#2366;र भ&#2366;रत क&#2375; एक कव&#2367;-र&#2366;जनय&#2367;क ह&#2376;&#2306; ज&#2379; वर&#2381;तम&#2366;न म&#2375;&#2306; नई द&#2367;ल&#2381;ल&#2368; म&#2375;&#2306; भ&#2366;रत&#2368;य स&#2366;&#2306;स&#2381;क&#2371;त&#2367;क स&#2306;ब&#2306;ध पर&#2367;षद क&#2375; उप मह&#2366;न&#2367;द&#2375;शक क&#2375; र&#2370;प म&#2375;&#2306; क&#2366;र&#2381;यरत ह&#2376;&#2306;.'},
+{question:'मध&#2381;य र&#2375;लव&#2375; क&#2375; नए मह&#2366;प&#2381;रब&#2306;धक क&#2375; र&#2370;प म&#2375;&#2306; क&#2367;स&#2375; न&#2367;य&#2369;क&#2381;त क&#2367;य&#2366; गय&#2366; ह&#2376;?',options:['अन&#2367;ल क&#2369;म&#2366;र ल&#2366;ह&#2379;ट&#2368;','नर&#2375;श ल&#2366;लव&#2366;न&#2368;','अश&#2379;क क&#2369;म&#2366;र म&#2367;श&#2381;र&#2366;','आल&#2379;क स&#2367;&#2306;ह',],answer:1,
+description:'नर&#2375;श ल&#2366;लव&#2366;न&#2368; क&#2379; मध&#2381;य र&#2375;लव&#2375; क&#2366; मह&#2366;प&#2381;रब&#2306;धक न&#2367;य&#2369;क&#2381;त क&#2367;य&#2366; गय&#2366; ह&#2376;. वह भ&#2366;रत&#2368;य र&#2375;लव&#2375; इ&#2306;ज&#2368;न&#2367;यर&#2367;&#2306;ग स&#2375;व&#2366; क&#2375; 1985 ब&#2376;च क&#2375; एक वर&#2367;ष&#2381;ठ अध&#2367;क&#2366;र&#2368; ह&#2376;&#2306;. व&#2375; मध&#2381;य र&#2375;लव&#2375; क&#2375; मह&#2366;प&#2381;रब&#2306;धक बनन&#2375; स&#2375; पहल&#2375; पश&#2381;च&#2367;म र&#2375;लव&#2375; क&#2375; वर&#2367;ष&#2381;ठ उप मह&#2366;प&#2381;रब&#2306;धक और म&#2369;ख&#2381;य सतर&#2381;कत&#2366; अध&#2367;क&#2366;र&#2368; थ&#2375;. उन&#2381;ह&#2379;&#2306;न&#2375; पश&#2381;च&#2367;म र&#2375;लव&#2375; क&#2375; मह&#2366;प&#2381;रब&#2306;धक अश&#2379;क क&#2369;म&#2366;र म&#2367;श&#2381;र&#2366; क&#2366; स&#2381;थ&#2366;न ल&#2367;य&#2366;, ज&#2379; मध&#2381;य र&#2375;लव&#2375; क&#2375; प&#2381;रभ&#2366;र&#2368; भ&#2368; थ&#2375;.'},
+{question:'इसर&#2379; क&#2375; आद&#2367;त&#2381;य L1 प&#2381;र&#2379;ज&#2375;क&#2381;ट क&#2375; ल&#2367;ए, &#8216;व&#2367;ज&#2367;बल एम&#2367;शन ल&#2366;इन क&#2379;र&#2379;न&#2366;ग&#2381;र&#2366;फ&#8217; प&#2375;ल&#2379;ड क&#2366; न&#2367;र&#2381;म&#2366;ण क&#2367;सन&#2375; क&#2367;य&#2366; ह&#2376;?',options:['ड&#2368;आरड&#2368;ओ','भ&#2366;भ&#2366; एट&#2377;म&#2367;क र&#2367;सर&#2381;च स&#2375;&#2306;टर ','इ&#2306;ड&#2367;यन इ&#2306;स&#2381;ट&#2368;ट&#2381;य&#2370;ट ऑफ एस&#2381;ट&#2381;र&#2379;फ&#2367;ज&#2367;क&#2381;स','आईआईट&#2368; म&#2369;&#2306;बई',],answer:2,
+description:'इ&#2306;स&#2381;ट&#2368;ट&#2381;य&#2370;ट ऑफ एस&#2381;ट&#2381;र&#2379;फ&#2367;ज&#2367;क&#2381;स (IIA) न&#2375; इसर&#2379; क&#2379; &#8216;व&#2367;ज&#2367;बल एम&#2367;शन ल&#2366;इन क&#2379;र&#2379;न&#2366;ग&#2381;र&#2366;फ&#8217; (Visible Line Emission Coronagraph-VELC) स&#2380;&#2306;प द&#2367;य&#2366; ह&#2376;. व&#2368;ईएलस&#2368;, इसर&#2379; क&#2375; आद&#2367;त&#2381;य L1 प&#2381;र&#2379;ज&#2375;क&#2381;ट क&#2375; तहत स&#2370;र&#2381;य क&#2375; अध&#2381;ययन क&#2375; ल&#2367;ए भ&#2375;ज&#2366; ज&#2366;य&#2375;ग&#2366;. यह उपकरण आद&#2367;त&#2381;य L1 प&#2381;र&#2379;ज&#2375;क&#2381;ट  क&#2375; तहत भ&#2375;ज&#2366; ज&#2366;न&#2375; व&#2366;ल&#2366; सबस&#2375; बड़&#2366; य&#2306;त&#2381;र ह&#2376;. इसर&#2379; क&#2366; यह महत&#2381;व&#2366;क&#2366;&#2306;क&#2381;ष&#2368; आद&#2367;त&#2381;य L1 इस वर&#2381;ष ज&#2370;न य&#2366; ज&#2369;ल&#2366;ई म&#2375;&#2306; प&#2381;रस&#2381;त&#2366;व&#2367;त ह&#2376;. व&#2368;ईएलस&#2368; प&#2375;ल&#2379;ड क&#2379; व&#2367;ज&#2381;ञ&#2366;न और प&#2381;र&#2380;द&#2381;य&#2379;ग&#2367;क&#2368; अन&#2369;स&#2306;ध&#2366;न और श&#2367;क&#2381;ष&#2366; क&#2375;&#2306;द&#2381;र (CREST) क&#2376;&#2306;पस म&#2375;&#2306; ड&#2367;ज&#2366;इन और त&#2376;य&#2366;र क&#2367;य&#2366; गय&#2366; ह&#2376; ज&#2379; ब&#2375;&#2306;गल&#2369;र&#2369; म&#2375;&#2306; स&#2381;थ&#2367;त ह&#2376;.'},
+  
+  
+  
+  
+  
+  
+  ];
+
+function load(){
+    number++;
+   questionText.innerHTML=myApp[questionIndex].question;
+    creatOptions();
+    scoreBoard();
+    currentQuestionNum.innerHTML=number + " / " +myApp.length;
+}
+function creatOptions(){
+    optionBox.innerHTML="";
+    let animationDelay=0.2;
+    for(let i=0; i<myApp[questionIndex].options.length; i++){
+        const option=document.createElement("div");
+              option.innerHTML=myApp[questionIndex].options[i];
+              option.classList.add("option");
+              option.id=i;
+              option.style.animationDelay=animationDelay + "s";
+              animationDelay=animationDelay+0.2;
+              option.setAttribute("onclick","check(this)");
+              optionBox.appendChild(option);
+        
+    }
+}
+
+function generateRandomQuestion(){
+    const randomNumber=Math.floor(Math.random() * myApp.length);
+   let hitDuplicate=0;
+   if(myArray.length == 0){
+        questionIndex=randomNumber;
+    }
+    else{
+        for(let i=0; i<myArray.length; i++){
+            if(randomNumber == myArray[i]){
+                //if duplicate found
+                hitDuplicate=1;
+                
+            }
+        }
+        if(hitDuplicate == 1){
+            generateRandomQuestion();
+            return;
+        }
+        else{
+            questionIndex=randomNumber;
+        }
+    }
+    
+    myArray.push(randomNumber);
+    console.log(myArray)
+    load();
+}
+
+function check(ele){
+    const id=ele.id;
+    if(id==myApp[questionIndex].answer){
+       ele.classList.add("correct");
+        score++;
+        scoreBoard();
+    }
+    else{
+        ele.classList.add("wrong");
+        //show correct option when clicked answer is wrong
+        for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+            }
+        }
+    }
+    attempt++;
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+    stopTimer();
+    
+    if(number == myApp.length){
+        quizOver();
+    }
+}
+function timeIsUp(){
+    showTimeUpText();
+    //when time is up Show Correct Answer
+    for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+    
+            }
+        }
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+ if(number == myApp.length){
+        quizOver();
+      }
+}
+
+function stopTimer(){
+    clearInterval(interval);
+}
+function disableOptions(){
+    for(let i=0; i<optionBox.children.length; i++){
+        optionBox.children[i].classList.add("already-answered")
+    }
+}
+function showAnswerDescription(){
+    if(typeof myApp[questionIndex].description !== 'undefined'){
+        answerDescription.classList.add("show");
+        answerDescription.innerHTML=myApp[questionIndex].description;
+    }
+    
+}
+function hideAnswerDescription(){
+    answerDescription.classList.remove("show");
+    answerDescription.innerHTML="";
+}
+
+function showNextQuestionBtn(){
+    nextQuestionBtn.classList.add("show");
+}
+function hideNextQuestionBtn(){
+    nextQuestionBtn.classList.remove("show");
+}
+function showTimeUpText(){
+    timeUpText.classList.add("show");
+}
+function hideTimeUpText(){
+    timeUpText.classList.remove("show");
+    
+}
+function scoreBoard(){
+    correctAnswers.innerHTML=score;
+}
+
+nextQuestionBtn.addEventListener("click",nextQuestion);
+
+function nextQuestion(){
+   generateRandomQuestion();
+    hideNextQuestionBtn();
+    hideAnswerDescription();
+    hideTimeUpText();
+    startTimer();
+}
+function quizResult(){
+    document.querySelector(".total-questions").innerHTML=myApp.length;
+    document.querySelector(".total-attempt").innerHTML=attempt;
+    document.querySelector(".total-correct").innerHTML=score;
+    document.querySelector(".your-score").innerHTML=score;
+    document.querySelector(".total-wrong").innerHTML=attempt-score;
+    const percentage=(score/myApp.length)*100;
+    document.querySelector(".percentage").innerHTML=percentage.toFixed(2) +"%";
+}
+function resetQuiz(){
+  attempt=0;
+  //questionIndex=0;
+  score=0;
+  number=0;
+  myArray=[];
+}
+
+function quizOver(){
+    nextQuestionBtn.classList.remove("show");
+    seeResultBtn.classList.add("show");
+}
+seeResultBtn.addEventListener("click", ()=>{
+    quizBox.classList.remove("show");
+    seeResultBtn.classList.remove("show");
+    quizOverBox.classList.add("show");
+    quizResult();
+     })
+
+startAgainQuizBtn.addEventListener("click", ()=>{
+    quizBox.classList.add("show");
+    quizOverBox.classList.remove("show");
+    resetQuiz();
+    nextQuestion();
+})
+
+goHomeBtn.addEventListener("click", ()=>{
+    quizOverBox.classList.remove("show");
+    quizHomeBox.classList.add("show")
+    resetQuiz();
+})
+  
+startQuizBtn.addEventListener("click", ()=>{
+    quizHomeBox.classList.remove("show");
+    quizBox.classList.add("show");
+    nextQuestion();
+})
+
+//window.onload=()=>{
+    
+//}
+</script>
+
+
+
+<br><br><br>
+
+
+
+
+<iframe src="../../SUGGESTED.html" width="100%" height="7000px" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143314085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143314085-1');
+</script>
+
+
+
+
+
+
+

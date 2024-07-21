@@ -73,17 +73,17 @@
                         <div class="col-md-12">
                       <form method="post" name="google-sheet" >
                                         <div class="form-group"><center>4 अंक से ज्यादा कोड नहीं लिख पाओगे, और कोई शब्द नहीं लिख सकते (कोई गलती ना हो इसलिए मैंने सेट कर दिया है) 😎</center>
-                                            <input type="number" name="Movie Code" class="form-control" id="मोबाइल नंबर" placeholder="Movie Code" value="" required=""/>
+                                            <input type="number" name="Code" class="form-control" id="मोबाइल नंबर" placeholder="Movie Code" value="" required=""/>
                                         </div>
 
                                         <div class="form-group">
 
-                                        <input type="text" placeholder="Movie Name" name="Movie Name" class="form-control"  required=""/>
+                                        <input type="text" placeholder="Movie Name" name="Name" class="form-control"  required=""/>
 
                                           
                                         </div> 
                                                     <div class="form-group">
-                                            <input type="text" name="Movie Link" class="form-control" placeholder="Movie Link" value="" required=""/>
+                                            <input type="text" name="Link" class="form-control" placeholder="Movie Link" value="" required=""/>
                                         </div>
 
 
@@ -144,13 +144,13 @@ setInterval(function() {
 </script>
 
  <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwICzqNNZ09Kb4dDs2yE1sJlqCrqtstNUlJkfpuDZVHER04Bcku0zSX_EGLNOzRrHCq/exec'
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbznAdHeyswmx-_WfkoRt__uW-7Ks_ZNWAu75atn-P5Hif9pU_tRo3aT7poHrJoXMszn/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("पायल जी आपका बहुत बहुत धन्यवाद आपने हमारे लिए इस मूवी को उपलोड किया, अब आप कोड डालकर देख लीजिये की ये मूवी प्ले हो रहा है की नहीं "))
+                .then(response => alert("पायल जी आपका बहुत बहुत धन्यवाद आपने हमारे लिए इस मूवी को अपलोड किया, अब आप कोड डालकर देख लीजिये की ये मूवी प्ले हो रहा है की नहीं "))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>

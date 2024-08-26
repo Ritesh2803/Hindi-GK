@@ -121,7 +121,7 @@ async function onEncrypt() {
 
   const encrypted = await generateFragment(url, password, hint, useRandomSalt,
       useRandomIv);
-  const output = `github.io/link-lock/#${encrypted}`;
+  const output = `.io/link-lock/#${encrypted}`;
 
   document.querySelector("#output").value = output;
   highlight("output");

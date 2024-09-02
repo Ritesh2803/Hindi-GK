@@ -21,24 +21,24 @@
 
 
 
-<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/1.jpg">
-<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/1.jpg"></a>
+<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/1.jpg">
+<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/1.jpg"></a>
 
 
-<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/2.jpg">
-<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/2.jpg"></a>
+<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/2.jpg">
+<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/2.jpg"></a>
 
 
-<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/3.jpg">
-<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/3.jpg"></a>
+<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/3.jpg">
+<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/3.jpg"></a>
 
 
-<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/4.jpg">
-<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/4.jpg"></a>
+<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/4.jpg">
+<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/4.jpg"></a>
 
 
-<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/5.jpg">
-<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180/5.jpg"></a>
+<a href="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/5.jpg">
+<img alt="" width="100%" height="" src="https://www.desitales2.com/videos/contents/videos_screenshots/0/580/320x180320x180/5.jpg"></a>
 
 
 
@@ -89,3 +89,22 @@
 
 
 
+<input type="text" value="Hello World" id="myInput">
+<button onclick="myFunction()">Copy text</button>
+
+<script>
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8" />
+  <meta name="author" content="Jacob Strieb" />
+  <meta name="description" content="Password protect links using AES in the browser." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+
+  <title>Link Locker</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" type="text/css" />
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="../b64.js"></script>
+  <script type="text/javascript" src="../api.js"></script>
+  <script type="text/javascript">
+    function error(text) {
+      document.querySelector(".error").style.display = "inherit";
+      document.querySelector("#errortext").innerText = `Error: ${text}`;
+    }
+
+
+    // Run when the <body> loads
+    function main() {
+      // Fail if the b64 library or API was not loaded
+      if (!("b64" in window)) {
+        error("Base64 library not loaded.");
+        return;
+      }
+      if (!("apiVersions" in window)) {
+        error("API library not loaded.");
+        return;
+      }
+    }
+  </script>
+  <script type="text/javascript" src="create.js"></script>
+</head>
+
+<body onload="main()">
+
+
+
+
+
+  <!-- Display errors in a big red box -->
+  <div class="error red-border" style="display: none">
+    <p id="errortext">Error</p>
+    <button onclick="main()">Try again</button>
+  </div>
+
+  <!-- Project description -->
+  <center><img alt="lOGO" class="img-fluid" src="../photos/logo-transparent.png"></a></center>
+  <div>
+    <p>लिंक लॉक एक ऐसा टूल है जो लिंक में पासवर्ड जोड़ता है; दूसरे शब्दों में, URL को एन्क्रिप्ट और डिक्रिप्ट करने के लिए। जब ​​कोई उपयोगकर्ता एन्क्रिप्टेड URL पर जाता है, तो उसे पासवर्ड के लिए संकेत दिया जाएगा। यदि पासवर्ड सही है, तो लिंक लॉक उन्हें छिपी हुई वेबसाइट पर भेज देता है। अन्यथा, एक त्रुटि प्रदर्शित होती है। उपयोगकर्ता पासवर्ड की याद दिलाने के लिए संकेत भी जोड़ सकते हैं।</p>
+    <p>प्रत्येक एन्क्रिप्टेड URL पूरी तरह से इस एप्लिकेशन द्वारा उत्पन्न लिंक के भीतर संग्रहीत किया जाता है। नतीजतन, उपयोगकर्ता लिंक लॉक के साथ बनाए गए सभी डेटा को नियंत्रित करते हैं। सर्वर पर कभी भी कुछ भी संग्रहीत नहीं किया जाता है, और कोई कुकीज़, ट्रैकिंग या साइनअप नहीं होते हैं।</p>
+    
+  </div>
+
+  <hr />
+
+  <div>
+  <label>इन्क्रिप्टेड लिंक को देखें</label>
+<input type="text" id="txtName"/>
+    <a href = "javascript:;" onclick = "this.href='https://jstrieb.github' + document.getElementById('txtName').value" required />
+      <button>खोजें</button></a>
+
+</div>
+
+
+  <hr />
+
+  <!-- Main form -->
+  <div class="form">
+    <div class="labeled-input">
+      <label for="url">सीक्रेट लिंक में पासवर्ड लगाएं </label>
+      <input type="url" id="url" placeholder="https://" oninvalid="if (!this.validity.customError) this.setCustomValidity('Please enter a valid URL. Make sure to include \'http://\' or \'https://\' at the beginning.')" oninput="this.setCustomValidity('')" required />
+    </div>
+    <div class="labeled-input hint">
+      <label for="url">पासवर्ड याद रखने के लिए कोई हिंट दे सकते हो (optional)</label>
+      <textarea id="hint" rows="1"></textarea>
+    </div>
+    <div class="split-row">
+      <div class="labeled-input password">
+        <label for="password">पासवर्ड</label>
+        <input type="password" id="password" />
+      </div>
+      <div class="labeled-input confirm-password">
+        <label for="confirm-password">दोबारा पासवर्ड डालिये</label>
+        <input type="password" id="confirm-password" oninput="this.setCustomValidity('')" />
+      </div>
+    </div>
+
+    <!-- Advanced options (JavaScript-activated dropdown) -->
+    <details>
+      <summary id="advanced-label">advanced</summary>
+      <div class="advanced" id="advanced">
+        <div class="labeled-input">
+          <label for="iv">random initialization vector</label>
+          <input type="checkbox" id="iv" onclick="onIvCheck(this)" checked />
+        </div>
+        <div class="labeled-input">
+          <label for="salt">random salt</label>
+          <input type="checkbox" id="salt" checked />
+        </div>
+      </div>
+    </details>
+    <button id="encrypt" onclick="onEncrypt()">लिंक को एन्क्रिप्टेड करें</button>
+  </div>
+
+  <hr />
+
+  <!-- Output area -->
+  <div class="output">
+    <label for="output">लिंक को एन्क्रिप्ट करें वाले बटन पर क्लिक करने के बाद निचे आपको एन्क्रिप्टेड लिंक मिल जाएगा 👇👇👇</label>
+    <input type="text" id="output" readonly/>
+    <button id="copy" onclick="onCopy('output')">Copy</button>
+    
+
+    <!-- Special incantation to make TinyURL work -->
+    <form action="https://tinyurl.com/create.php" method="get" target="_blank" style="display: inline;">
+      <input type="hidden" id="source" name="source" value="indexpage" />
+
+    </form>
+    <p class="alert">Copied</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

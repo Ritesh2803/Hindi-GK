@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="author" content="Jacob Strieb" />
   <meta name="description" content="Password protect links using AES in the browser." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
@@ -41,9 +41,17 @@
   <script type="text/javascript" src="create.js"></script>
 </head>
 
-<body onload="main()">
+<body onload="main()"  style="background-color:#202020;">
 
+<script type="text/javascript">
 
+var all = document.getElementsByTagName("*");
+
+for (var i=0, max=all.length; i < max; i++) {
+ all[i].style.color = "white";
+}
+
+</script>
 
 
 
@@ -54,14 +62,9 @@
   </div>
 
   <!-- Project description -->
-  <center><img alt="lOGO" class="img-fluid" src="../photos/logo-transparent.png"></a></center>
-  <div>
-    <p>लिंक लॉक एक ऐसा टूल है जो लिंक में पासवर्ड जोड़ता है; दूसरे शब्दों में, URL को एन्क्रिप्ट और डिक्रिप्ट करने के लिए। जब ​​कोई उपयोगकर्ता एन्क्रिप्टेड URL पर जाता है, तो उसे पासवर्ड के लिए संकेत दिया जाएगा। यदि पासवर्ड सही है, तो लिंक लॉक उन्हें छिपी हुई वेबसाइट पर भेज देता है। अन्यथा, एक त्रुटि प्रदर्शित होती है। उपयोगकर्ता पासवर्ड की याद दिलाने के लिए संकेत भी जोड़ सकते हैं।</p>
-    <p>प्रत्येक एन्क्रिप्टेड URL पूरी तरह से इस एप्लिकेशन द्वारा उत्पन्न लिंक के भीतर संग्रहीत किया जाता है। नतीजतन, उपयोगकर्ता लिंक लॉक के साथ बनाए गए सभी डेटा को नियंत्रित करते हैं। सर्वर पर कभी भी कुछ भी संग्रहीत नहीं किया जाता है, और कोई कुकीज़, ट्रैकिंग या साइनअप नहीं होते हैं।</p>
-    
-  </div>
-
-  <hr />
+  <center><img alt="lOGO" class="img-fluid" src="../photos/logo-transparent.png"></a></center><br><br><br><br>
+  
+  
 
   <div>
   <label>इन्क्रिप्टेड लिंक को देखें</label>
@@ -77,7 +80,7 @@
   <!-- Main form -->
   <div class="form">
     <div class="labeled-input">
-      <label for="url">सीक्रेट लिंक में पासवर्ड लगाएं </label>
+      <label for="url">लिंक में पासवर्ड लगाएं </label>
       <input type="url" id="url" placeholder="https://" oninvalid="if (!this.validity.customError) this.setCustomValidity('Please enter a valid URL. Make sure to include \'http://\' or \'https://\' at the beginning.')" oninput="this.setCustomValidity('')" required />
     </div>
     <div class="labeled-input hint">
@@ -132,7 +135,25 @@
 
 
 
-
+<p style="color:whitesmoke; font-size:18px;">
+    
+      नोट :- ये App डेमो के लिए बनाया गया है ,
+      ताकि आप इस App को अच्छे से इस्तेमाल करें और आपको ये App पसंद आता है तो हम ये App आपके लिए बना देंगे 
+      <br><br> 
+      इस App के फायदे :- यदि आप कोई लिंक शेयर करते हैं, तो वह लिंक सभी को मिल जाता है और लोग उस लिंक को इंटरनेट पर फैला देते हैं, इससे आपकी इनकम  कम हो जाती है, अगर आप इस App से लिंक इन्क्रिप्ट करेंगे तो वो लिंक सिर्फ इसी App में ही खुलेगा  लोग आपकी लिंक को गलत तरीके से फैला नहीं पाएंगे
+      
+      <br><br>
+      Ads :- हमने इस App में यूजर के अच्छे एक्सपीरियंस के लिए ad सिर्फ 24 घंटे में एक बार ही दिखे ऐसा सेट किया है (App इस्तेमाल करके समझ गए होंगे)
+      
+      <br><br>
+      
+   Profite :- 24 घंटे में यूजर  1 बार ही Ad देखेगा, उससे आपको 1 यूजर का 60 से 7 0 पैसा मिलेगा अगर आप App बनवा कर इसमें अच्छे से  काम करोगे तो आपको अच्छा प्रॉफिट होगा , और अगर हर दिन 10000 यूजर आपका App इस्तमाल करेंगे तो हर दिन आपके 7000 रूपये बनेंगे  अभी जो App है उसमे  यूजर से 60 से 70 पैसे बन रहें है, लेकिन आप अपने app में  Ad  को बढ़ाने बोलोगे तो हम Ad और बढ़ा देंगे इस आपकी इनकम और ज्यादा बढ़ जाएगी (आपको Ad  के लिए कुछ नहीं करना होगा हम Ad  एक्टिव करके देंगे और आपको एक एडमिन पन्नेल भी देंगे जिसमे आप अपना प्रॉफिट देख पाएंगे और पैसे अपने बैंक अकाउंट में भेज पाएंगे )
+      <br><br>
+    
+    Price :- इस App को बनवाने के लिए 15000 रुपये लगेंगे 
+    <br><br>
+    आप अगर 15000 रुपये नहीं दे सकते तो आप हमसे इस App को रेंट पर भी ले सकते हैं 999 रूपये हर महीने (इसमें  कुछ कंडीसन है जब आप हमसे कांटेक्ट करोगे तब सारा डिटेल आपको भेज देंगे )
+</p>
 
 
 

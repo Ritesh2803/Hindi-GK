@@ -83,10 +83,20 @@ for (var i=0, max=all.length; i < max; i++) {
       <label for="url">लिंक में पासवर्ड लगाएं </label>
       <input type="url" id="url" placeholder="https://" oninvalid="if (!this.validity.customError) this.setCustomValidity('Please enter a valid URL. Make sure to include \'http://\' or \'https://\' at the beginning.')" oninput="this.setCustomValidity('')" required />
     </div>
+
+
+
     <div class="labeled-input hint">
-      <label for="url">पासवर्ड याद रखने के लिए कोई हिंट दे सकते हो (optional)</label>
-      <textarea id="hint" rows="1"></textarea>
+       <select class="form-control" name="नाम" aria-label="Default select example" id="hint">
+                                <option value="hint section coming soon* <br> hint section coming soon <br> hint section coming soon <br> hint section coming soon <br> hint section coming soon <br> hint section coming soon <br> hint section coming soon <br> hint section coming soon ">hint section coming soon.....</option>
+</select>
+
+
     </div>
+
+
+
+
     <div class="split-row">
       <div class="labeled-input password">
         <label for="password">पासवर्ड</label>
